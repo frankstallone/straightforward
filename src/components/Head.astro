@@ -1,24 +1,25 @@
 ---
-import "../css/reset.css";
-import "../css/global.css";
-import "../css/publicsans.css";
-import "../css/variables.css";
-import "../css/blocks/box.css";
-import "../css/blocks/card.css";
-import "../css/blocks/center.css";
-import "../css/blocks/grid.css";
-import "../css/blocks/prose.css";
-import "../css/blocks/cluster.css";
-import "../css/blocks/cover.css";
-import "../css/blocks/reel.css";
-import "../css/blocks/stack.css";
-import "../css/blocks/switcher.css";
-import "../css/utilities/content.css";
-import "../css/utilities/flow.css";
-import "../css/utilities/region.css";
-import "../css/utilities/wrapper.css";
-import "../css/utility.css";
-import "../css/exceptions.css";
+import '../css/reset.css';
+import '../css/global.css';
+import '../css/inter.css';
+import '../css/publicsans.css';
+import '../css/variables.css';
+import '../css/blocks/box.css';
+import '../css/blocks/card.css';
+import '../css/blocks/center.css';
+import '../css/blocks/grid.css';
+import '../css/blocks/prose.css';
+import '../css/blocks/cluster.css';
+import '../css/blocks/cover.css';
+import '../css/blocks/reel.css';
+import '../css/blocks/stack.css';
+import '../css/blocks/switcher.css';
+import '../css/utilities/content.css';
+import '../css/utilities/flow.css';
+import '../css/utilities/region.css';
+import '../css/utilities/wrapper.css';
+import '../css/utility.css';
+import '../css/exceptions.css';
 export interface Props {
   meta: {
     title?: string;
@@ -32,16 +33,14 @@ const { meta } = Astro.props;
 
 const title = meta.title
   ? meta.title
-  : "The Internet's favorite Frank Stallone";
+  : 'Straighforward Growth | Consulting expertise with a twist';
 const description = meta.description
   ? meta.description
-  : "The Internet's favorite Frank Stallone";
+  : 'Straighforward Growth | Consulting expertise with a twist';
 const canonicalURL = meta.canonicalURL
   ? meta.canonicalURL
-  : "https://frankstall.one";
-const ogImage = meta.image
-  ? meta.image
-  : "/media/the-internets-favorite-frank-stallone-ogimage.png";
+  : 'https://straightforwardgrowth.com';
+const ogImage = meta.image ? meta.image : '/media/og-image@2x.png';
 ---
 
 <head>
@@ -54,7 +53,13 @@ const ogImage = meta.image
   <link rel="sitemap" href="/sitemap-index.xml" />
   <!-- Canonical -->
   <link rel="canonical" href={canonicalURL} />
-
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+  <meta name="msapplication-TileColor" content="#00aba9" />
+  <meta name="theme-color" content="#ff0000" />
   <meta name="generator" content={Astro.generator} />
   <title>{title}</title>
   <!-- Open Graph -->
@@ -63,7 +68,10 @@ const ogImage = meta.image
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:image" content={ogImage} />
-  <meta property="og:image:alt" content={`Frank Stallone - ${description}`} />
+  <meta
+    property="og:image:alt"
+    content={`Straightforward Growth | ${description}`}
+  />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -73,126 +81,14 @@ const ogImage = meta.image
   <link
     rel="preload"
     as="font"
-    href="/fonts/future/the-future-thin.woff2"
+    href="/fonts/inter/InterVariable.woff2"
     type="font/woff2"
     crossorigin="anonymous"
   />
   <link
     rel="preload"
     as="font"
-    href="/fonts/future/the-future-thin-italic.woff2"
-    type="font/woff2"
-    crossorigin="anonymous"
-  />
-  <link
-    rel="preload"
-    as="font"
-    href="/fonts/future/the-future-extralight.woff2"
-    type="font/woff2"
-    crossorigin="anonymous"
-  />
-  <link
-    rel="preload"
-    as="font"
-    href="/fonts/future/the-future-extralight-italic.woff2"
-    type="font/woff2"
-    crossorigin="anonymous"
-  />
-  <link
-    rel="preload"
-    as="font"
-    href="/fonts/future/the-future-light.woff2"
-    type="font/woff2"
-    crossorigin="anonymous"
-  />
-  <link
-    rel="preload"
-    as="font"
-    href="/fonts/future/the-future-light-italic.woff2"
-    type="font/woff2"
-    crossorigin="anonymous"
-  />
-  <link
-    rel="preload"
-    as="font"
-    href="/fonts/future/the-future-regular.woff2"
-    type="font/woff2"
-    crossorigin="anonymous"
-  />
-  <link
-    rel="preload"
-    as="font"
-    href="/fonts/future/the-future-italic.woff2"
-    type="font/woff2"
-    crossorigin="anonymous"
-  />
-  <link
-    rel="preload"
-    as="font"
-    href="/fonts/future/the-future-medium.woff2"
-    type="font/woff2"
-    crossorigin="anonymous"
-  />
-  <link
-    rel="preload"
-    as="font"
-    href="/fonts/future/the-future-medium.woff2"
-    type="font/woff2"
-    crossorigin="anonymous"
-  />
-  <link
-    rel="preload"
-    as="font"
-    href="/fonts/future/the-future-bold.woff2"
-    type="font/woff2"
-    crossorigin="anonymous"
-  />
-  <link
-    rel="preload"
-    as="font"
-    href="/fonts/future/the-future-bold-italic.woff2"
-    type="font/woff2"
-    crossorigin="anonymous"
-  />
-  <link
-    rel="preload"
-    as="font"
-    href="/fonts/future/the-future-black.woff2"
-    type="font/woff2"
-    crossorigin="anonymous"
-  />
-  <link
-    rel="preload"
-    as="font"
-    href="/fonts/future/the-future-black-italic.woff2"
-    type="font/woff2"
-    crossorigin="anonymous"
-  />
-  <link
-    rel="preload"
-    as="font"
-    href="/fonts/future/the-future-mono-regular.woff2"
-    type="font/woff2"
-    crossorigin="anonymous"
-  />
-  <link
-    rel="preload"
-    as="font"
-    href="/fonts/future/the-future-mono-italic.woff2"
-    type="font/woff2"
-    crossorigin="anonymous"
-  />
-  <link
-    rel="preload"
-    as="font"
-    href="/fonts/future/the-future-mono-medium.woff2"
-    type="font/woff2"
-    crossorigin="anonymous"
-  />
-  <link
-    rel="preload"
-    as="font"
-    href="/fonts/future/the-future-mono-medium-italic.woff2"
+    href="/fonts/inter/InterVariable.woff2"
     type="font/woff2"
     crossorigin="anonymous"
   />

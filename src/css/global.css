@@ -18,6 +18,7 @@ body {
   line-height: var(--line-height);
   letter-spacing: var(--tracking);
   position: relative;
+  font-optical-sizing: auto;
 }
 
 /* Base typesetting */
@@ -35,7 +36,7 @@ h6 {
 
 h1,
 h2 {
-  font-size: var(--step-3);
+  font-size: var(--step-2);
 }
 
 h3 {

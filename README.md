@@ -1,6 +1,6 @@
-# Astro Starter Kit: Straightfoward Growth Template
+# Straightfoward Growth
 
-A stripped down template from frankstall.one using best practices I've learned throughout the years to build desirable performant websites.
+The landing page for the Straightfoward Growth consulting team.
 
 ## 🚀 Project Structure
 
@@ -41,11 +41,3 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more about Astro?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-## Todo
-
-- [ ] Remove all references to Frank Stallone
-- [ ] Remove all unused CSS
-- [ ] Add Straightforward Growth boilerplate content
-- [ ] Decide whether or not to keep Public Sans
-- [ ] Add comments for best practices when using the template

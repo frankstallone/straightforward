@@ -3,6 +3,8 @@
   flex-direction: column;
   min-block-size: 100svh;
   padding: var(--cover-padding, 1rem);
+  background-color: var(--spot-color, transparent);
+  color: var(--spot-color-text, inherit);
 }
 
 .cover > * {

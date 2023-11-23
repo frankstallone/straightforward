@@ -1,29 +1,38 @@
 ---
-import Header from "./Header.astro";
-import frankstallone from "../assets/2023-Frank-Stallone-Web-Marketing-Expert.png";
-import { Picture } from "astro:assets";
+import Header from './Header.astro';
 ---
 
-<div class="cover spot-color-gray-dark" id="hero" style="--cover-padding: 0;">
-  <Header />
-  <div class="switcher" style="--spot-color: transparent;">
-    <div class="box flex flex-col justify-center flow prose">
-      <h1 class="step-5">Learn, grow, prosper</h1>
+<div
+  class="relative z-0 overflow-hidden"
+  style="background-color: var(--blue900); color: var(--blue200);"
+>
+  <svg
+    viewBox="0 0 40 54"
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="#062740"
+    class="absolute h-auto z-10"
+    style="width: 75vw; inset: 11rem -20rem auto auto;"
+  >
+    <path
+      d="M28.613,10.573l0,-10.573l-27.827,14.667l0,20.157l8.769,4.227l0.003,-18.812l19.055,-9.666Z"
+    ></path>
+    <path
+      d="M29.237,17.998l-11.566,6.294l-0.036,9.931l12.85,-6.6l0.028,9.044l-12.501,7.578l0,9.289l21.202,-11.367l-0,-18.944l-9.977,-5.225Z"
+    ></path>
+  </svg>
+  <div class="cover relative z-10" id="hero" style="--cover-padding: 0;">
+    <Header />
+    <div
+      class="box flex flex-col justify-center flow prose"
+      style="color: var(--blue200);"
+    >
+      <h1 style="font-size: 8vw">
+        Finally, a straightforward consulting firm.
+      </h1>
       <h2 class="font-weight-base">
-        Sharing actionable tips from my agency, enterprise, and start up
-        experience with a design and developer twist.
+        Objective, data and performance driven online marketing consulting.
       </h2>
-    </div>
-    <div class="text-center relative overflow-hidden">
-      <Picture
-        src={frankstallone}
-        widths={[500, 700, 1200]}
-        width={4210}
-        height={5456}
-        class="object-contain h-auto"
-        alt="The Internet's favorite Frank Stallone"
-        format="avif"
-      />
     </div>
   </div>
 </div>

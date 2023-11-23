@@ -514,6 +514,11 @@ Utilities for controlling how grid items are aligned along their inline axis. */
 
 /* Spot colors */
 
+.spot-color-blue-dark {
+  --spot-color: var(--blue900);
+  --spot-color-text: var(--blue100);
+}
+
 .spot-color-gray-dark {
   --spot-color: var(--gray1200);
   --spot-color-text: var(--gray100);
@@ -628,6 +633,37 @@ Utilities for controlling how an element is positioned in the DOM. */
 
 .sticky {
   position: sticky;
+}
+
+/* Z-Index
+Utilities for controlling the stack order of an element. */
+
+.z-0 {
+  z-index: 0;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.z-20 {
+  z-index: 20;
+}
+
+.z-30 {
+  z-index: 30;
+}
+
+.z-40 {
+  z-index: 40;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
+.z-auto {
+  z-index: auto;
 }
 
 /* Overflow
