@@ -1,0 +1,31 @@
+---
+import { Picture } from "astro:assets";
+import frankstallone from "../assets/frank-stallone-logo-2023-04-white@2x.png";
+---
+
+<header
+  class="cluster box text-center justify-between"
+  style="--spot-color: transparent;"
+>
+  <a href="/">
+    <Picture
+      src={frankstallone}
+      widths={[501]}
+      width={140}
+      height={13.406}
+      class="object-contain"
+      alt="The Internet's favorite Frank Stallone"
+      format="avif"
+    />
+  </a>
+  <nav>
+    <ul
+      role="list"
+      class="cluster justify-center font-weight-emphasis font-display"
+      style="--gap: var(--space-l);"
+    >
+      <li class="header-link"><a href="#contact">Reach out</a></li>
+      <li class="header-link"><a href="#book-call">Book a call</a></li>
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,27 @@
+{
+  "name": "straightforward-astro-template",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.3.1",
+    "@astrojs/sitemap": "^3.0.3",
+    "astro": "^3.5.5",
+    "astro-purgecss": "^3.2.1",
+    "purgecss": "^5.0.0",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "prettier": "^3.1.0",
+    "prettier-plugin-astro": "^0.12.2"
+  },
+  "engines": {
+    "node": ">=18.17.1"
+  }
+}
