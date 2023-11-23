@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8efdf442-0fdc-47ef-b479-71670ccaf8d1/deploy-status)](https://app.netlify.com/sites/straightforward/deploys)
+
 # Straightfoward Growth
 
 The landing page for the Straightfoward Growth consulting team.
