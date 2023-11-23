@@ -93,4 +93,16 @@ const ogImage = meta.image ? meta.image : '/media/og-image@2x.png';
     crossorigin="anonymous"
   />
   <!-- Schema.org -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C1M7VDFL5R"
+  ></script>
+  <script type="text/partytown">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-C1M7VDFL5R');
+  </script>
 </head>
