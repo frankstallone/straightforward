@@ -1,19 +1,24 @@
 /* Utility classes */
 
 /* Main navigation buttons */
-.header-link a {
-  color: var(--gray100);
+.header-links a {
+  color: var(--blue100);
   font-size: var(--step-0);
   display: inline-block;
+  padding: 0.5rem 0.5rem;
   text-decoration: none;
+  transition:
+    color 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+  box-shadow: inset 0 0 0 0 var(--yellow200);
 }
 
-.header-link a:hover,
-.header-link a:focus,
-.header-link a:active {
-  color: var(--gray400);
-  text-decoration: underline;
-  text-decoration-thickness: max(0.15em, 1px);
+.header-links a:hover,
+.header-links a:focus,
+.header-links a:active {
+  color: var(--yellow900);
+  text-decoration: none;
+  box-shadow: inset 200px 0 0 0 var(--yellow200);
 }
 
 /* Main buttons */
