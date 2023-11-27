@@ -1,0 +1,48 @@
+---
+import Header from './Header.astro';
+interface Props {
+  industry: string | undefined;
+}
+
+const { industry } = Astro.props;
+
+const businessIndustry = industry || 'business';
+---
+
+<div
+  class="relative z-0 overflow-hidden"
+  style="background-color: var(--blue900); color: var(--blue200);"
+>
+  <svg
+    viewBox="0 0 40 54"
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="#062740"
+    class="absolute h-auto z-10"
+    style="width: 75vw; inset: 11rem -20rem auto auto;"
+    role="img"
+  >
+    <title>Straightforward Growth logo</title>
+    <path
+      d="M28.613,10.573l0,-10.573l-27.827,14.667l0,20.157l8.769,4.227l0.003,-18.812l19.055,-9.666Z"
+    ></path>
+    <path
+      d="M29.237,17.998l-11.566,6.294l-0.036,9.931l12.85,-6.6l0.028,9.044l-12.501,7.578l0,9.289l21.202,-11.367l-0,-18.944l-9.977,-5.225Z"
+    ></path>
+  </svg>
+  <div class="relative z-10" id="hero" style="--cover-padding: 0;">
+    <Header />
+    <div
+      class="region box flex flex-col justify-center flow prose"
+      style="color: var(--yellow200);"
+    >
+      <h1 style="font-size: 8vw">
+        100's of hours of research for your {businessIndustry}.
+      </h1>
+      <h2 class="font-weight-base">
+        Being successful online is extremely difficult. Being successful online
+        without analyzing data is near impossible.
+      </h2>
+    </div>
+  </div>
+</div>

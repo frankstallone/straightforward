@@ -1,0 +1,56 @@
+---
+import InnerLayout from '../layouts/InnerLayout.astro';
+import Benefits from '../components/Benefits.astro';
+import SpotsAvailable from '../components/SpotsAvailable.astro';
+import Card from '../components/Card.astro';
+
+const cards = [
+  {
+    heading: 'Straightforward Package',
+    content:
+      'Have your own content, SEO, social or web teams? Supercharge your existing teams with 100’s of hours in keyphrase research for your market. With a list of one or more keyphrases to have in the pages, examples of high ranking sites, and key analysis findings.',
+    benefits: [
+      '3 ideas for a blog post, newsletter, or landing page',
+      'Wireframe structure recommendation',
+      'Content machine',
+      'Same day delivery',
+    ],
+  },
+  {
+    heading: 'Growth Package',
+    content:
+      'Need something with more craft? Get everything in the straightforward package but with added content creation. Give us your brand persona, brand language, and brand personality and we’ll marry that to our high value keyphrase posts and pages.',
+    benefits: [
+      'Everything in the Straightforward Package',
+      'Content creation, with 2 revisions',
+      'Unlimited stock photography',
+      'Implementation on most platforms',
+    ],
+  },
+];
+---
+
+<InnerLayout
+  meta={{
+    title: 'Straighforward Growth | Consulting expertise with a twist',
+    description:
+      'With a combined 30 years of experience in the tech industry, we help you grow your business with a twist.',
+  }}
+>
+  <Benefits />
+  <SpotsAvailable />
+  <section class="region wrapper">
+    <div class="switcher">
+      {
+        cards.map((card, index) => (
+          <Card
+            index={index}
+            heading={card.heading}
+            content={card.content}
+            benefits={card.benefits}
+          />
+        ))
+      }
+    </div>
+  </section>
+</InnerLayout>
