@@ -38,7 +38,7 @@ const button = buttonText || 'Get Started';
 
 <div style={style} class={classList} data-layout={dataLayout}>
   <div class="price-card-content flow">
-    <h3 class="uppercase step-0 font-weight-semibold">{heading}</h3>
+    <h3 class="uppercase step-0 font-weight-semibold mb-m-l">{heading}</h3>
     <p>{content}</p>
     {
       monthlyPrice && (
@@ -50,9 +50,11 @@ const button = buttonText || 'Get Started';
     }
     {
       buttonURL && (
-        <a href={buttonURL} class={buttonStyles}>
-          {button}
-        </a>
+        <div class="mt-m-l mb-m-l">
+          <a href={buttonURL} class={buttonStyles}>
+            {button}
+          </a>
+        </div>
       )
     }
     <ul>
