@@ -71,10 +71,14 @@
   --ratio: 1.5;
   --line-height: var(--ratio);
   --line-height-small: calc(var(--ratio) * 0.7);
+  --line-height-smaller: calc(var(--ratio) * 0.6);
   --font-base: 'InterVariable', sans-serif;
   --font-base-weight: 400;
   --font-emphasis-weight: 500;
-  --font-medium-weight: 600;
+  --font-semibold-weight: 600;
+  --font-bold-weight: 700;
+  --font-extra-bold-weight: 800;
+  --font-black-weight: 900;
   --font-display: 'InterVariable', 'sans-serif';
   --font-date: 'InterVariable', 'sans-serif';
   --gutter: var(--space-s-m);

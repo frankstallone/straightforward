@@ -1,17 +1,17 @@
-.card {
+.price-card {
   max-inline-size: var(--max-width, 400px);
   border-radius: var(--border-radius);
   overflow: hidden;
 }
-.card > a {
+.price-card > a {
   text-decoration: none;
 }
-.card > a:hover h3 {
+.price-card > a:hover h3 {
   text-decoration: underline;
 }
-.card img,
-.card picture,
-.card source {
+.price-card img,
+.price-card picture,
+.price-card source {
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -19,6 +19,6 @@
   aspect-ratio: 16 / 9;
   border-radius: var(--border-radius);
 }
-.card-content {
-  padding: var(--space-s-m);
+.price-card-content {
+  padding: var(--space-m-l);
 }

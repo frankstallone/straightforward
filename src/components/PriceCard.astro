@@ -1,0 +1,62 @@
+---
+export interface Props {
+  heading: string;
+  content: string;
+  url?: string;
+  imgUrl?: any;
+  alt?: string;
+  style?: string;
+  classes?: string;
+  monthlyPrice?: string;
+  dataLayout?: 'full';
+  buttonText?: string;
+  buttonURL?: string;
+  index: number;
+  benefits: string[];
+}
+
+const {
+  url = '#',
+  imgUrl,
+  alt = 'Straightforward Solutions Image',
+  heading,
+  style,
+  classes,
+  content,
+  benefits,
+  monthlyPrice,
+  dataLayout,
+  buttonText,
+  buttonURL,
+  index,
+} = Astro.props;
+
+const classList = `price-card ${classes}`;
+const buttonStyles = `button ${index === 1 ? 'button-disabled' : ''}`;
+const button = buttonText || 'Get Started';
+---
+
+<div style={style} class={classList} data-layout={dataLayout}>
+  <div class="price-card-content flow">
+    <h3 class="uppercase step-0 font-weight-semibold">{heading}</h3>
+    <p>{content}</p>
+    {
+      monthlyPrice && (
+        <p class="font-weight-bold">
+          <span class="step-2">${monthlyPrice}</span>{' '}
+          <span style="color: var(--blue500);">/month</span>
+        </p>
+      )
+    }
+    {
+      buttonURL && (
+        <a href={buttonURL} class={buttonStyles}>
+          {button}
+        </a>
+      )
+    }
+    <ul>
+      {benefits.map((benefit) => <li>{benefit}</li>)}
+    </ul>
+  </div>
+</div>

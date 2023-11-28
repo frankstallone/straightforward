@@ -99,6 +99,11 @@
   outline: 2px solid var(--color-loud);
 }
 
+.button-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 /* Region */
 
 .region[data-padding='l'] {
@@ -157,6 +162,48 @@
 .grid[data-rows='masonry'] {
   align-items: start;
   grid-template-rows: masonry;
+}
+
+/* Text colors */
+
+.text-color-blue100 {
+  color: var(--blue100);
+}
+
+.text-color-blue200 {
+  color: var(--blue200);
+}
+
+.text-color-blue300 {
+  color: var(--blue300);
+}
+
+.text-color-blue400 {
+  color: var(--blue400);
+}
+
+.text-color-blue500 {
+  color: var(--blue500);
+}
+
+.text-color-blue600 {
+  color: var(--blue600);
+}
+
+.text-color-blue700 {
+  color: var(--blue700);
+}
+
+.text-color-blue800 {
+  color: var(--blue800);
+}
+
+.text-color-blue900 {
+  color: var(--blue900);
+}
+
+.text-color-blue1000 {
+  color: var(--blue1000);
 }
 
 /* Flex */
@@ -340,12 +387,24 @@ Utilities for controlling how grid items are aligned along their inline axis. */
   font-weight: var(--font-weight-base);
 }
 
-.font-weight-medium {
-  font-weight: var(--font-medium-weight);
-}
-
 .font-weight-emphasis {
   font-weight: var(--font-emphasis-weight);
+}
+
+.font-weight-semibold {
+  font-weight: var(--font-semibold-weight);
+}
+
+.font-weight-bold {
+  font-weight: var(--font-bold-weight);
+}
+
+.font-weight-extra-bold {
+  font-weight: var(--font-extra-bold-weight);
+}
+
+.font-weight-black {
+  font-weight: var(--font-black-weight);
 }
 
 .font-display {

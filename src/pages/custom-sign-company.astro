@@ -2,7 +2,7 @@
 import InnerLayout from '../layouts/InnerLayout.astro';
 import Benefits from '../components/Benefits.astro';
 import SpotsAvailable from '../components/SpotsAvailable.astro';
-import Card from '../components/Card.astro';
+import PriceCard from '../components/PriceCard.astro';
 
 const cards = [
   {
@@ -15,6 +15,8 @@ const cards = [
       'Content machine',
       'Same day delivery',
     ],
+    monthlyPrice: '1,000',
+    buttonURL: '#',
   },
   {
     heading: 'Growth Package',
@@ -26,6 +28,9 @@ const cards = [
       'Unlimited stock photography',
       'Implementation on most platforms',
     ],
+    monthlyPrice: '2,500',
+    buttonText: 'Coming soon',
+    buttonURL: '#',
   },
 ];
 ---
@@ -42,14 +47,25 @@ const cards = [
   <section class="region wrapper">
     <div class="switcher">
       {
-        cards.map((card, index) => (
-          <Card
-            index={index}
-            heading={card.heading}
-            content={card.content}
-            benefits={card.benefits}
-          />
-        ))
+        cards.map((card, index) => {
+          const styles =
+            index === 0
+              ? 'border: 3px solid var(--blue500); color: var(--blue700);'
+              : 'border: 3px solid var(--blue200); color: var(--blue500);';
+          return (
+            <PriceCard
+              index={index}
+              heading={card.heading}
+              content={card.content}
+              buttonText={card.buttonText}
+              buttonURL={card.buttonURL}
+              benefits={card.benefits}
+              monthlyPrice={card.monthlyPrice}
+              style={`--max-width: 500px; ${styles}`}
+              classes="mx-auto"
+            />
+          );
+        })
       }
     </div>
   </section>
