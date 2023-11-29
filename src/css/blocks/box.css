@@ -2,7 +2,7 @@
   padding: var(--padding, var(--space-l));
   border: var(--border-thin) solid;
   color: var(--spot-color-text, var(--color-dark));
-  background-color: var(--spot-color, transparent);
+  border: 3px solid var(--spot-color, transparent);
 }
 
 .box * {

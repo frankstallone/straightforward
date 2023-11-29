@@ -374,6 +374,38 @@ Utilities for controlling how grid items are aligned along their inline axis. */
   text-align: center;
 }
 
+.text-left {
+  text-align: left;
+}
+
+.text-strike {
+  text-decoration: line-through;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration-line: underline;
+}
+
+.overline {
+  text-decoration-line: overline;
+}
+
+.line-through {
+  text-decoration-line: line-through;
+}
+
+.no-underline {
+  text-decoration-line: none;
+}
+
 .font-weight-base {
   font-weight: var(--font-base-weight);
 }
@@ -572,6 +604,11 @@ Utilities for controlling how grid items are aligned along their inline axis. */
 .spot-color-blue-dark {
   --spot-color: var(--blue900);
   --spot-color-text: var(--blue100);
+}
+
+.spot-color-gray {
+  --spot-color: var(--gray800);
+  --spot-color-text: var(--gray1200);
 }
 
 .spot-color-gray-dark {

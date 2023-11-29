@@ -1,5 +1,4 @@
 ---
-import Contact from '../components/ContactCSC.astro';
 import Footer from '../components/Footer.astro';
 import Head from '../components/Head.astro';
 import InnerHero from '../components/InnerHero.astro';
@@ -16,7 +15,6 @@ const { meta, header } = Astro.props;
       <!-- Heading & Hero -->
       <InnerHero header={header} />
       <slot />
-      <Contact />
       <!-- Footer -->
       <Footer />
     </main>

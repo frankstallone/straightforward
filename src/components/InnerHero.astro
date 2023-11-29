@@ -1,12 +1,13 @@
 ---
 import Header from './Header.astro';
 interface Props {
-  industry: string | undefined;
+  header: {
+    title: string;
+    subtitle: string;
+  };
 }
 
-const { industry } = Astro.props;
-
-const businessIndustry = industry || 'business';
+const { header } = Astro.props;
 ---
 
 <div
@@ -37,11 +38,10 @@ const businessIndustry = industry || 'business';
       style="color: var(--yellow200);"
     >
       <h1 style="font-size: 8vw;">
-        100's of hours of research for your {businessIndustry}.
+        {header.title}
       </h1>
       <h2 class="font-weight-base step-2">
-        Being successful online is extremely difficult. Being successful online
-        without analyzing data is near impossible.
+        {header.subtitle}
       </h2>
     </div>
   </div>

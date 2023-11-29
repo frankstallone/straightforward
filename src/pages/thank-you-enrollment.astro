@@ -1,0 +1,26 @@
+---
+import ThankYouLayout from '../layouts/ThankYouLayout.astro';
+
+const customSignHeading = {
+  title: "What's next?",
+  subtitle: "We're with you for the long haul.",
+};
+---
+
+<ThankYouLayout
+  meta={{
+    title: 'Straighforward Growth | Consulting expertise with a twist',
+    description:
+      'With a combined 30 years of experience in the tech industry, we help you grow your business with a twist.',
+  }}
+  header={customSignHeading}
+>
+  <section class="region wrapper flow prose">
+    <h2>Thank you for enrolling</h2>
+    <p>
+      Within the next 24 hours you'll get an email from Notion saying that
+      you've been added as a guest to your own unique page. This page will have
+      your first 3 long form content suggestions, and so much more!
+    </p>
+  </section>
+</ThankYouLayout>
