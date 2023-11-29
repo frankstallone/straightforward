@@ -56,29 +56,31 @@ const customSignHeader = {
 >
   <Benefits />
   <SpotsAvailable />
-  <section class="region wrapper" data-layout="md">
-    <div class="grid" style="--gap: 0;">
-      {
-        cards.map((card, index) => {
-          const styles =
-            index === 0
-              ? 'border: 3px solid var(--blue500); color: var(--blue700);'
-              : 'border: 3px solid var(--blue200); color: var(--blue500);';
-          return (
-            <PriceCard
-              index={index}
-              heading={card.heading}
-              content={card.content}
-              buttonText={card.buttonText}
-              buttonURL={card.buttonURL}
-              benefits={card.benefits}
-              monthlyPrice={card.monthlyPrice}
-              style={`--max-width: 400px; ${styles}`}
-            />
-          );
-        })
-      }
-    </div>
-  </section>
+  <div class="region spot-color-orange">
+    <section class="wrapper" data-layout="md">
+      <div class="grid" style="--gap: 0;">
+        {
+          cards.map((card, index) => {
+            const styles =
+              index === 0
+                ? 'border: 3px solid var(--blue500); color: var(--blue700);'
+                : 'border: 3px solid var(--blue200); color: var(--blue500);';
+            return (
+              <PriceCard
+                index={index}
+                heading={card.heading}
+                content={card.content}
+                buttonText={card.buttonText}
+                buttonURL={card.buttonURL}
+                benefits={card.benefits}
+                monthlyPrice={card.monthlyPrice}
+                style={`--max-width: 400px; ${styles}`}
+              />
+            );
+          })
+        }
+      </div>
+    </section>
+  </div>
   <FAQ />
 </InnerLayout>

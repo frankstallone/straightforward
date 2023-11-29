@@ -10,7 +10,7 @@
   transition:
     color 0.2s ease-in-out,
     box-shadow 0.2s ease-in-out;
-  box-shadow: inset 0 0 0 0 var(--yellow200);
+  box-shadow: inset 0 0 0 0 var(--yellow300);
 }
 
 .header-links a:hover,
@@ -18,7 +18,7 @@
 .header-links a:active {
   color: var(--yellow900);
   text-decoration: none;
-  box-shadow: inset 200px 0 0 0 var(--yellow200);
+  box-shadow: inset 200px 0 0 0 var(--yellow300);
 }
 
 /* Main buttons */
@@ -601,13 +601,68 @@ Utilities for controlling how grid items are aligned along their inline axis. */
 
 /* Spot colors */
 
+.spot-color-blue {
+  --spot-color: var(--blue100);
+  --spot-color-text: var(--blue900);
+}
+
 .spot-color-blue-dark {
   --spot-color: var(--blue900);
   --spot-color-text: var(--blue100);
 }
 
+.spot-color-purple {
+  --spot-color: var(--purple200);
+  --spot-color-text: var(--purple1000);
+}
+
+.spot-color-purple-dark {
+  --spot-color: var(--purple1000);
+  --spot-color-text: var(--purple100);
+}
+
+.spot-color-yellow {
+  --spot-color: var(--yellow100);
+  --spot-color-text: var(--yellow1000);
+}
+
+.spot-color-yellow-dark {
+  --spot-color: var(--yellow1000);
+  --spot-color-text: var(--yellow100);
+}
+
+.spot-color-pink {
+  --spot-color: var(--pink100);
+  --spot-color-text: var(--pink1000);
+}
+
+.spot-color-pink-dark {
+  --spot-color: var(--pink1000);
+  --spot-color-text: var(--pink100);
+}
+
+.spot-color-green {
+  --spot-color: var(--green100);
+  --spot-color-text: var(--green1000);
+}
+
+.spot-color-green-dark {
+  --spot-color: var(--green1000);
+  --spot-color-text: var(--green100);
+}
+
+.spot-color-orange {
+  --spot-color: var(--orange100);
+  --spot-color-text: var(--orange1000);
+}
+
+.spot-color-orange-dark {
+  --spot-color: var(--orange1000);
+  --spot-color-text: var(--orange100);
+}
+
 .spot-color-gray {
-  --spot-color: var(--gray800);
+  --spot-color: var(--gray200);
   --spot-color-text: var(--gray1200);
 }
 
