@@ -34,9 +34,10 @@ const {
 const classList = `price-card ${classes}`;
 const buttonStyles = `button ${index === 1 ? 'button-disabled' : ''}`;
 const button = buttonText || 'Get Started';
+const styles = `${index === 1 ? 'transform: scale(0.95);' : ''} ${style}`;
 ---
 
-<div style={style} class={classList} data-layout={dataLayout}>
+<div style={styles} class={classList} data-layout={dataLayout}>
   <div class="price-card-content flow">
     <h3 class="uppercase step-0 font-weight-semibold mb-m-l">{heading}</h3>
     <p>{content}</p>
@@ -57,7 +58,7 @@ const button = buttonText || 'Get Started';
         </div>
       )
     }
-    <ul>
+    <ul class="price-card-item">
       {benefits.map((benefit) => <li>{benefit}</li>)}
     </ul>
   </div>

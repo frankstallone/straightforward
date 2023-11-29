@@ -15,7 +15,7 @@ const cards = [
       'Content machine',
       'Same day delivery',
     ],
-    monthlyPrice: '1,000',
+    monthlyPrice: '1,250',
     buttonURL: '#',
   },
   {
@@ -45,7 +45,7 @@ const cards = [
   <Benefits />
   <SpotsAvailable />
   <section class="region wrapper">
-    <div class="switcher">
+    <div class="grid" style="--grid-min-item-size: 600px; --gap: 0;">
       {
         cards.map((card, index) => {
           const styles =
@@ -62,7 +62,6 @@ const cards = [
               benefits={card.benefits}
               monthlyPrice={card.monthlyPrice}
               style={`--max-width: 500px; ${styles}`}
-              classes="mx-auto"
             />
           );
         })
