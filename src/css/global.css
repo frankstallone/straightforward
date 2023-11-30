@@ -150,7 +150,7 @@ textarea:focus {
 /* Footer */
 
 footer {
-  color: var(--gray200);
+  color: var(--blue200);
 }
 
 footer small {
@@ -159,12 +159,17 @@ footer small {
 
 footer a,
 footer a:visited {
+  padding: 0.5rem 0.5rem;
   text-decoration: none;
-  transition: var(--transition-base);
+  transition:
+    color var(--transition-base),
+    box-shadow var(--transition-base);
+  box-shadow: inset 0 0 0 0 var(--yellow300);
 }
 footer a:hover,
 footer a:focus,
 footer a:active {
-  color: var(--gray700);
+  color: var(--blue1000);
   text-decoration: none;
+  box-shadow: inset 200px 0 0 0 var(--yellow300);
 }
