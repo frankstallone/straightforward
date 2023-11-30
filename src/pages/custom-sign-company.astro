@@ -22,6 +22,7 @@ const cards = [
     ],
     monthlyPrice: '2,000',
     buttonURL: 'https://buy.stripe.com/cN217FgyTcfhcN2288',
+    bookingLink: 'https://tidycal.com/19qz8xm/straightfoward-package',
   },
   {
     heading: 'Growth Package',
@@ -74,6 +75,7 @@ const customSignHeader = {
                 buttonURL={card.buttonURL}
                 benefits={card.benefits}
                 monthlyPrice={card.monthlyPrice}
+                bookingURL={card.bookingLink}
                 style={`--max-width: 400px; ${styles}`}
               />
             );
