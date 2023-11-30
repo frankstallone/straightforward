@@ -7,8 +7,11 @@ interface Props {
 const { header } = Astro.props;
 ---
 
-<li class="accordion__item box max-inline-size:measure-lg">
-  <h3 class="max-inline-size:measure-lg">
+<li
+  class="accordion__item box max-inline-size:measure-lg"
+  style="--padding: var(--space-s);"
+>
+  <h3 class="max-inline-size:measure-lg step-1">
     <button
       id="accordion-header-1"
       class="accordion__header text-left"

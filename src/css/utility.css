@@ -602,7 +602,7 @@ Utilities for controlling how grid items are aligned along their inline axis. */
 /* Spot colors */
 
 .spot-color-blue {
-  --spot-color: var(--blue100);
+  --spot-color: var(--blue200);
   --spot-color-text: var(--blue900);
 }
 
