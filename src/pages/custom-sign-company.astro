@@ -41,20 +41,20 @@ const cards = [
 ];
 
 const customSignHeader = {
-  title: 'Lead Generation for Sign Companies',
+  title: 'Lead generation for Sign Companies',
   subtitle:
     'Growing a sign business online is difficult. Growing a sign business online without analyzing data is near impossible. Get the data you need to increase online leads for your sign company.',
 };
+
+const pageMeta = {
+  title: 'Lead Generation for Sign Companies | How to grow a Sign Business',
+  description:
+    'Sign Company Lead Generation | Growing a sign business online is difficult. Growing a sign business online without analyzing data is near impossible. Get the data you need to increase online leads for your custom sign company.',
+  image: '/media/og-image-csc@2x.png',
+};
 ---
 
-<InnerLayout
-  meta={{
-    title: 'Lead Generation for Sign Companies | How to Grow a Sign Business',
-    description:
-      'Sign Company Lead Generation | Growing a sign business online is difficult. Growing a sign business online without analyzing data is near impossible. Get the data you need to increase online leads for your custom sign company.',
-  }}
-  header={customSignHeader}
->
+<InnerLayout meta={pageMeta} header={customSignHeader}>
   <Benefits />
   <SpotsAvailable />
   <div class="region spot-color-blue">
