@@ -58,7 +58,9 @@ const bookingLink = bookingURL || '#';
         </div>
       )
     }
-    <p><small class="font-weight-semibold">What's included:</small></p>
+    <p>
+      <small class="font-weight-semibold uppercase">What's included:</small>
+    </p>
     <ul class="price-card-item">
       {benefits.map((benefit) => <li>{benefit}</li>)}
     </ul>

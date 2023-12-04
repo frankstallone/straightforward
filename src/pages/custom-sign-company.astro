@@ -56,9 +56,11 @@ const pageMeta = {
 ---
 
 <InnerLayout meta={pageMeta} header={customSignHeader}>
-  <ContentMachine />
+  <div class="relative">
+    <ContentMachine />
+    <SpotsAvailable />
+  </div>
   <Benefits />
-  <SpotsAvailable />
   <div class="region spot-color-blue">
     <section class="wrapper" data-layout="md">
       <div class="grid" style="--gap: 0;">
