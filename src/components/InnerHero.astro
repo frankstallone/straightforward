@@ -1,5 +1,5 @@
 ---
-import Header from './Header.astro';
+import InnerHeader from './InnerHeader.astro';
 interface Props {
   header: {
     title: string;
@@ -32,7 +32,7 @@ const { header } = Astro.props;
     ></path>
   </svg>
   <div class="relative z-10" id="hero" style="--cover-padding: 0;">
-    <Header />
+    <InnerHeader />
     <div
       class="region box flex flex-col justify-center flow prose"
       style="color: var(--yellow300);"

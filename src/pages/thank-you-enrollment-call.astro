@@ -1,0 +1,30 @@
+---
+import ThankYouLayout from '../layouts/ThankYouLayout.astro';
+
+const customSignHeading = {
+  title: 'Thank you for the opportunity',
+  subtitle:
+    'We work hard to save you time and money, so you can focus on what matters most.',
+};
+---
+
+<ThankYouLayout
+  meta={{
+    title: 'Straighforward Growth | Consulting expertise with a twist',
+    description:
+      'With a combined 30 years of experience in the tech industry, we help you grow your business with a twist.',
+  }}
+  header={customSignHeading}
+>
+  <section class="region wrapper flow prose">
+    <h2>What's next?</h2>
+    <p>
+      You're on our calendar! You should have gotten a Google Meet calendar
+      invite. If you've never used Google Meet before <a
+        href="https://support.google.com/meet/answer/10409699?hl=en"
+        target="_blank">you can check your video &amp; audio settings</a
+      > before the call to ensure everything is working correctly.
+    </p>
+    <p></p>
+  </section>
+</ThankYouLayout>
