@@ -607,7 +607,7 @@ Utilities for controlling how grid items are aligned along their inline axis. */
 }
 
 .spot-color-blue-dark {
-  --spot-color: var(--blue900);
+  --spot-color: var(--blue1000);
   --spot-color-text: var(--blue100);
 }
 
@@ -617,7 +617,7 @@ Utilities for controlling how grid items are aligned along their inline axis. */
 }
 
 .spot-color-purple-dark {
-  --spot-color: var(--purple1000);
+  --spot-color: var(--purple1100);
   --spot-color-text: var(--purple100);
 }
 

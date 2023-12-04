@@ -1,0 +1,28 @@
+---
+import notionCheatsheet from '../assets/sign-company-lead-generation-cheatsheet@2x.png';
+import { Picture } from 'astro:assets';
+---
+
+<div
+  class="region spot-color-blue-dark relative z-0 overflow-hidden"
+  id="notion"
+>
+  <div class="wrapper text-center justify-center items-center">
+    <div class="box flow prose">
+      <h2 class="mx-auto">Your unique content machine</h2>
+      <p class="mx-auto">
+        A single home for writing long and short form content.
+      </p>
+    </div>
+    <Picture
+      src={notionCheatsheet}
+      widths={[520, 700, 615, 2000]}
+      width={2600}
+      height={1432}
+      alt="Notion screenshot of the shared page for the Custom Sign Company and content idea template"
+      quality={80}
+      format="avif"
+      class="h-auto"
+    />
+  </div>
+</div>

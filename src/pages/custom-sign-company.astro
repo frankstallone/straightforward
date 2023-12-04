@@ -4,6 +4,7 @@ import Benefits from '../components/Benefits.astro';
 import SpotsAvailable from '../components/SpotsAvailable.astro';
 import PriceCard from '../components/PriceCard.astro';
 import FAQ from '../components/FAQ.astro';
+import ContentMachine from '../components/ContentMachine.astro';
 
 const cards = [
   {
@@ -55,6 +56,7 @@ const pageMeta = {
 ---
 
 <InnerLayout meta={pageMeta} header={customSignHeader}>
+  <ContentMachine />
   <Benefits />
   <SpotsAvailable />
   <div class="region spot-color-blue">
