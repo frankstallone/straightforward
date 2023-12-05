@@ -84,8 +84,8 @@
   display: block;
   text-decoration: none;
   border: none;
-  background-color: var(--spot-color, var(--gray1200));
-  color: var(--gray100);
+  background-color: var(--spot-color-text, var(--gray1200));
+  color: var(--spot-color, var(--gray100));
   padding-inline: var(--space-m);
   padding-block: var(--space-s);
   text-align: center;
@@ -96,7 +96,7 @@
   text-decoration: none;
 }
 .button:focus {
-  outline: 2px solid var(--color-loud);
+  outline: 2px solid var(--spot-color-text, var(--gray100));
 }
 
 .button-disabled {

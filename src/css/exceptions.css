@@ -1,5 +1,12 @@
+.price-card .button {
+  background-color: var(--spot-color, var(--gray1200));
+  color: var(--spot-color-text, var(--gray1200));
+}
 .price-card .button:hover {
   background-color: var(--blue1100);
+}
+.price-card .button:focus {
+  outline-color: var(--spot-color, var(--gray1200));
 }
 
 #spots-available {
