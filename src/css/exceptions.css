@@ -1,3 +1,32 @@
 .price-card .button:hover {
   background-color: var(--blue1100);
 }
+
+#spots-available {
+  background-color: var(--yellow300);
+  bottom: -3rem;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-8deg);
+  padding: 0.5rem 1rem;
+  width: 80vw;
+}
+
+@media (min-width: 50em) {
+  #spots-available {
+    width: auto;
+  }
+}
+
+/* Media queries
+@media (min-width: 50em) {
+}
+
+@media (min-width: 80em) {
+}
+
+@media (min-width: 90em) {
+}
+
+@media (min-width: 120em) {
+}
+*/
