@@ -16,8 +16,8 @@ const customSignHeading = {
   }}
   header={customSignHeading}
 >
-  <section class="region wrapper flow prose">
-    <div class="content">
+  <section class="region wrapper">
+    <div class="content flow prose">
       <h2>What's next?</h2>
       <p>
         Within the next 24 hours you'll get an email from Notion saying that
@@ -64,11 +64,11 @@ const customSignHeading = {
   console.log(searchParams);
   const session_id = searchParams.get('session_id');
   console.log(session_id);
+  console.log(typeof session_id);
 
-  const searchParamsOutput = document.getElementById('searchParams')?.innerHTML;
+  const searchParamsOutput = document.getElementById('searchParams');
   console.log(searchParamsOutput);
   if (searchParamsOutput) {
-    const searchParamsOutput = document.getElementById('searchParams');
     if (searchParamsOutput instanceof HTMLElement) {
       if (searchParamsOutput) {
         searchParamsOutput.innerHTML = session_id?.toString() ?? '';
