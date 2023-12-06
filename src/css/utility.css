@@ -774,7 +774,7 @@ Utilities for controlling how grid items are aligned along their inline axis. */
 
 .spot-color-blue-dark {
   --spot-color: var(--blue1000);
-  --spot-color-text: var(--blue100);
+  --spot-color-text: var(--blue300);
 }
 
 .spot-color-purple {
@@ -784,7 +784,7 @@ Utilities for controlling how grid items are aligned along their inline axis. */
 
 .spot-color-purple-dark {
   --spot-color: var(--purple1100);
-  --spot-color-text: var(--purple100);
+  --spot-color-text: var(--purple300);
 }
 
 .spot-color-yellow {
@@ -794,7 +794,7 @@ Utilities for controlling how grid items are aligned along their inline axis. */
 
 .spot-color-yellow-dark {
   --spot-color: var(--yellow1000);
-  --spot-color-text: var(--yellow100);
+  --spot-color-text: var(--yellow200);
 }
 
 .spot-color-pink {
@@ -803,8 +803,8 @@ Utilities for controlling how grid items are aligned along their inline axis. */
 }
 
 .spot-color-pink-dark {
-  --spot-color: var(--pink1000);
-  --spot-color-text: var(--pink100);
+  --spot-color: var(--pink1100);
+  --spot-color-text: var(--pink300);
 }
 
 .spot-color-green {
@@ -813,8 +813,8 @@ Utilities for controlling how grid items are aligned along their inline axis. */
 }
 
 .spot-color-green-dark {
-  --spot-color: var(--green1000);
-  --spot-color-text: var(--green100);
+  --spot-color: var(--green1100);
+  --spot-color-text: var(--green200);
 }
 
 .spot-color-orange {
@@ -824,7 +824,7 @@ Utilities for controlling how grid items are aligned along their inline axis. */
 
 .spot-color-orange-dark {
   --spot-color: var(--orange1000);
-  --spot-color-text: var(--orange100);
+  --spot-color-text: var(--orange200);
 }
 
 .spot-color-gray {
