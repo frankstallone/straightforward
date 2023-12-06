@@ -62,14 +62,16 @@ const customSignHeading = {
   </section>
 </ThankYouLayout>
 
-<script type="module">
+<script>
   const searchParams = new URLSearchParams(window.location.search);
   console.log(searchParams);
   const session_id = searchParams.get('session_id');
   console.log(session_id);
   console.log(typeof session_id);
 
-  const sessionIdInput = document.getElementById('sessionId') as HTMLInputElement;
+  const sessionIdInput = document.getElementById(
+    'sessionId',
+  ) as HTMLInputElement;
 
   if (sessionIdInput) {
     sessionIdInput.value = (session_id?.toString() ?? '') as string;
