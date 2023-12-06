@@ -62,12 +62,17 @@ const customSignHeading = {
 <script type="module">
   const searchParams = new URLSearchParams(window.location.search);
   console.log(searchParams);
+  const session_id = searchParams.get('session_id');
+  console.log(session_id);
+
   const searchParamsOutput = document.getElementById('searchParams')?.innerHTML;
   console.log(searchParamsOutput);
   if (searchParamsOutput) {
     const searchParamsOutput = document.getElementById('searchParams');
     if (searchParamsOutput instanceof HTMLElement) {
-      searchParamsOutput.innerHTML = searchParams.toString();
+      if (searchParamsOutput) {
+        searchParamsOutput.innerHTML = session_id?.toString() ?? '';
+      }
     }
   }
 </script>
