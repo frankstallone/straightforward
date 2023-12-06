@@ -29,16 +29,13 @@ const customSignHeading = {
         account to share the Notion page. If you would like to use another email
         address, feel free to add that here.
       </p>
-      <p>
-        <pre id="searchParams"></pre>
-      </p>
       <form
         name="notion-share-email"
         class="flow"
         netlify-honeypot="bot-field"
         method="POST"
         data-netlify="true"
-        action="/"
+        action="/thank-you-enrollment/?notion-share-email=true"
       >
         <input
           type="hidden"
@@ -63,27 +60,19 @@ const customSignHeading = {
 </ThankYouLayout>
 
 <script>
+  // Grab query params
   const searchParams = new URLSearchParams(window.location.search);
-  console.log(searchParams);
+  // Isolate notion-share-email
+  const notionShareEmail = searchParams.get('notion-share-email');
+  console.log(notionShareEmail);
+  // Isolate session_id
   const session_id = searchParams.get('session_id');
-  console.log(session_id);
-  console.log(typeof session_id);
-
+  // Grab form input
   const sessionIdInput = document.getElementById(
     'sessionId',
   ) as HTMLInputElement;
-
+  // Update form input value
   if (sessionIdInput) {
     sessionIdInput.value = (session_id?.toString() ?? '') as string;
-  }
-
-  const searchParamsOutput = document.getElementById('searchParams');
-  console.log(searchParamsOutput);
-  if (searchParamsOutput) {
-    if (searchParamsOutput instanceof HTMLElement) {
-      if (searchParamsOutput) {
-        searchParamsOutput.innerHTML = session_id?.toString() ?? '';
-      }
-    }
   }
 </script>
