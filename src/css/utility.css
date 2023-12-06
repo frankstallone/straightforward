@@ -96,7 +96,7 @@
   text-decoration: none;
 }
 .button:focus {
-  outline: 2px solid var(--spot-color-text, var(--gray100));
+  outline: 2px solid var(--spot-color-text, var(--gray1200));
 }
 
 .button-disabled {
@@ -381,12 +381,15 @@
 flex-1 {
   flex: 1 1 0%;
 }
+
 flex-auto {
   flex: 1 1 auto;
 }
+
 flex-initial {
   flex: 0 1 auto;
 }
+
 flex-none {
   flex: none;
 }
