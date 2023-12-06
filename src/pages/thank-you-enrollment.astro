@@ -24,7 +24,7 @@ const customSignHeading = {
         you've been added as a guest to your own unique page. This page will
         have your first 3 long form content suggestions, and so much more!
       </p>
-      <p>
+      <p id="notion-share-update-msg">
         Typically we use the same email address associated with your Stripe
         account to share the Notion page. If you would like to use another email
         address, feel free to add that here.
@@ -69,10 +69,17 @@ const customSignHeading = {
   const notionShareEmailForm = document.getElementById(
     'notion-share-email',
   ) as HTMLFormElement;
+  const notionShareMsg = document.getElementById(
+    'notion-share-update-msg',
+  ) as HTMLParagraphElement;
+
   // If the form was just subtmitted, hide it
   if (notionShareEmail) {
     // Add the hidden class
     notionShareEmailForm.classList.add('hidden');
+    // Update the Notion shared message
+    notionShareMsg.innerHTML =
+      '<strong>Email address to be used with your membership has been updated!</strong>';
     // Else, if Stripe session id is present, add it to the form
   } else {
     // Isolate session_id
