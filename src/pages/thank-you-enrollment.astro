@@ -36,6 +36,7 @@ const customSignHeading = {
         method="POST"
         data-netlify="true"
         action="/thank-you-enrollment/?notion-share-email=true"
+        id="notion-share-email"
       >
         <input
           type="hidden"
@@ -64,15 +65,25 @@ const customSignHeading = {
   const searchParams = new URLSearchParams(window.location.search);
   // Isolate notion-share-email
   const notionShareEmail = searchParams.get('notion-share-email');
-  console.log(notionShareEmail);
-  // Isolate session_id
-  const session_id = searchParams.get('session_id');
-  // Grab form input
-  const sessionIdInput = document.getElementById(
-    'sessionId',
-  ) as HTMLInputElement;
-  // Update form input value
-  if (sessionIdInput) {
-    sessionIdInput.value = (session_id?.toString() ?? '') as string;
+  // Grab the form
+  const notionShareEmailForm = document.getElementById(
+    'notion-share-email',
+  ) as HTMLFormElement;
+  // If the form was just subtmitted, hide it
+  if (notionShareEmail) {
+    // Add the hidden class
+    notionShareEmailForm.classList.add('hidden');
+    // Else, if Stripe session id is present, add it to the form
+  } else {
+    // Isolate session_id
+    const session_id = searchParams.get('session_id');
+    // Grab form input
+    const sessionIdInput = document.getElementById(
+      'sessionId',
+    ) as HTMLInputElement;
+    // Update form input value
+    if (sessionIdInput) {
+      sessionIdInput.value = (session_id?.toString() ?? '') as string;
+    }
   }
 </script>
