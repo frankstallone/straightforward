@@ -778,7 +778,7 @@ Utilities for controlling how grid items are aligned along their inline axis. */
 }
 
 .spot-color-purple {
-  --spot-color: var(--purple200);
+  --spot-color: var(--purple300);
   --spot-color-text: var(--purple1000);
 }
 

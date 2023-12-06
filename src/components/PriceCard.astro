@@ -30,7 +30,7 @@ const {
   index,
 } = Astro.props;
 
-const classList = `price-card spot-color-blue-dark ${classes}`;
+const classList = `price-card ${classes}`;
 const buttonStyles = `button ${index === 1 ? 'button-disabled' : ''}`;
 const button = buttonText || 'Get Started';
 const styles = `${index === 1 ? 'transform: scale(0.95);' : ''} ${style}`;
@@ -38,8 +38,8 @@ const bookingLink = bookingURL || '#';
 ---
 
 <div style={styles} class={classList} data-layout={dataLayout}>
-  <div class="price-card-content flow">
-    <h3 class="uppercase step-0 font-weight-semibold mb-m-l">{heading}</h3>
+  <div class="box flow prose spot-color-blue-dark">
+    <h3 class="uppercase step-0 font-weight-semibold">{heading}</h3>
     <p>{content}</p>
     {
       monthlyPrice && (
@@ -51,11 +51,9 @@ const bookingLink = bookingURL || '#';
     }
     {
       buttonURL && (
-        <div class="mt-m-l mb-m-l">
-          <a href={buttonURL} class={buttonStyles}>
-            {button}
-          </a>
-        </div>
+        <a href={buttonURL} class={buttonStyles}>
+          {button}
+        </a>
       )
     }
     <p>

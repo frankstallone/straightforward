@@ -63,27 +63,20 @@ const pageMeta = {
   </div>
   <div class="region spot-color-blue">
     <section class="wrapper" data-layout="md">
-      <div class="grid" style="--gap: 0;">
+      <div class="price-card-container" style="--gap: 0;">
         {
-          cards.map((card, index) => {
-            const styles =
-              index === 0
-                ? 'border: 3px solid var(--blue500); color: var(--blue700);'
-                : 'border: 3px solid var(--blue400); color: var(--blue500);';
-            return (
-              <PriceCard
-                index={index}
-                heading={card.heading}
-                content={card.content}
-                buttonText={card.buttonText}
-                buttonURL={card.buttonURL}
-                benefits={card.benefits}
-                monthlyPrice={card.monthlyPrice}
-                bookingURL={card.bookingLink}
-                style={`--max-width: 400px; ${styles}`}
-              />
-            );
-          })
+          cards.map((card, index) => (
+            <PriceCard
+              index={index}
+              heading={card.heading}
+              content={card.content}
+              buttonText={card.buttonText}
+              buttonURL={card.buttonURL}
+              benefits={card.benefits}
+              monthlyPrice={card.monthlyPrice}
+              bookingURL={card.bookingLink}
+            />
+          ))
         }
       </div>
     </section>

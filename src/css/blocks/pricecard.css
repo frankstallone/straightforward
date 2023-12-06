@@ -1,3 +1,19 @@
+.price-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap, var(--space-s));
+}
+
+.price-card-container > * {
+  flex-grow: 1;
+  flex-basis: calc((30rem - 100%) * 999);
+}
+
+.price-card-container > :nth-last-child(n + 3),
+.price-card-container > :nth-last-child(n + 3) ~ * {
+  flex-basis: 100%;
+}
+
 .price-card {
   max-inline-size: var(--max-width, 400px);
   overflow: hidden;
@@ -20,9 +36,6 @@
   aspect-ratio: 16 / 9;
   border-radius: var(--border-radius);
 }
-.price-card-content {
-  padding: var(--space-m-l);
-}
 .price-card-item svg {
   position: absolute;
   margin-inline-start: calc(var(--space-m) * -0.95);
@@ -33,4 +46,16 @@
 .price-card-item li {
   position: relative;
   padding-inline-start: var(--space-m);
+}
+
+.price-card .button {
+  font-weight: var(--font-semibold-weight);
+  background-color: var(--yellow300);
+  color: var(--yellow1100);
+}
+.price-card .button:hover {
+  background-color: var(--yellow400);
+}
+.price-card .button:focus {
+  outline-color: var(--yellow300);
 }
