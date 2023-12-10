@@ -17,7 +17,7 @@ const openAccordionItem = (accordionItem) => {
   accordionPanel.style.height = `${getPanelHeight(accordionItem)}px`;
   accordionItem.classList.add('is-active');
   accordionItemHeader.setAttribute('aria-expanded', true);
-  accordionToggleIndicator.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="header__toggle-indicator" aria-hidden="true" viewBox="0 0 512 512"><path d="M239 401c9.4 9.4 24.6 9.4 33.9 0L465 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-175 175L81 175c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9L239 401z"/></svg>`;
+  accordionToggleIndicator.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="header__toggle-indicator" aria-hidden="true" viewBox="0 0 512 512"><path d="M239 111c9.4-9.4 24.6-9.4 33.9 0L465 303c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-175-175L81 337c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9L239 111z"></path></svg>`;
 };
 
 const closeAccordionItem = (accordionItem) => {
@@ -31,7 +31,7 @@ const closeAccordionItem = (accordionItem) => {
   accordionPanel.style.height = 0;
   accordionItemHeader.focus();
   accordionItemHeader.setAttribute('aria-expanded', false);
-  accordionToggleIndicator.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="header__toggle-indicator" aria-hidden="true" viewBox="0 0 512 512"><path d="M239 111c9.4-9.4 24.6-9.4 33.9 0L465 303c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-175-175L81 337c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9L239 111z"></path></svg>`;
+  accordionToggleIndicator.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="header__toggle-indicator" aria-hidden="true" viewBox="0 0 512 512"><path d="M239 401c9.4 9.4 24.6 9.4 33.9 0L465 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-175 175L81 175c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9L239 401z"/></svg>`;
 };
 
 const isAccordionOpen = (accordionItem) => {
