@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://straightforwardgrowth.com/sitemap-index.xml
