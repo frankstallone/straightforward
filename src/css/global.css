@@ -70,7 +70,7 @@ blockquote:not([class]) p:last-of-type {
 }
 
 svg {
-  height: 2ex;
+  height: 1lh;
   width: auto;
   flex: none;
 }
