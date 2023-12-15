@@ -61,7 +61,30 @@ const pageMeta = {
     <Benefits />
     <SpotsAvailable />
   </div>
-  <div class="region spot-color-blue">
+  <div class="region spot-color-blue relative z-0 overflow-hidden">
+    <div
+      style="width: 100vw;
+    min-width: 1500px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    background-repeat: no-repeat;
+    background-image: radial-gradient(circle 800px at 700px 200px, var(--purple300), transparent), radial-gradient(circle 600px at calc(100% - 300px) 300px, var(--blue300), transparent), radial-gradient(circle 800px at right center, var(--blue400), transparent), radial-gradient(circle 800px at right bottom, var(--blue100), transparent), radial-gradient(circle 800px at calc(50% - 600px) calc(100% - 100px), var(--pink100), var(--pink200), transparent);"
+    >
+    </div>
+    <!-- <svg
+      viewBox="0 0 200 200"
+      fill="currentColor"
+      class="absolute z-0 text-color-purple300"
+      style="height: 130vh; left: 50%; top: 50%; transform: translate(-50%, -50%);"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M50 0H200V50V150L150 200L150 50H0L50 0ZM0 165.067V100L65.067 100L0 165.067ZM100 200H35.7777L100 135.778L100 200Z"
+      ></path>
+    </svg> -->
     <section class="wrapper" data-layout="md">
       <div class="price-card-container" style="--gap: 0;">
         {
