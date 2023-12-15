@@ -885,6 +885,10 @@ Utilities for controlling how content is justified and aligned at the same time.
   --spot-color-text: var(--gray100);
 }
 
+.spot-color-transparent {
+  --spot-color: transparent;
+}
+
 .rounded {
   border-radius: var(--border-radius);
 }
