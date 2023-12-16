@@ -21,6 +21,7 @@
   position: absolute;
   top: 0px;
   bottom: 0px;
+  opacity: 0.25;
   background-repeat: no-repeat;
   background-image: radial-gradient(
       circle 800px at 700px 200px,
