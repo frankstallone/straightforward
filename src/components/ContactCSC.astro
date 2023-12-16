@@ -4,8 +4,8 @@
 
 <div class="region spot-color-blue-dark" id="contact">
   <div class="wrapper content">
-    <div class="flow prose text-color-blue300">
-      <h2>Domain authority</h2>
+    <div class="flow prose text-color-blue300 text-center mb-xl-2xl">
+      <h2 style="color: var(--blue200);">Domain authority</h2>
       <p>
         We specialize in creating domain authority on the web for a custom sign
         companies. If you have any questions about the services above or looking
@@ -14,10 +14,9 @@
     </div>
     <form
       name="main-csc"
-      class="flow"
       netlify-honeypot="bot-field"
       method="POST"
-      class="flow"
+      class="flow prose"
       data-netlify="true"
       action="/"
     >
@@ -46,11 +45,13 @@
         <label for="message">What are your goals?</label>
         <textarea name="message" id="message" rows="6" required></textarea>
       </span>
-      <button
-        type="submit"
-        class="button"
-        style="--spot-color: var(--color-loud);">Submit</button
-      >
+      <div class="stack">
+        <button
+          type="submit"
+          class="button"
+          style="--spot-color: var(--color-loud);">Submit</button
+        >
+      </div>
     </form>
   </div>
 </div>

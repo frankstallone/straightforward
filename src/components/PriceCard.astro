@@ -39,7 +39,12 @@ const bookingLink = bookingURL || '#';
 
 <div style={styles} class={classList} data-layout={dataLayout}>
   <div class="box flow prose spot-color-blue-dark">
-    <h3 class="uppercase step-0 font-weight-semibold">{heading}</h3>
+    <h3
+      class="uppercase step-0 font-weight-semibold"
+      style="color: var(--blue100);"
+    >
+      {heading}
+    </h3>
     <p>{content}</p>
     {
       monthlyPrice && (
