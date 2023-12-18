@@ -1,0 +1,111 @@
+---
+
+---
+
+<div
+  class="region relative z-0"
+  style="background-color: var(--blue1100); overflow-hidden"
+>
+  <div
+    class="absolute z-10 flex justify-start items-end overflow-hidden"
+    style="pointer-events: none; left: 0; right: 0; bottom: 0;"
+  >
+    <div
+      class="absolute z-0"
+      style="background: radial-gradient(ellipse 75% 700px at 35% calc(100% + 100px), var(--purple900) 30%, var(--purple1000) 50%, var(--purple1100) 60%, transparent 100%); transform: rotate(-10deg); bottom: -200px; left: -200px; right: -200px; top: -200px; height: 700px; pointer-events: none;"
+    >
+    </div>
+    <div
+      class="grow z-10"
+      style="height: 0.5px; background-color: var(--purple500); max-width: 1400px;"
+    >
+    </div>
+    <div id="graph">
+      <svg
+        width="100%"
+        height="100%"
+        viewBox="0 0 5730 3942"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        class="relative z-10"
+        style="height: 100%;"
+      >
+        <path
+          id="upward-background"
+          d="M5729.17,58.075l-0,3883.59l-5729.17,-0c83.3,-0 136.113,-42.709 173.783,-97.134c48.892,-70.625 72.313,-160.954 103.875,-203.262c118.888,-159.413 344.65,187.917 425.363,8.921c47.533,-105.45 124.721,-555.259 315.783,-622.671c145.259,-51.271 285.171,169.408 384.217,154.825c105.696,-15.554 458.471,-763.804 683.35,-846.633c50.312,-18.525 297.642,-125.867 442.204,-101.98c278.958,46.096 495.333,248.717 589.638,192.642c129.791,-77.171 71.283,-291.6 124.72,-419.271c34.413,-82.208 382.709,-123.458 441.025,-268.925c56.596,-141.179 208.334,-649.879 364.046,-660.262c155.692,-10.379 140.175,338.404 248.071,351.271c284.846,33.991 347.708,-265.855 385.75,-340.142c110.538,-215.796 420.642,-1008.32 1047.34,-1030.97Z"
+          style="fill:#03111d;"></path>
+        <path
+          id="upward-curve"
+          d="M0,3937.35c83.3,0 136.113,-39.087 173.783,-93.512c48.892,-70.625 72.309,-160.955 103.875,-203.267c118.888,-159.408 344.65,187.921 425.363,8.925c47.533,-105.45 124.721,-555.258 315.783,-622.675c145.259,-51.267 285.171,169.412 384.217,154.829c105.696,-15.554 458.471,-763.804 683.35,-846.633c50.312,-18.525 297.637,-125.867 442.204,-101.979c278.958,46.095 495.333,248.716 589.638,192.641c129.791,-77.171 71.283,-291.6 124.72,-419.271c34.409,-82.208 382.709,-123.458 441.025,-268.925c56.596,-141.179 208.334,-649.879 364.046,-660.262c155.692,-10.379 140.171,338.404 248.071,351.271c284.846,33.991 347.708,-265.854 385.75,-340.142c110.538,-215.796 420.642,-1008.32 1047.34,-1030.97"
+          style="fill:none;stroke:#9b85eb;stroke-width:.5px;"
+          vector-effect="non-scaling-stroke"></path>
+        <circle id="dot" cx="5700" cy="57" r="28" style="fill:#9b85eb;"
+        ></circle>
+      </svg>
+    </div>
+    <div
+      class="z-10"
+      id="mask-right"
+      style="background: var(--blue1100); height: calc(150px + 3vw);"
+    >
+      <svg
+        width="100%"
+        height="100%"
+        viewBox="0 0 80 200"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        style="height: 346px; width: 70px;"
+      >
+        <rect
+          id="mask-right"
+          x="0"
+          y="0"
+          width="80"
+          height="200"
+          style="fill:#03111d;"></rect>
+      </svg>
+    </div>
+  </div>
+  <div class="relative z-20 overflow-hidden" id="keyphrases">
+    <div id="data" class="center box relative z-10 flex">
+      <div class="flow prose spot-color-transparent">
+        <h2 class="text-color-blue200">40K</h2>
+        <p class="text-color-blue300 step--2">
+          Sign company keyphrases analyzed
+        </p>
+      </div>
+      <div class="flow prose spot-color-transparent">
+        <h2 class="text-color-blue200">500 - 100K+</h2>
+        <p class="text-color-blue300 step--2">
+          Potential monthly search volume
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  #data {
+    gap: var(--space-s-m);
+    --measure: 70ch;
+    flex-direction: column;
+  }
+  #graph {
+    height: calc(150px + 1vw);
+    transform: translateX(-2px);
+  }
+  #mask-right {
+    height: calc(150px + 1vw);
+    margin-right: -60px;
+  }
+  @media (min-width: 50em) {
+    #data {
+      flex-direction: row;
+    }
+    #graph,
+    #mask-right {
+      height: calc(150px + 3vw);
+      margin-right: 0;
+    }
+  }
+</style>
