@@ -85,12 +85,6 @@
       var(--blue1100),
       transparent
     ),
-    radial-gradient(
-      circle 600px at calc(100% - 300px) 300px,
-      var(--purple1100),
-      transparent
-    ),
-    radial-gradient(circle 750px at right center, var(--blue900), transparent),
     radial-gradient(circle 750px at right bottom, var(--blue1100), transparent),
     radial-gradient(
       circle 750px at calc(50% - 600px) calc(100% - 100px),
