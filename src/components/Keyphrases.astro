@@ -67,13 +67,12 @@
     </div>
   </div>
   <div class="relative z-20 overflow-hidden" id="keyphrases">
-    <div
-      class="center box items-center relative z-10 flex"
-      style="gap: var(--space-s-m); --measure: 70ch;"
-    >
+    <div id="data" class="center box relative z-10 flex">
       <div class="flow prose spot-color-transparent">
         <h2 class="text-color-blue200">40K</h2>
-        <p class="text-color-blue300 step--2">Keyphrases analyzed</p>
+        <p class="text-color-blue300 step--2">
+          Sign company keyphrases analyzed
+        </p>
       </div>
       <div class="flow prose spot-color-transparent">
         <h2 class="text-color-blue200">500 - 100K+</h2>
@@ -86,6 +85,11 @@
 </div>
 
 <style>
+  #data {
+    gap: var(--space-s-m);
+    --measure: 70ch;
+    flex-direction: column;
+  }
   #graph {
     height: calc(150px + 1vw);
     transform: translateX(-2px);
@@ -101,6 +105,9 @@
     }
   }
   @media (min-width: 50em) {
+    #data {
+      flex-direction: row;
+    }
     #keyphrases {
       margin-bottom: 0;
       h2 {
