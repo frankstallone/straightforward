@@ -1,11 +1,13 @@
-@media (prefers-reduced-motion: no-preference) {
-  .fade-in {
-    opacity: 0.15;
-    scale: 0.8;
-    animation: fade-in linear forwards;
-    animation-timeline: view();
-    animation-range-start: entry 20%;
-    animation-range-end: entry 30%;
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .fade-in {
+      opacity: 0.15;
+      scale: 0.8;
+      animation: fade-in linear forwards;
+      animation-timeline: view();
+      animation-range-start: entry 20%;
+      animation-range-end: entry 30%;
+    }
   }
 }
 

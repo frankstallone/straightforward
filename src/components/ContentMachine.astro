@@ -3,11 +3,7 @@ import notionCheatsheet from '../assets/sign-company-lead-generation-cheatsheet-
 import { Picture } from 'astro:assets';
 ---
 
-<div
-  class="region spot-color-blue-dark relative z-0 overflow-hidden"
-  id="notion"
->
-  <!-- <div id="orb-dark-blue"></div> -->
+<div class="region spot-color-blue-dark relative z-0 overflow-clip" id="notion">
   <svg
     viewBox="0 0 1204 1204"
     version="1.1"
@@ -215,7 +211,7 @@ import { Picture } from 'astro:assets';
     </defs>
   </svg>
   <div
-    class="wrapper text-center justify-center items-center relative z-10 overflow-hidden"
+    class="wrapper text-center justify-center items-center relative z-10 overflow-clip"
   >
     <div class="box flow prose spot-color-transparent">
       <h2 class="mx-auto" style="color: var(--blue200);">
@@ -234,7 +230,7 @@ import { Picture } from 'astro:assets';
       alt="Notion screenshots of the Content machine for Sign Companies"
       quality={80}
       format="avif"
-      class="h-auto mx-auto"
+      class="h-auto mx-auto fade-in"
       style="max-width: 80%;"
     />
   </div>
