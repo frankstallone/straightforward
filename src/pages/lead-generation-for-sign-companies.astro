@@ -84,5 +84,80 @@ const pageMeta = {
       </div>
     </section>
   </div>
-  <FAQ />
+  <div class="region spot-color-purple relative z-0">
+    <div
+      x-data="valueSlider"
+      x-init="$watch('sliderValue', () => calculateRevenue())"
+      class="wrapper flow"
+      data-layout="md"
+    >
+      <h2 class="mx-auto text-center">How can impressions turn into cash?</h2>
+      <p class="mx-auto text-center">
+        Let's make some assumptions, and quickly calculate what your monthly
+        revenue could be. We'll assume a 2% conversion rate on impressions, a
+        10% close rate on leads, and the average custom sign contract is worth
+        $70,000.
+      </p>
+      <div class="box text-center flow prose spot-color-purple-dark">
+        <div>
+          <h3 class="mx-auto">Impressions</h3>
+          <p class="mx-auto">
+            <small class="step--2"><span x-text="sliderValue"></span></small>
+          </p>
+          <input
+            class="w-full"
+            type="range"
+            x-model="sliderValue"
+            min="500"
+            max="100000"
+            step="100"
+          />
+          <p class="mx-auto">
+            <small>
+              <span x-text="leads"></span> lead(s), and <span
+                x-text="leadsClosed"></span> lead(s) closed
+            </small>
+          </p>
+        </div>
+        <div class="flow flow-space-xs">
+          <p class="mx-auto step-2">Monthly estimated value</p>
+          <h4 class="step-4"><span x-text="monthlyRevenue"></span></h4>
+        </div>
+      </div>
+    </div>
+  </div>
 </InnerLayout>
+
+<FAQ />
+
+<script>
+  import Alpine from 'alpinejs';
+
+  const formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    maximumFractionDigits: 0,
+  });
+
+  window.Alpine = Alpine;
+
+  Alpine.data('valueSlider', () => ({
+    init() {
+      this.calculateRevenue();
+    },
+    sliderValue: 5000,
+    leads: 0,
+    leadsClosed: 0,
+    averageValue: 70000,
+    monthlyRevenue: '$0',
+    calculateRevenue() {
+      this.leads = Math.round((((this.sliderValue / 100) * 2) / 100) * 7);
+      this.leadsClosed = Math.round((this.leads / 100) * 10);
+      this.monthlyRevenue = formatter.format(
+        Math.round(this.leadsClosed * this.averageValue),
+      );
+    },
+  }));
+
+  Alpine.start();
+</script>
