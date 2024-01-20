@@ -6,6 +6,7 @@ import PriceCard from '../components/PriceCard.astro';
 import FAQ from '../components/FAQ.astro';
 import ContentMachine from '../components/ContentMachine.astro';
 import Keyphrases from '../components/Keyphrases.astro';
+import EstimatedRevenue from '../components/EstimatedRevenue.astro';
 
 const cards = [
   {
@@ -58,6 +59,7 @@ const pageMeta = {
 
 <InnerLayout meta={pageMeta} header={customSignHeader}>
   <ContentMachine />
+  <EstimatedRevenue />
   <Keyphrases />
   <div class="relative">
     <Benefits />
@@ -84,80 +86,5 @@ const pageMeta = {
       </div>
     </section>
   </div>
-  <div class="region spot-color-purple relative z-0" id="estimate">
-    <div
-      x-data="valueSlider"
-      x-init="$watch('sliderValue', () => calculateRevenue())"
-      class="wrapper flow"
-      data-layout="md"
-    >
-      <h2 class="mx-auto text-center">How can impressions turn into cash?</h2>
-      <p class="mx-auto text-center">
-        Let's make some assumptions, and quickly calculate what your monthly
-        revenue could be. We'll assume a 2% conversion rate on impressions, a
-        10% close rate on leads, and the average custom sign contract is worth
-        $70,000.
-      </p>
-      <div class="switcher">
-        <div class="box text-center flow spot-color-purple-dark">
-          <h3 class="mx-auto">Impressions</h3>
-          <input
-            class="w-full"
-            type="range"
-            x-model="sliderValue"
-            min="500"
-            max="100000"
-            step="100"
-          />
-          <p class="mx-auto">
-            <small>
-              <span x-text="sliderValue"></span> impression equates to <span
-                x-text="leads"></span> leads, and <span x-text="leadsClosed"
-              ></span> leads closed.
-            </small>
-          </p>
-        </div>
-        <div class="box text-center flow spot-color-purple-dark">
-          <div class="flow prose">
-            <h3 class="mx-auto mb-m-l">Estimated revenue</h3>
-            <h4 class="step-4"><span x-text="monthlyRevenue"></span></h4>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </InnerLayout>
-
 <FAQ />
-
-<script>
-  import Alpine from 'alpinejs';
-
-  const formatter = new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-    maximumFractionDigits: 0,
-  });
-
-  window.Alpine = Alpine;
-
-  Alpine.data('valueSlider', () => ({
-    init() {
-      this.calculateRevenue();
-    },
-    sliderValue: 15000,
-    leads: 0,
-    leadsClosed: 0,
-    averageValue: 70000,
-    monthlyRevenue: '$0',
-    calculateRevenue() {
-      this.leads = Math.round((((this.sliderValue / 100) * 2) / 100) * 7);
-      this.leadsClosed = Math.round((this.leads / 100) * 10);
-      this.monthlyRevenue = formatter.format(
-        Math.round(this.leadsClosed * this.averageValue),
-      );
-    },
-  }));
-
-  Alpine.start();
-</script>
