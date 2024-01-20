@@ -240,3 +240,12 @@ footer a:active {
   text-decoration: none;
   box-shadow: inset 200px 0 0 0 var(--yellow300);
 }
+
+#hero-title {
+  font-size: var(--step-6);
+}
+@media (min-width: 50em) {
+  #hero-title {
+    font-size: 8vw;
+  }
+}
