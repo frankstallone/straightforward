@@ -98,14 +98,11 @@ const pageMeta = {
         10% close rate on leads, and the average custom sign contract is worth
         $70,000.
       </p>
-      <div class="box text-center flow prose spot-color-purple-dark">
-        <div>
+      <div class="switcher">
+        <div class="box text-center flow spot-color-purple-dark">
           <h3 class="mx-auto">Impressions</h3>
-          <p class="mx-auto">
-            <small class="step--2"><span x-text="sliderValue"></span></small>
-          </p>
           <input
-            class="w-full my-m-l"
+            class="w-full"
             type="range"
             x-model="sliderValue"
             min="500"
@@ -114,14 +111,17 @@ const pageMeta = {
           />
           <p class="mx-auto">
             <small>
-              Equates to <span x-text="leads"></span> leads, and <span
-                x-text="leadsClosed"></span> leads closed.
+              <span x-text="sliderValue"></span> impression equates to <span
+                x-text="leads"></span> leads, and <span x-text="leadsClosed"
+              ></span> leads closed.
             </small>
           </p>
         </div>
-        <div class="flow flow-space-xs">
-          <p class="mx-auto step-2">Monthly estimated revenue</p>
-          <h4 class="step-4"><span x-text="monthlyRevenue"></span></h4>
+        <div class="box text-center flow spot-color-purple-dark">
+          <div class="flow flow-space-xs">
+            <p class="mx-auto step-2">Monthly estimated revenue</p>
+            <h4 class="step-4"><span x-text="monthlyRevenue"></span></h4>
+          </div>
         </div>
       </div>
     </div>
