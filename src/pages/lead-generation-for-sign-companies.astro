@@ -5,7 +5,6 @@ import SpotsAvailable from '../components/SpotsAvailable.astro';
 import PriceCard from '../components/PriceCard.astro';
 import FAQ from '../components/FAQ.astro';
 import ContentMachine from '../components/ContentMachine.astro';
-import Keyphrases from '../components/Keyphrases.astro';
 import EstimatedRevenue from '../components/EstimatedRevenue.astro';
 
 const cards = [
@@ -60,7 +59,6 @@ const pageMeta = {
 <InnerLayout meta={pageMeta} header={customSignHeader}>
   <ContentMachine />
   <EstimatedRevenue />
-  <Keyphrases />
   <div class="relative">
     <Benefits />
     <SpotsAvailable />
