@@ -78,7 +78,7 @@ const pageMeta = {
     >
       <div
         x-data="valueSlider"
-        x-init="$watch('sliderValue', () => calculateRevenue())"
+        x-init="$watch('averageValue, sliderValue', () => calculateRevenue())"
         class="wrapper flow prose relative z-10"
         data-layout="md"
       >
@@ -89,6 +89,15 @@ const pageMeta = {
 
         <div class="switcher">
           <div class="box text-center flow spot-color-purple flow-space-m">
+            <h3 class="mx-auto">Average price</h3>
+            <input
+              class="w-full mt-m"
+              type="range"
+              x-model="averageValue"
+              min="500"
+              max="250000"
+              step="100"
+            />
             <h3 class="mx-auto">Impressions</h3>
             <input
               class="w-full mt-m"
@@ -100,8 +109,9 @@ const pageMeta = {
             />
             <p class="mx-auto">
               <span x-text="prettyImpressions"></span> impressions, <span
-                x-text="leads"></span> leads, and <span x-text="leadsClosed"
-              ></span> leads closed.
+                x-text="leads"></span> leads, <span x-text="leadsClosed"></span>
+               leads closed at an average price of $<span
+                x-text="prettyAverageValue"></span>.
             </p>
           </div>
           <div
@@ -114,8 +124,8 @@ const pageMeta = {
           </div>
         </div>
         <p class="mx-auto text-center step--2">
-          † Assuming a 2% conversion rate on impressions, a 10% close rate on
-          leads, and the average custom sign contract is worth $70,000.
+          † Assuming a 2% conversion rate on impressions, and a 10% close rate
+          on leads.
         </p>
       </div>
     </div>
@@ -179,9 +189,10 @@ const pageMeta = {
       },
       sliderValue: '15000',
       prettyImpressions: '0',
+      prettyAverageValue: '0',
       leads: 0,
       leadsClosed: 0,
-      averageValue: 70000,
+      averageValue: '70000',
       monthlyRevenue: '$0',
       calculateRevenue() {
         this.leads = Math.round(
@@ -189,9 +200,12 @@ const pageMeta = {
         );
         this.leadsClosed = Math.round((this.leads / 100) * 10);
         this.monthlyRevenue = formatter.format(
-          Math.round(this.leadsClosed * this.averageValue),
+          Math.round(this.leadsClosed * Number(this.averageValue)),
         );
         this.prettyImpressions = Number(this.sliderValue).toLocaleString(
+          'en-US',
+        );
+        this.prettyAverageValue = Number(this.averageValue).toLocaleString(
           'en-US',
         );
       },
