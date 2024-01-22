@@ -62,20 +62,52 @@
       </svg>
     </div>
   </div>
-  <div class="region relative z-20 overflow-hidden" id="keyphrases">
-    <div id="data" class="center box relative z-10 flex">
-      <div class="flow prose spot-color-transparent">
-        <h2 class="text-color-blue200">40K</h2>
-        <p class="text-color-blue300 step--1 fade-in">
-          Sign company keyphrases analyzed
-        </p>
+  <div
+    class="region relative z-10 overflow-clip"
+    style="color: var(--blue100);"
+    id="estimate"
+  >
+    <div
+      x-data="valueSlider"
+      x-init="$watch('sliderValue', () => calculateRevenue())"
+      class="wrapper flow prose relative z-10"
+      data-layout="md"
+    >
+      <h2 class="mx-auto text-center">Impressions to cash</h2>
+      <p class="mx-auto text-center">
+        Calculate your estimated revenue based on the impressions.†
+      </p>
+
+      <div class="switcher">
+        <div class="box text-center flow spot-color-purple flow-space-m">
+          <h3 class="mx-auto">Impressions</h3>
+          <input
+            class="w-full mt-m"
+            type="range"
+            x-model="sliderValue"
+            min="500"
+            max="250000"
+            step="100"
+          />
+          <p class="mx-auto">
+            <span x-text="prettyImpressions"></span> impressions, <span
+              x-text="leads"></span> leads, and <span x-text="leadsClosed"
+            ></span> leads closed.
+          </p>
+        </div>
+        <div
+          class="box text-center spot-color-purple flex flex-col justify-center items-center"
+        >
+          <div class="flow prose">
+            <h3 class="mx-auto">Estimated revenue</h3>
+            <h4 class="step-4"><span x-text="monthlyRevenue"></span></h4>
+          </div>
+        </div>
       </div>
-      <div class="flow prose spot-color-transparent">
-        <h2 class="text-color-blue200">500 - 100K+</h2>
-        <p class="text-color-blue300 step--1">
-          Potential monthly visitors per long form content idea
-        </p>
-      </div>
+      <p class="mx-auto text-center step--2">
+        † Assuming a 2% conversion rate on impressions, a 10% close rate on
+        leads, and the average custom sign contract is worth $70,000.
+      </p>
     </div>
   </div>
 </div>
@@ -120,3 +152,39 @@
     }
   }
 </style>
+
+<script>
+  import Alpine from 'alpinejs';
+
+  const formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    maximumFractionDigits: 0,
+  });
+
+  window.Alpine = Alpine;
+
+  Alpine.data('valueSlider', () => ({
+    init() {
+      this.calculateRevenue();
+    },
+    sliderValue: '15000',
+    prettyImpressions: '0',
+    leads: 0,
+    leadsClosed: 0,
+    averageValue: 70000,
+    monthlyRevenue: '$0',
+    calculateRevenue() {
+      this.leads = Math.round(
+        (((Number(this.sliderValue) / 100) * 2) / 100) * 7,
+      );
+      this.leadsClosed = Math.round((this.leads / 100) * 10);
+      this.monthlyRevenue = formatter.format(
+        Math.round(this.leadsClosed * this.averageValue),
+      );
+      this.prettyImpressions = Number(this.sliderValue).toLocaleString('en-US');
+    },
+  }));
+
+  Alpine.start();
+</script>
