@@ -63,7 +63,7 @@
     </div>
   </div>
   <div
-    class="region relative z-0 overflow-clip"
+    class="region relative z-10 overflow-clip"
     style="color: var(--blue100);"
     id="estimate"
   >
@@ -79,10 +79,10 @@
       </p>
 
       <div class="switcher">
-        <div class="box text-center flow spot-color-purple">
+        <div class="box text-center flow spot-color-purple flow-space-m">
           <h3 class="mx-auto">Impressions</h3>
           <input
-            class="w-full"
+            class="w-full mt-m"
             type="range"
             x-model="sliderValue"
             min="500"
@@ -90,14 +90,16 @@
             step="100"
           />
           <p class="mx-auto">
-            <span x-text="prettyImpressions"></span> impression equates to <span
+            <span x-text="prettyImpressions"></span> impressions, <span
               x-text="leads"></span> leads, and <span x-text="leadsClosed"
             ></span> leads closed.
           </p>
         </div>
-        <div class="box text-center flow spot-color-purple">
+        <div
+          class="box text-center spot-color-purple flex flex-col justify-center items-center"
+        >
           <div class="flow prose">
-            <h3 class="mx-auto mb-m-l">Estimated revenue</h3>
+            <h3 class="mx-auto">Estimated revenue</h3>
             <h4 class="step-4"><span x-text="monthlyRevenue"></span></h4>
           </div>
         </div>
