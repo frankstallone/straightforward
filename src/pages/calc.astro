@@ -89,7 +89,9 @@ const pageMeta = {
         <div class="switcher">
           <div class="box text-center flow spot-color-purple flow-space-m">
             <h3 class="mx-auto">Average price</h3>
-            <h4>$<span x-text="prettyAverageValue"></span></h4>
+            <h4 class="mt-2xs-xs">
+              $<span x-text="prettyAverageValue"></span>
+            </h4>
             <input
               class="w-full mt-m"
               type="range"
@@ -99,7 +101,7 @@ const pageMeta = {
               step="100"
             />
             <h3 class="mx-auto">Impressions</h3>
-            <h4 x-text="prettyImpressions"></h4>
+            <h4 x-text="prettyImpressions" class="mt-2xs-xs"></h4>
             <input
               class="w-full mt-m"
               type="range"
