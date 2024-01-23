@@ -79,7 +79,6 @@ const pageMeta = {
         x-data="valueSlider"
         x-init="$watch('averageValue, sliderValue', () => calculateRevenue())"
         class="wrapper flow prose relative z-10"
-        data-layout="md"
       >
         <h2 class="mx-auto text-center">Impressions to cash</h2>
         <p class="mx-auto text-center">
@@ -89,7 +88,7 @@ const pageMeta = {
         <div class="switcher">
           <div class="box text-center flow spot-color-purple flow-space-m">
             <h3 class="mx-auto">
-              $<span x-text="prettyAverageValue"></span> avg. conversion
+              $<span x-text="prettyAverageValue"></span> LTV
             </h3>
             <h4 class="mt-2xs-xs"></h4>
             <input
