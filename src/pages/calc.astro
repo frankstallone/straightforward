@@ -89,6 +89,7 @@ const pageMeta = {
         <div class="switcher">
           <div class="box text-center flow spot-color-purple flow-space-m">
             <h3 class="mx-auto">Average price</h3>
+            <h4>$<span x-text="prettyAverageValue"></span></h4>
             <input
               class="w-full mt-m"
               type="range"
@@ -98,6 +99,7 @@ const pageMeta = {
               step="100"
             />
             <h3 class="mx-auto">Impressions</h3>
+            <h4 x-text="prettyImpressions"></h4>
             <input
               class="w-full mt-m"
               type="range"
@@ -106,12 +108,6 @@ const pageMeta = {
               max="250000"
               step="100"
             />
-            <p class="mx-auto">
-              <span x-text="prettyImpressions"></span> impressions, <span
-                x-text="leads"></span> leads, <span x-text="leadsClosed"></span>
-               leads closed at an average price of $<span
-                x-text="prettyAverageValue"></span>.
-            </p>
           </div>
           <div
             class="box text-center spot-color-purple flex flex-col justify-center items-center"
@@ -119,6 +115,12 @@ const pageMeta = {
             <div class="flow prose">
               <h3 class="mx-auto">Estimated revenue</h3>
               <h4 class="step-4"><span x-text="monthlyRevenue"></span></h4>
+              <p class="mx-auto">
+                <span x-text="leads"></span> leads, <span x-text="leadsClosed"
+                ></span>
+                 leads closed at an average price of $<span
+                  x-text="prettyAverageValue"></span>.
+              </p>
             </div>
           </div>
         </div>
