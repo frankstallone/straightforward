@@ -91,7 +91,9 @@ const pageMeta = {
               $<span x-text="prettyAverageValue"></span> LTV
             </h3>
             <h4 class="mt-2xs-xs"></h4>
+            <label for="averageValue" class="sr-only">Average value</label>
             <input
+              id="averageValue"
               class="w-full mt-m"
               type="range"
               x-model="averageValue"
@@ -102,7 +104,9 @@ const pageMeta = {
             <h3 class="mx-auto">
               <span x-text="prettyImpressions"></span> impressions
             </h3>
+            <label for="sliderValue" class="sr-only">Impressions</label>
             <input
+              id="sliderValue"
               class="w-full mt-m"
               type="range"
               x-model="sliderValue"
@@ -126,8 +130,15 @@ const pageMeta = {
           </div>
         </div>
         <p class="mx-auto text-center step--2">
-          † Assuming a 2% conversion rate on impressions, and a 10% close rate
-          on leads.
+          † Assuming a 2% conversion rate on impressions <a
+            href="https://blog.hubspot.com/marketing/landing-page-stats#:~:text=The%20average%20landing%20page%20conversion,you%20and%20your%20target%20audience"
+            target="_blank">¹</a
+          >
+          <a
+            href="https://www.outerboxdesign.com/web-design-articles/ctr-based-on-organic-position"
+            target="_blank">²</a
+          >, a 10% close rate on leads, and the average custom sign contract is
+          worth $70,000.
         </p>
       </div>
     </div>

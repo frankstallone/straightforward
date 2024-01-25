@@ -81,7 +81,9 @@
       <div class="switcher">
         <div class="box text-center flow spot-color-purple flow-space-m">
           <h3 class="mx-auto">Impressions</h3>
+          <label for="sliderValue" class="sr-only">Impressions</label>
           <input
+            id="sliderValue"
             class="w-full mt-m"
             type="range"
             x-model="sliderValue"
@@ -105,8 +107,15 @@
         </div>
       </div>
       <p class="mx-auto text-center step--2">
-        † Assuming a 2% conversion rate on impressions, a 10% close rate on
-        leads, and the average custom sign contract is worth $70,000.
+        † Assuming a 2% conversion rate on impressions <a
+          href="https://blog.hubspot.com/marketing/landing-page-stats#:~:text=The%20average%20landing%20page%20conversion,you%20and%20your%20target%20audience"
+          target="_blank">¹</a
+        >
+        <a
+          href="https://www.outerboxdesign.com/web-design-articles/ctr-based-on-organic-position"
+          target="_blank">²</a
+        >, a 10% close rate on leads, and the average custom sign contract is
+        worth $70,000.
       </p>
     </div>
   </div>
@@ -175,9 +184,12 @@
     averageValue: 70000,
     monthlyRevenue: '$0',
     calculateRevenue() {
+      // Clickthrough rate of 2%
+      // Page conversion rate of 7%
       this.leads = Math.round(
         (((Number(this.sliderValue) / 100) * 2) / 100) * 7,
       );
+      // Close rate of 10%
       this.leadsClosed = Math.round((this.leads / 100) * 10);
       this.monthlyRevenue = formatter.format(
         Math.round(this.leadsClosed * this.averageValue),
