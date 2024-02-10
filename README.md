@@ -2,7 +2,7 @@
 
 # Straightfoward Growth
 
-The landing page for the Straightfoward Growth consulting team.
+The landing page for the [Straightfoward Growth](https://straightforwardgrowth.com).
 
 ## 🚀 Project Structure
 
@@ -11,7 +11,7 @@ Inside of your Astro project, you'll see the following folders and files:
 ```text
 /
 ├── public/
-│   └── favicon.svg
+│   └── robots.txt
 ├── src/
 │   ├── assets/
 │   ├── components/
