@@ -9,12 +9,28 @@ import EstimatedRevenue from '../components/EstimatedRevenue.astro';
 
 const cards = [
   {
-    heading: 'Straightforward',
+    heading: 'Straightforward Max',
     content:
-      'Are you already writing blog articles, and other landing pages? Supercharge your existing team with data-based and insight validated high value keyphrase content ideas to create content that connects.',
+      "Writing is hard. Get everything in the Straightforward+ package but with added content creation. Give us your brand persona, brand language, and brand personality and we'll marry that to our high value keyphrase content recommendations.",
+    benefits: [
+      'Everything in the Straightforward+ package',
+      'Content creation, with unlimited revisions',
+      'Unlimited stock photography',
+      'Implementation on most platforms',
+    ],
+    monthlyPrice: '6,000',
+    buttonText: 'Coming soon',
+    buttonURL: '#',
+    comingSoon: true,
+  },
+  {
+    heading: 'Straightforward+',
+    content:
+      'Supercharge your existing team with even more data-based and insight validated high value keyphrase content ideas to create content.',
     benefits: [
       '3 content ideas',
       'High rank examples',
+      'Analysis findings',
       'Best practices & wireframes',
       'Distribution recommendations',
       'Content machine framework',
@@ -23,21 +39,26 @@ const cards = [
       'Cancel anytime',
     ],
     monthlyPrice: '2,000',
-    buttonURL: 'https://buy.stripe.com/cN217FgyTcfhcN2288',
     bookingLink: 'https://tidycal.com/19qz8xm/straightfoward-package',
+    buttonURL: 'https://buy.stripe.com/cN217FgyTcfhcN2288',
   },
   {
-    heading: 'Straightforward +',
+    heading: 'Straightforward',
     content:
-      "Writing is hard. Get everything in the straightforward package but with added content creation. Give us your brand persona, brand language, and brand personality and we'll marry that to our high value keyphrase content recommendations.",
+      'Are you already writing blog articles, and other landing pages? Supercharge your existing team with data-based and insight validated high value keyphrase content.',
     benefits: [
-      'Everything in the Straightforward package',
-      'Content creation, with unlimited revisions',
-      'Unlimited stock photography',
-      'Implementation on most platforms',
+      '1 content idea',
+      'High rank examples',
+      'Analysis findings',
+      'Best practices & wireframes',
+      'Distribution recommendations',
+      'Content machine framework',
+      'Average 24-hour delivery',
+      'Easy credit-card payments',
+      'Cancel anytime',
     ],
-    monthlyPrice: '6,000',
-    buttonText: 'Coming soon',
+    monthlyPrice: '1,700',
+    bookingLink: 'https://tidycal.com/19qz8xm/straightfoward-package',
     buttonURL: '#',
   },
 ];
@@ -67,8 +88,8 @@ const pageMeta = {
   </div>
   <div class="region spot-color-purple relative z-0 overflow-hidden">
     <div id="orbs"></div>
-    <section class="wrapper" data-layout="md">
-      <div class="price-card-container" style="--gap: 0;">
+    <section class="wrapper">
+      <div class="price-card-container">
         {
           cards.map((card, index) => (
             <PriceCard
@@ -80,6 +101,7 @@ const pageMeta = {
               benefits={card.benefits}
               monthlyPrice={card.monthlyPrice}
               bookingURL={card.bookingLink}
+              comingSoon={card.comingSoon}
             />
           ))
         }
