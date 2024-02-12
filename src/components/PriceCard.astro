@@ -11,7 +11,7 @@ export interface Props {
   dataLayout?: 'full';
   buttonText?: string;
   buttonURL?: string;
-  index: number;
+  index?: number;
   benefits: string[];
   bookingURL?: string;
   comingSoon?: boolean;
@@ -29,7 +29,6 @@ const {
   buttonURL,
   bookingURL,
   comingSoon,
-  index,
 } = Astro.props;
 
 const classList = `price-card flex ${classes ? classes : ''}`;
