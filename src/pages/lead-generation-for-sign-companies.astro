@@ -6,15 +6,31 @@ import PriceCard from '../components/PriceCard.astro';
 import FAQ from '../components/FAQ.astro';
 import ContentMachine from '../components/ContentMachine.astro';
 import EstimatedRevenue from '../components/EstimatedRevenue.astro';
+import type { Props as PriceProps } from '../components/PriceCard.astro';
 
-const cards = [
+const cards: PriceProps[] = [
   {
-    heading: 'Straightforward',
+    heading: 'Straightforward Max',
     content:
-      'Are you already writing blog articles, and other landing pages? Supercharge your existing team with data-based and insight validated high value keyphrase content ideas to create content that connects.',
+      "Writing is hard. Get everything in the Straightforward+ package but with added content creation. Give us your brand persona, brand language, and brand personality and we'll marry that to our high value keyphrase content recommendations.",
+    benefits: [
+      'Everything in the Straightforward+ package',
+      'Content creation, with unlimited revisions',
+      'Unlimited stock photography',
+      'Implementation on most platforms',
+    ],
+    monthlyPrice: '6,000',
+    bookingURL: 'https://tidycal.com/19qz8xm/straightfoward-package',
+    buttonURL: 'https://buy.stripe.com/28o8A782ngvx28o6oq',
+  },
+  {
+    heading: 'Straightforward+',
+    content:
+      'Supercharge your existing team with even more data-based and insight validated high value keyphrase content ideas to create content.',
     benefits: [
       '3 content ideas',
       'High rank examples',
+      'Analysis findings',
       'Best practices & wireframes',
       'Distribution recommendations',
       'Content machine framework',
@@ -23,22 +39,26 @@ const cards = [
       'Cancel anytime',
     ],
     monthlyPrice: '2,000',
+    bookingURL: 'https://tidycal.com/19qz8xm/straightfoward-package',
     buttonURL: 'https://buy.stripe.com/cN217FgyTcfhcN2288',
-    bookingLink: 'https://tidycal.com/19qz8xm/straightfoward-package',
   },
   {
-    heading: 'Straightforward +',
+    heading: 'Straightforward',
     content:
-      "Writing is hard. Get everything in the straightforward package but with added content creation. Give us your brand persona, brand language, and brand personality and we'll marry that to our high value keyphrase content recommendations.",
+      'Are you already writing blog articles, and other landing pages? Supercharge your existing team with data-based and insight validated high value keyphrase content.',
     benefits: [
-      'Everything in the Straightforward package',
-      'Content creation, with unlimited revisions',
-      'Unlimited stock photography',
-      'Implementation on most platforms',
+      '1 content idea',
+      'High rank examples',
+      'Analysis findings',
+      'Distribution recommendations',
+      'Content machine framework',
+      'Average 24-hour delivery',
+      'Easy credit-card payments',
+      'Cancel anytime',
     ],
-    monthlyPrice: '6,000',
-    buttonText: 'Coming soon',
-    buttonURL: '#',
+    monthlyPrice: '1,000',
+    bookingURL: 'https://tidycal.com/19qz8xm/straightfoward-package',
+    buttonURL: 'https://buy.stripe.com/00g5nV3M74MP9AQbIJ',
   },
 ];
 
@@ -67,19 +87,20 @@ const pageMeta = {
   </div>
   <div class="region spot-color-purple relative z-0 overflow-hidden">
     <div id="orbs"></div>
-    <section class="wrapper" data-layout="md">
-      <div class="price-card-container" style="--gap: 0;">
+    <section class="wrapper">
+      <div class="price-card-container">
         {
           cards.map((card, index) => (
             <PriceCard
               index={index}
               heading={card.heading}
               content={card.content}
-              buttonText={card.buttonText}
+              buttonText={card.buttonText ? card.buttonText : undefined}
               buttonURL={card.buttonURL}
               benefits={card.benefits}
               monthlyPrice={card.monthlyPrice}
-              bookingURL={card.bookingLink}
+              bookingURL={card.bookingURL}
+              comingSoon={card.comingSoon ? card.comingSoon : undefined}
             />
           ))
         }

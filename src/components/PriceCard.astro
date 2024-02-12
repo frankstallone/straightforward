@@ -11,9 +11,10 @@ export interface Props {
   dataLayout?: 'full';
   buttonText?: string;
   buttonURL?: string;
-  index: number;
+  index?: number;
   benefits: string[];
   bookingURL?: string;
+  comingSoon?: boolean;
 }
 
 const {
@@ -27,61 +28,69 @@ const {
   buttonText,
   buttonURL,
   bookingURL,
-  index,
+  comingSoon,
 } = Astro.props;
 
-const classList = `price-card ${classes}`;
-const buttonStyles = `button ${index === 1 ? 'button-disabled' : ''}`;
+const classList = `price-card flex ${classes ? classes : ''}`;
+const buttonStyles = `button ${comingSoon ? 'button-disabled' : ''}`;
 const button = buttonText || 'Get Started';
-const styles = `${index === 1 ? 'transform: scale(0.95);' : ''} ${style}`;
+const styles = `${style ? style : ''}`;
 const bookingLink = bookingURL || '#';
 ---
 
 <div style={styles} class={classList} data-layout={dataLayout}>
-  <div class="box flow prose spot-color-blue-dark">
-    <h3
-      class="uppercase step-0 font-weight-semibold"
-      style="color: var(--blue100);"
-    >
-      {heading}
-    </h3>
-    <p>{content}</p>
-    {
-      monthlyPrice && (
-        <p class="font-weight-bold">
-          <span class="step-2">${monthlyPrice}</span>{' '}
-          <span style="color: var(--blue500);">/month</span>
-        </p>
-      )
-    }
-    {
-      buttonURL && (
-        <a href={buttonURL} class={buttonStyles}>
-          {button}
-        </a>
-      )
-    }
-    <p>
-      <small class="font-weight-semibold uppercase">What's included:</small>
-    </p>
-    <ul role="list" class="price-card-item">
+  <div class="box flow flex flex-col justify-between spot-color-blue-dark">
+    <div class="flow prose">
+      <h3
+        class="uppercase step-0 font-weight-semibold"
+        style="color: var(--blue100);"
+      >
+        {heading}
+      </h3>
+      <p>{content}</p>
+    </div>
+    <div class="flow prose">
       {
-        benefits.map((benefit) => (
-          <li>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="16"
-              width="14"
-              viewBox="0 0 448 512"
-              style="fill: currentColor"
-            >
-              <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-            </svg>
-            {benefit}
-          </li>
-        ))
+        monthlyPrice && (
+          <p class="font-weight-bold">
+            <span class="step-2">${monthlyPrice}</span>{' '}
+            <span style="color: var(--blue500);">/month</span>
+          </p>
+        )
       }
-    </ul>
-    <p class="text-center"><a href={bookingLink}>Book enrollment call</a></p>
+      {
+        buttonURL && (
+          <a
+            href={buttonURL}
+            class={buttonStyles}
+            style="margin-block-start: var(--space-xs);"
+          >
+            {button}
+          </a>
+        )
+      }
+      <p>
+        <small class="font-weight-semibold uppercase">What's included:</small>
+      </p>
+      <ul role="list" class="price-card-item">
+        {
+          benefits.map((benefit) => (
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="16"
+                width="14"
+                viewBox="0 0 448 512"
+                style="fill: currentColor"
+              >
+                <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+              </svg>
+              {benefit}
+            </li>
+          ))
+        }
+      </ul>
+      <p class="text-center"><a href={bookingLink}>Book enrollment call</a></p>
+    </div>
   </div>
 </div>
