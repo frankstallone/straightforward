@@ -97,9 +97,10 @@ const ogImage = meta.image ? meta.image : '/media/og-image@2x.png';
   <!-- Google tag (gtag.js) -->
   <script
     type="text/partytown"
+    is:inline
     async
     src="https://www.googletagmanager.com/gtag/js?id=G-C1M7VDFL5R"></script>
-  <script type="text/partytown">
+  <script type="text/partytown" is:inline>
     window.dataLayer = window.dataLayer || [];
     function gtag() {
       dataLayer.push(arguments);
@@ -109,7 +110,7 @@ const ogImage = meta.image ? meta.image : '/media/og-image@2x.png';
     gtag('config', 'G-C1M7VDFL5R');
   </script>
   <!-- Hotjar Tracking Code for Straightforward Growth -->
-  <script type="text/partytown">
+  <script type="text/partytown" is:inline>
     (function (h, o, t, j, a, r) {
       h.hj =
         h.hj ||
