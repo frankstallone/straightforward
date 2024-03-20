@@ -31,6 +31,7 @@
   aspect-ratio: 16 / 9;
   border-radius: var(--border-radius);
 }
+
 .price-card-item svg {
   height: 0.75lh;
   position: absolute;
@@ -47,12 +48,15 @@
 
 .price-card .button {
   font-weight: var(--font-semibold-weight);
-  background-color: var(--yellow300);
-  color: var(--yellow1100);
+  background-color: var(--purple1000);
+  color: var(--purple200);
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 .price-card .button:hover {
-  background-color: var(--yellow400);
+  background-color: var(--purple900);
 }
 .price-card .button:focus {
-  outline-color: var(--yellow300);
+  outline-color: var(--purple800);
 }
