@@ -52,7 +52,13 @@ const customSignHeading = {
         </p>
         <span class="stack">
           <label for="email">Preferred email for Notion</label>
-          <input id="email" name="email" type="email" required />
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            aria-required="true"
+          />
         </span>
         <button type="submit" class="button">Submit</button>
       </form>
@@ -67,10 +73,10 @@ const customSignHeading = {
   const notionShareEmail = searchParams.get('notion-share-email');
   // Grab the form
   const notionShareEmailForm = document.getElementById(
-    'notion-share-email',
+    'notion-share-email'
   ) as HTMLFormElement;
   const notionShareMsg = document.getElementById(
-    'notion-share-update-msg',
+    'notion-share-update-msg'
   ) as HTMLParagraphElement;
 
   // If the form was just subtmitted, hide it
@@ -86,7 +92,7 @@ const customSignHeading = {
     const session_id = searchParams.get('session_id');
     // Grab form input
     const sessionIdInput = document.getElementById(
-      'sessionId',
+      'sessionId'
     ) as HTMLInputElement;
     // Update form input value
     if (sessionIdInput) {
