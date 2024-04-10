@@ -43,20 +43,20 @@
 .price-card-item li {
   position: relative;
   padding-inline-start: var(--space-m);
-  font-size: var(--step--1);
+  font-size: var(--size-step-000);
 }
 
 .price-card .button {
-  font-weight: var(--font-semibold-weight);
-  background-color: var(--purple1000);
-  color: var(--purple200);
+  font-weight: var(--font-semibold);
+  background-color: var(--color-indigo-1000);
+  color: var(--color-indigo-200);
   box-shadow:
     0 10px 15px -3px rgb(0 0 0 / 0.1),
     0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 .price-card .button:hover {
-  background-color: var(--purple900);
+  background-color: var(--color-indigo-900);
 }
 .price-card .button:focus {
-  outline-color: var(--purple800);
+  outline-color: var(--color-indigo-800);
 }

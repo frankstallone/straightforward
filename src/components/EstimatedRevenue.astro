@@ -2,22 +2,19 @@
 
 ---
 
-<div
-  class="region relative z-0 overflow-hidden"
-  style="background-color: var(--color-blue-1000);"
->
+<div class="region relative z-0 overflow-hidden bg-indigo-1000">
   <div
     class="absolute z-10 flex justify-start items-end overflow-hidden"
     style="pointer-events: none; left: 0; right: 0; bottom: 0;"
   >
     <div
       class="absolute z-0"
-      style="background: radial-gradient(ellipse 75% 700px at 35% calc(100% + 100px), var(--color-indigo-800) 30%, var(--color-indigo-900) 50%, var(--color-indigo-1000) 60%, transparent 100%); transform: rotate(-10deg); bottom: -200px; left: -200px; right: -200px; top: -200px; height: 700px; pointer-events: none;"
+      style="background: radial-gradient(ellipse 75% 700px at 35% calc(100% + 100px), var(--color-indigo-vivid-700) 30%, var(--color-indigo-vivid-800) 50%, var(--color-indigo-vivid-900) 60%, transparent 100%); transform: rotate(-10deg); bottom: -200px; left: -200px; right: -200px; top: -200px; height: 700px; pointer-events: none;"
     >
     </div>
     <div
       class="grow z-10"
-      style="height: 0.5px; background-color: var(--color-indigo-500); max-width: 1400px;"
+      style="height: 0.5px; background-color: var(--color-indigo-vivid-500); max-width: 1400px;"
     >
     </div>
     <div id="graph">
@@ -33,21 +30,18 @@
         <path
           id="upward-background"
           d="M5729.17,58.075l-0,3883.59l-5729.17,-0c83.3,-0 136.113,-42.709 173.783,-97.134c48.892,-70.625 72.313,-160.954 103.875,-203.262c118.888,-159.413 344.65,187.917 425.363,8.921c47.533,-105.45 124.721,-555.259 315.783,-622.671c145.259,-51.271 285.171,169.408 384.217,154.825c105.696,-15.554 458.471,-763.804 683.35,-846.633c50.312,-18.525 297.642,-125.867 442.204,-101.98c278.958,46.096 495.333,248.717 589.638,192.642c129.791,-77.171 71.283,-291.6 124.72,-419.271c34.413,-82.208 382.709,-123.458 441.025,-268.925c56.596,-141.179 208.334,-649.879 364.046,-660.262c155.692,-10.379 140.175,338.404 248.071,351.271c284.846,33.991 347.708,-265.855 385.75,-340.142c110.538,-215.796 420.642,-1008.32 1047.34,-1030.97Z"
-          style="fill:#03111d;"></path>
+          class="fill-indigo-1000"></path>
         <path
           id="upward-curve"
           d="M0,3937.35c83.3,0 136.113,-39.087 173.783,-93.512c48.892,-70.625 72.309,-160.955 103.875,-203.267c118.888,-159.408 344.65,187.921 425.363,8.925c47.533,-105.45 124.721,-555.258 315.783,-622.675c145.259,-51.267 285.171,169.412 384.217,154.829c105.696,-15.554 458.471,-763.804 683.35,-846.633c50.312,-18.525 297.637,-125.867 442.204,-101.979c278.958,46.095 495.333,248.716 589.638,192.641c129.791,-77.171 71.283,-291.6 124.72,-419.271c34.409,-82.208 382.709,-123.458 441.025,-268.925c56.596,-141.179 208.334,-649.879 364.046,-660.262c155.692,-10.379 140.171,338.404 248.071,351.271c284.846,33.991 347.708,-265.854 385.75,-340.142c110.538,-215.796 420.642,-1008.32 1047.34,-1030.97"
-          style="fill:none;stroke:#9b85eb;stroke-width:.5px;"
+          class="stroke-indigo-vivid-300"
+          style="fill:none; stroke-width:.5px;"
           vector-effect="non-scaling-stroke"></path>
-        <circle id="dot" cx="5700" cy="57" r="28" style="fill:#9b85eb;"
+        <circle id="dot" cx="5700" cy="57" r="28" class="fill-indigo-vivid-300"
         ></circle>
       </svg>
     </div>
-    <div
-      class="z-10"
-      id="mask-right"
-      style="background: var(--color-blue-1000);"
-    >
+    <div class="z-10 bg-blue-1000" id="mask-right">
       <svg
         width="100%"
         height="100%"
@@ -62,15 +56,11 @@
           y="0"
           width="80"
           height="200"
-          style="fill:#03111d;"></rect>
+          class="fill-blue-1000"></rect>
       </svg>
     </div>
   </div>
-  <div
-    class="region relative z-10 overflow-clip"
-    style="color: var(--color-blue-100);"
-    id="estimate"
-  >
+  <div class="region relative z-10 overflow-clip text-blue-100" id="estimate">
     <div
       x-data="valueSlider"
       x-init="$watch('sliderValue', () => calculateRevenue())"
@@ -83,7 +73,9 @@
       </p>
 
       <div class="switcher">
-        <div class="box text-center flow spot-color-purple flow-space-m">
+        <div
+          class="box text-center flow bg-indigo-vivid-300 text-indigo-vivid-900 flow-space-m"
+        >
           <h3 class="mx-auto">Impressions</h3>
           <label for="sliderValue" class="sr-only">Impressions</label>
           <input
@@ -102,7 +94,7 @@
           </p>
         </div>
         <div
-          class="box text-center spot-color-purple flex flex-col justify-center items-center"
+          class="box text-center bg-indigo-vivid-300 text-indigo-vivid-900 flex flex-col justify-center items-center"
         >
           <div class="flow prose">
             <h3 class="mx-auto">Estimated revenue</h3>
@@ -110,7 +102,7 @@
           </div>
         </div>
       </div>
-      <p class="mx-auto text-center step--2">
+      <p class="mx-auto text-center text-step-0000">
         † Assuming a 2% conversion rate on impressions <a
           href="https://blog.hubspot.com/marketing/landing-page-stats#:~:text=The%20average%20landing%20page%20conversion,you%20and%20your%20target%20audience"
           target="_blank">¹</a

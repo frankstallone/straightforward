@@ -32,3 +32,19 @@
   opacity: 0.5;
   pointer-events: none;
 }
+
+.button.invert {
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-1400);
+}
+
+.button.invert:hover,
+.button.invert:focus,
+.button.invert:active {
+  color: var(--color-gold-vivid-900);
+  background-color: var(--color-gold-vivid-200);
+}
+
+.button.invert:focus {
+  outline: 2px solid var(--color-gold-vivid-200);
+}

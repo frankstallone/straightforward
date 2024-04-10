@@ -10,20 +10,28 @@
   background-repeat: no-repeat;
   background-image: radial-gradient(
       circle 800px at 700px 200px,
-      var(--purple400),
+      var(--color-indigo-vivid-400),
       transparent
     ),
     radial-gradient(
       circle 600px at calc(100% - 300px) 300px,
-      var(--yellow200),
+      var(--color-gold-vivid-200),
       transparent
     ),
-    radial-gradient(circle 750px at right center, var(--blue400), transparent),
-    radial-gradient(circle 750px at right bottom, var(--blue200), transparent),
+    radial-gradient(
+      circle 750px at right center,
+      var(--color-blue-vivid-400),
+      transparent
+    ),
+    radial-gradient(
+      circle 750px at right bottom,
+      var(--color-blue-vivid-200),
+      transparent
+    ),
     radial-gradient(
       circle 750px at calc(50% - 600px) calc(100% - 100px),
-      var(--pink300),
-      var(--pink300),
+      var(--color-magenta-vivid-300),
+      var(--color-magenta-vivid-300),
       transparent
     );
 }
@@ -39,20 +47,28 @@
   background-repeat: no-repeat;
   background-image: radial-gradient(
       circle 800px at 700px 200px,
-      var(--blue1100),
+      var(--color-blue-vivid-900),
       transparent
     ),
     radial-gradient(
       circle 600px at calc(100% - 300px) 300px,
-      var(--blue1100),
+      var(--color-blue-vivid-900),
       transparent
     ),
-    radial-gradient(circle 750px at right center, var(--blue900), transparent),
-    radial-gradient(circle 750px at right bottom, var(--blue1100), transparent),
+    radial-gradient(
+      circle 750px at right center,
+      var(--color-blue-vivid-900),
+      transparent
+    ),
+    radial-gradient(
+      circle 750px at right bottom,
+      var(--color-blue-vivid-900),
+      transparent
+    ),
     radial-gradient(
       circle 750px at calc(50% - 600px) calc(100% - 100px),
-      var(--blue1100),
-      var(--blue1100),
+      var(--color-blue-vivid-900),
+      var(--color-blue-vivid-900),
       transparent
     );
 }
@@ -67,14 +83,18 @@
   background-repeat: no-repeat;
   background-image: radial-gradient(
       circle 800px at 700px 200px,
-      var(--blue1100),
+      var(--color-blue-vivid-900),
       transparent
     ),
-    radial-gradient(circle 750px at right bottom, var(--blue1100), transparent),
+    radial-gradient(
+      circle 750px at right bottom,
+      var(--color-blue-vivid-900),
+      transparent
+    ),
     radial-gradient(
       circle 750px at calc(50% - 600px) calc(100% - 100px),
-      var(--purple1100),
-      var(--purple1100),
+      var(--color-indigo-vivid-900),
+      var(--color-indigo-vivid-900),
       transparent
     );
 }

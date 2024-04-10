@@ -75,7 +75,7 @@ export default {
   },
 
   // Prevents Tailwind's core components
-  // blocklist: ["container"],
+  blocklist: ['invert'],
 
   // Prevents Tailwind from generating that wall of empty custom properties
   experimental: {
