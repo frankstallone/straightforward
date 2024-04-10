@@ -1,0 +1,100 @@
+#orbs {
+  width: 100vw;
+  min-width: 1500px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  opacity: 0.25;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(
+      circle 800px at 700px 200px,
+      var(--color-indigo-vivid-400),
+      transparent
+    ),
+    radial-gradient(
+      circle 600px at calc(100% - 300px) 300px,
+      var(--color-gold-vivid-200),
+      transparent
+    ),
+    radial-gradient(
+      circle 750px at right center,
+      var(--color-blue-vivid-400),
+      transparent
+    ),
+    radial-gradient(
+      circle 750px at right bottom,
+      var(--color-blue-vivid-200),
+      transparent
+    ),
+    radial-gradient(
+      circle 750px at calc(50% - 600px) calc(100% - 100px),
+      var(--color-magenta-vivid-300),
+      var(--color-magenta-vivid-300),
+      transparent
+    );
+}
+
+#orb-dark-blue {
+  width: 100vw;
+  min-width: 1500px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(
+      circle 800px at 700px 200px,
+      var(--color-blue-vivid-1100),
+      transparent
+    ),
+    radial-gradient(
+      circle 600px at calc(100% - 300px) 300px,
+      var(--color-blue-vivid-1100),
+      transparent
+    ),
+    radial-gradient(
+      circle 750px at right center,
+      var(--color-blue-vivid-900),
+      transparent
+    ),
+    radial-gradient(
+      circle 750px at right bottom,
+      var(--color-blue-vivid-1100),
+      transparent
+    ),
+    radial-gradient(
+      circle 750px at calc(50% - 600px) calc(100% - 100px),
+      var(--color-blue-vivid-1100),
+      var(--color-blue-vivid-1100),
+      transparent
+    );
+}
+#orb-dark-blue-purple {
+  width: 100vw;
+  min-width: 1500px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(
+      circle 800px at 700px 200px,
+      var(--color-blue-vivid-1100),
+      transparent
+    ),
+    radial-gradient(
+      circle 750px at right bottom,
+      var(--color-blue-vivid-1100),
+      transparent
+    ),
+    radial-gradient(
+      circle 750px at calc(50% - 600px) calc(100% - 100px),
+      var(--color-indigo-vivid-1100),
+      var(--color-indigo-vivid-1100),
+      transparent
+    );
+}

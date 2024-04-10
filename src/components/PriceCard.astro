@@ -39,9 +39,9 @@ const bookingLink = bookingURL || '#';
 ---
 
 <div style={styles} class={classList} data-layout={dataLayout}>
-  <div class="box flow flex flex-col justify-between">
+  <div class="box flow flex flex-col justify-between bg-indigo-vivid-300">
     <div class="flow prose">
-      <h3 class="uppercase step-0 font-weight-semibold">
+      <h3 class="uppercase text-step-00 font-semibold">
         {heading}
       </h3>
       <p>{content}</p>
@@ -49,9 +49,9 @@ const bookingLink = bookingURL || '#';
     <div class="flow prose">
       {
         monthlyPrice && (
-          <p class="font-weight-bold">
-            <span class="step-2">${monthlyPrice}</span>{' '}
-            <span style="color: var(--blue700);">/month</span>
+          <p class="font-bold">
+            <span class="text-step-1">${monthlyPrice}</span>{' '}
+            <span class=" text-blue-700">/month</span>
           </p>
         )
       }
@@ -68,7 +68,7 @@ const bookingLink = bookingURL || '#';
       }
       <div>
         <p>
-          <small class="font-weight-semibold uppercase">What's included:</small>
+          <small class="font-semibold uppercase">What's included:</small>
         </p>
         <ul role="list" class="price-card-item">
           {

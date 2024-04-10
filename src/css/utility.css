@@ -1,26 +1,5 @@
 /* Utility classes */
 
-/* Main navigation buttons */
-.header-links a {
-  color: var(--blue100);
-  font-size: var(--step-0);
-  display: inline-block;
-  padding: 0.5rem 0.5rem;
-  text-decoration: none;
-  transition:
-    color var(--transition-base),
-    box-shadow var(--transition-base);
-  box-shadow: inset 0 0 0 0 var(--yellow300);
-}
-
-.header-links a:hover,
-.header-links a:focus,
-.header-links a:active {
-  color: var(--yellow900);
-  text-decoration: none;
-  box-shadow: inset 200px 0 0 0 var(--yellow300);
-}
-
 /* Main buttons */
 
 /* Clips */
@@ -76,32 +55,6 @@
 
 .max-inline-size-full {
   max-inline-size: 100vw;
-}
-
-/* Buttons */
-
-.button {
-  display: block;
-  text-decoration: none;
-  border: none;
-  background-color: var(--spot-color-text, var(--gray1200));
-  color: var(--spot-color, var(--gray100));
-  padding-inline: var(--space-m);
-  padding-block: var(--space-s);
-  text-align: center;
-}
-.button:hover,
-.button:focus,
-.button:active {
-  text-decoration: none;
-}
-.button:focus {
-  outline: 2px solid var(--spot-color-text, var(--gray1200));
-}
-
-.button-disabled {
-  opacity: 0.5;
-  pointer-events: none;
 }
 
 /* Region */
