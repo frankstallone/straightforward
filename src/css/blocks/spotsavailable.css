@@ -1,0 +1,14 @@
+#spots-available {
+  background-color: var(--color-gold-vivid-200);
+  bottom: -3.5rem;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-8deg);
+  padding: 0.75rem 1.25rem;
+  width: 80vw;
+}
+
+@media (min-width: 50em) {
+  #spots-available {
+    width: auto;
+  }
+}

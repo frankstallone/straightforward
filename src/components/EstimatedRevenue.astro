@@ -4,7 +4,7 @@
 
 <div
   class="region relative z-0 overflow-hidden"
-  style="background-color: var(--blue1100);"
+  style="background-color: var(--color-blue-1000);"
 >
   <div
     class="absolute z-10 flex justify-start items-end overflow-hidden"
@@ -12,12 +12,12 @@
   >
     <div
       class="absolute z-0"
-      style="background: radial-gradient(ellipse 75% 700px at 35% calc(100% + 100px), var(--purple900) 30%, var(--purple1000) 50%, var(--purple1100) 60%, transparent 100%); transform: rotate(-10deg); bottom: -200px; left: -200px; right: -200px; top: -200px; height: 700px; pointer-events: none;"
+      style="background: radial-gradient(ellipse 75% 700px at 35% calc(100% + 100px), var(--color-indigo-800) 30%, var(--color-indigo-900) 50%, var(--color-indigo-1000) 60%, transparent 100%); transform: rotate(-10deg); bottom: -200px; left: -200px; right: -200px; top: -200px; height: 700px; pointer-events: none;"
     >
     </div>
     <div
       class="grow z-10"
-      style="height: 0.5px; background-color: var(--purple500); max-width: 1400px;"
+      style="height: 0.5px; background-color: var(--color-indigo-500); max-width: 1400px;"
     >
     </div>
     <div id="graph">
@@ -43,7 +43,11 @@
         ></circle>
       </svg>
     </div>
-    <div class="z-10" id="mask-right" style="background: var(--blue1100);">
+    <div
+      class="z-10"
+      id="mask-right"
+      style="background: var(--color-blue-1000);"
+    >
       <svg
         width="100%"
         height="100%"
@@ -64,7 +68,7 @@
   </div>
   <div
     class="region relative z-10 overflow-clip"
-    style="color: var(--blue100);"
+    style="color: var(--color-blue-100);"
     id="estimate"
   >
     <div
@@ -187,12 +191,12 @@
       // Clickthrough rate of 2%
       // Page conversion rate of 7%
       this.leads = Math.round(
-        (((Number(this.sliderValue) / 100) * 2) / 100) * 7,
+        (((Number(this.sliderValue) / 100) * 2) / 100) * 7
       );
       // Close rate of 10%
       this.leadsClosed = Math.round((this.leads / 100) * 10);
       this.monthlyRevenue = formatter.format(
-        Math.round(this.leadsClosed * this.averageValue),
+        Math.round(this.leadsClosed * this.averageValue)
       );
       this.prettyImpressions = Number(this.sliderValue).toLocaleString('en-US');
     },

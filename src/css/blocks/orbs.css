@@ -1,18 +1,3 @@
-#spots-available {
-  background-color: var(--yellow300);
-  bottom: -3.5rem;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-8deg);
-  padding: 0.75rem 1.25rem;
-  width: 80vw;
-}
-
-@media (min-width: 50em) {
-  #spots-available {
-    width: auto;
-  }
-}
-
 #orbs {
   width: 100vw;
   min-width: 1500px;
@@ -93,35 +78,3 @@
       transparent
     );
 }
-
-#hero-svg {
-  width: 150vw;
-  inset: -2rem -2rem auto auto;
-  opacity: 0.25;
-  --color-stop-1: var(--blue1100);
-  --color-stop-2: var(--blue900);
-  --color-stop-3: var(--blue700);
-  --color-stop-4: var(--blue500);
-  --color-stop-5: var(--blue300);
-}
-
-@media (min-width: 50em) {
-  #hero-svg {
-    width: 75vw;
-    inset: 11rem -20rem auto auto;
-  }
-}
-
-/* Media queries
-@media (min-width: 50em) {
-}
-
-@media (min-width: 80em) {
-}
-
-@media (min-width: 90em) {
-}
-
-@media (min-width: 120em) {
-}
-*/
