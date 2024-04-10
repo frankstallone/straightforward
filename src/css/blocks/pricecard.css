@@ -48,15 +48,17 @@
 
 .price-card .button {
   font-weight: var(--font-semibold);
-  background-color: var(--color-indigo-1000);
-  color: var(--color-indigo-200);
+  background-color: var(--color-indigo-vivid-1000);
+  color: var(--color-indigo-vivid-200);
   box-shadow:
     0 10px 15px -3px rgb(0 0 0 / 0.1),
     0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
-.price-card .button:hover {
-  background-color: var(--color-indigo-900);
+.price-card .button:hover,
+.price-card .button:active,
+.price-card .button:focus {
+  background-color: var(--color-indigo-vivid-900);
 }
 .price-card .button:focus {
-  outline-color: var(--color-indigo-800);
+  outline-color: var(--color-indigo-vivid-900);
 }
