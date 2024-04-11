@@ -1,5 +1,6 @@
 #hero-title {
   font-size: var(--size-step-5);
+  letter-spacing: -0.025em;
 }
 @media (min-width: 50em) {
   #hero-title {
