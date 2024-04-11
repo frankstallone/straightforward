@@ -1,3 +1,8 @@
+#hero ::selection {
+  background: var(--color-gold-100);
+  color: var(--color-gold-800);
+}
+
 #hero-title {
   font-size: var(--size-step-5);
   letter-spacing: -0.025em;

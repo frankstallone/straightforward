@@ -31,11 +31,11 @@ h6 {
 
 h1,
 h2 {
-  font-size: var(--size-step-4);
+  font-size: var(--size-step-3);
 }
 
 h3 {
-  font-size: var(--size-step-2);
+  font-size: var(--size-step-1);
 }
 
 /* Set line lengths */

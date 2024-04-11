@@ -1,5 +1,7 @@
 ---
-
+import { Image } from 'astro:assets';
+import frank from '../assets/avatar-04-2024-grayscale-500px-01.jpg';
+import lucas from '../assets/Lucas-Bako-avatar.jpg';
 ---
 
 <div class="region spot-color-gray">
@@ -21,14 +23,27 @@
           your audience, at the right point in their lives.
         </p>
         <div class="switcher">
-          <div class="text-center">
+          <div class="flex flex-col gap-xs items-center">
+            <div class="flex gap-xs">
+              <Image
+                src={lucas}
+                alt="Photo of Lucas Bako"
+                quality={80}
+                class="h-xl w-xl rounded-full object-contain"
+              />
+              <div class="flex flex-col">
+                <span class="text-step-00 font-medium">Lucas Bako</span>
+                <span class="text-step-000 text-gray-900"
+                  >Co-founder at Straighforward Growth</span
+                >
+              </div>
+            </div>
             <svg
               viewBox="0 0 469 207"
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
-              style="height: 7rem;"
-              class="w-auto"
+              class="h-l-xl w-auto"
               role="img"
             >
               <title>Bako Signature</title>
@@ -40,14 +55,27 @@
               ></path>
             </svg>
           </div>
-          <div class="text-center">
+          <div class="flex flex-col gap-xs items-center">
+            <div class="flex gap-xs">
+              <Image
+                src={frank}
+                alt="Photo of Frank Stallone"
+                quality={80}
+                class="h-xl w-xl rounded-full object-contain"
+              />
+              <div class="flex flex-col">
+                <span class="text-step-00 font-medium">Frank Stallone</span>
+                <span class="text-step-000 text-gray-900"
+                  >Co-founder at Straighforward Growth</span
+                >
+              </div>
+            </div>
             <svg
               viewBox="0 0 238 209"
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
-              style="height: 7rem;"
-              class="w-auto"
+              class="h-l-xl w-auto"
               role="img"
             >
               <title>Stallone Signature</title>
