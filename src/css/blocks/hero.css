@@ -4,13 +4,12 @@
 }
 
 #hero-title {
-  font-size: var(--size-step-5);
+  font-size: var(--size-step-4);
   letter-spacing: -0.025em;
 }
-@media (min-width: 50em) {
-  #hero-title {
-    font-size: 8vw;
-  }
+
+#hero-subtitle {
+  max-inline-size: 60ch;
 }
 
 #hero-svg {
