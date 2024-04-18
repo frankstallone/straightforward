@@ -10,9 +10,7 @@ interface Props {
 const { header } = Astro.props;
 ---
 
-<div
-  class="relative z-0 overflow-hidden bg-blue-vivid-1000 text-blue-vivid-300"
->
+<div class="relative z-0 overflow-hidden">
   <svg
     viewBox="0 0 753 1049"
     id="hero-svg"
@@ -78,13 +76,11 @@ const { header } = Astro.props;
   </svg>
   <div class="cover relative z-10" id="hero" style="--cover-padding: 0;">
     <InnerHeader />
-    <div
-      class="region box flex flex-col justify-center flow prose text-gold-vivid-200"
-    >
-      <h1 id="hero-title">
+    <div class="region box flex flex-col justify-center flow prose">
+      <h1 id="hero-title" class="text-gold-vivid-200">
         {header.title}
       </h1>
-      <h2 class="font-regular">
+      <h2 class="font-regular text-gold-vivid-200">
         {header.subtitle}
       </h2>
     </div>

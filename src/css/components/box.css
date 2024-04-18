@@ -6,7 +6,3 @@ More info: https://every-layout.dev/layouts/box/#the-generator
 .box {
   padding: var(--gutter, var(--space-s-m));
 }
-
-.box * {
-  color: inherit;
-}
