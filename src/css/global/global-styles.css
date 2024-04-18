@@ -10,8 +10,8 @@ html {
 }
 
 body {
-  color: var(--color-gray-1400);
-  background: var(--color-gray-100);
+  color: var(--color-blue-vivid-300);
+  background: var(--color-blue-vivid-1000);
   font-size: var(--size-step-00);
   font-family: var(--font-base);
   position: relative;
@@ -25,8 +25,9 @@ h3,
 h4,
 h5,
 h6 {
+  color: var(--color-blue-100);
   font-family: var(--font-display);
-  font-weight: var(--font-medium);
+  font-weight: var(--font-semibold);
 }
 
 h1,

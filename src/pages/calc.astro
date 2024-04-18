@@ -93,10 +93,10 @@ const pageMeta = {
           <div
             class="box text-center flow bg-indigo-vivid-300 text-indigo-vivid-900 flow-space-m"
           >
-            <h3 class="mx-auto mt-zero">
+            <h3 class="mx-auto mt-zero text-indigo-vivid-900">
               $<span x-text="prettyAverageValue"></span> LTV
             </h3>
-            <h4 class="mt-2xs-xs"></h4>
+            <h4 class="mt-2xs-xs text-indigo-vivid-900"></h4>
             <label for="averageValue" class="sr-only">Average value</label>
             <input
               id="averageValue"
@@ -107,7 +107,7 @@ const pageMeta = {
               max="250000"
               step="100"
             />
-            <h3 class="mx-auto">
+            <h3 class="mx-auto text-indigo-vivid-900">
               <span x-text="prettyImpressions"></span> impressions
             </h3>
             <label for="sliderValue" class="sr-only">Impressions</label>
@@ -125,8 +125,10 @@ const pageMeta = {
             class="box text-center bg-indigo-vivid-300 text-indigo-vivid-900 flex flex-col justify-center items-center"
           >
             <div class="flow prose">
-              <h3 class="mx-auto mt-zero">Monthly revenue</h3>
-              <h4 class="text-step-4">
+              <h3 class="mx-auto mt-zero text-indigo-vivid-900">
+                Monthly revenue
+              </h3>
+              <h4 class="text-step-4 text-indigo-vivid-900">
                 <span x-text="monthlyRevenue"></span>
               </h4>
               <p class="mx-auto">
