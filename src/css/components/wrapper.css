@@ -5,10 +5,9 @@
  * Info: https://piccalil.li/quick-tip/use-css-clamp-to-create-a-more-flexible-wrapper-utility/
  */
 .wrapper {
-  --measure: 85rem;
-  max-inline-size: var(--measure, 85rem);
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
+  max-width: clamp(16rem, var(--wrapper-max-width, 100vw), 80rem);
   padding-left: var(--gutter);
   padding-right: var(--gutter);
+  position: relative;
 }

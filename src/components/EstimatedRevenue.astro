@@ -65,7 +65,7 @@
       x-data="valueSlider"
       x-init="$watch('sliderValue', () => calculateRevenue())"
       class="wrapper flow prose relative z-10"
-      style="--measure: 70ch;"
+      style="--wrapper-max-width: 70ch;"
     >
       <h2 class="mx-auto text-center">Impressions to cash</h2>
       <p class="mx-auto text-center">
@@ -128,7 +128,7 @@
   }
   #data {
     gap: var(--space-s-m);
-    --measure: 70ch;
+    --wrapper-max-width: 70ch;
     flex-direction: column;
   }
   #graph {
