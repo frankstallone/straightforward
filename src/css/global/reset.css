@@ -100,3 +100,27 @@ textarea:not([rows]) {
 :target {
   scroll-margin-block: 5ex;
 }
+
+/*
+ * Otherwise browsers will automatically center the text.
+ */
+caption,
+th {
+  text-align: inherit;
+}
+
+/*
+  * Otherwise browsers will automatically set the font weight to bold, which
+  * might not be a part of your brand’s font weight scale.
+  */
+th {
+  font-weight: inherit;
+}
+
+/*
+  * Otherwise browsers will automatically add 2px of spacing between table
+  * elements, which may break your spacing scale.
+  */
+table {
+  border-spacing: 0;
+}
