@@ -48,71 +48,71 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </section>
-    <section class="region">
+    <section class="region" id="pricing-table">
       <div class="wrapper" style="--wrapper-max-width: 65ch;">
         <div class="box">
           <h2>Pricing table</h2>
         </div>
       </div>
       <div class="wrapper flow prose">
-        <table-saw breakpoint="(max-width: 760px)">
-          <table class="w-full mx-auto text-left md:text-center">
-            <thead>
-              <th></th>
-              <th class="w-1/4 px-xs py-s font-regular uppercase">Core</th>
-              <th class="w-1/4 px-xs py-s font-regular uppercase">Partner</th>
-            </thead>
-            <tbody class="divide-y divide-blue-200">
-              <tr>
-                <th class="py-s tracking-tight uppercase text-left font-regular"
-                  >Content ideas</th
-                >
-                <td class="py-s">2</td>
-                <td class="py-s">2</td>
-              </tr>
-              <tr>
-                <th class="py-s tracking-tight uppercase text-left font-regular"
-                  >Content machine</th
-                >
-                <td class="py-s justify-center items-center"
-                  ><Checkmark class="text-step-0000" /></td
-                >
-                <td class="py-s justify-center items-center"
-                  ><Checkmark class="text-step-0000" /></td
-                >
-              </tr>
-              <tr>
-                <th class="py-s tracking-tight uppercase text-left font-regular"
-                  >Engagement &amp; converstion best practices</th
-                >
-                <td class="py-s justify-center items-center"
-                  ><Checkmark class="text-step-0000" /></td
-                >
-                <td class="py-s justify-center items-center"
-                  ><Checkmark class="text-step-0000" /></td
-                >
-              </tr>
-              <tr>
-                <th class="py-s tracking-tight uppercase text-left font-regular"
-                  >Branded copy</th
-                >
-                <td class="py-s">&mdash;</td>
-                <td class="py-s justify-center items-center"
-                  ><Checkmark class="text-step-0000" /></td
-                >
-              </tr>
-              <tr>
-                <th class="py-s tracking-tight uppercase text-left font-regular"
-                  >Page optimization recommendations</th
-                >
-                <td class="py-s">&mdash;</td>
-                <td class="py-s justify-center items-center"
-                  ><Checkmark class="text-step-0000" /></td
-                >
-              </tr>
-            </tbody>
-          </table>
-        </table-saw>
+        <div class="box">
+          <table-saw breakpoint="(max-width: 760px)">
+            <table class="w-full mx-auto text-left md:text-center">
+              <thead>
+                <th></th>
+                <th class="w-1/4 px-xs py-s">Core</th>
+                <th class="w-1/4 px-xs py-s">Partner</th>
+              </thead>
+              <tbody class="divide-y divide-blue-vivid-800">
+                <tr>
+                  <th class="py-s text-left">Content ideas</th>
+                  <td class="py-s">2</td>
+                  <td class="py-s">2</td>
+                </tr>
+                <tr>
+                  <th class="py-s text-left">Content machine</th>
+                  <td class="py-s"><Checkmark class="text-step-0000" /></td>
+                  <td class="py-s"><Checkmark class="text-step-0000" /></td>
+                </tr>
+                <tr>
+                  <th class="py-s text-left">Engagement best practices</th>
+                  <td class="py-s"><Checkmark class="text-step-0000" /></td>
+                  <td class="py-s"><Checkmark class="text-step-0000" /></td>
+                </tr>
+                <tr>
+                  <th class="py-s text-left">Converstion best practices</th>
+                  <td class="py-s"><Checkmark class="text-step-0000" /></td>
+                  <td class="py-s"><Checkmark class="text-step-0000" /></td>
+                </tr>
+                <tr>
+                  <th class="py-s text-left">Training</th>
+                  <td class="py-s"><Checkmark class="text-step-0000" /></td>
+                  <td class="py-s"><Checkmark class="text-step-0000" /></td>
+                </tr>
+                <tr>
+                  <th class="py-s text-left">Branded copy</th>
+                  <td class="py-s">&mdash;</td>
+                  <td class="py-s">Unlimited revisions</td>
+                </tr>
+                <tr>
+                  <th class="py-s text-left">Page level optimizations</th>
+                  <td class="py-s">&mdash;</td>
+                  <td class="py-s"><Checkmark class="text-step-0000" /></td>
+                </tr>
+                <tr>
+                  <th class="py-s text-left">Minimum term</th>
+                  <td class="py-s">Month-to-month</td>
+                  <td class="py-s">Month-to-month</td>
+                </tr>
+                <tr>
+                  <th class="py-s text-left">Pay by credit card</th>
+                  <td class="py-s"><Checkmark class="text-step-0000" /></td>
+                  <td class="py-s"><Checkmark class="text-step-0000" /></td>
+                </tr>
+              </tbody>
+            </table>
+          </table-saw>
+        </div>
       </div>
     </section>
   </main>
