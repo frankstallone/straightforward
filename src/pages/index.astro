@@ -1,6 +1,8 @@
 ---
 import Checkmark from '../components/Checkmark.astro';
 import Layout from '../layouts/Layout.astro';
+import kettlebells from '../assets/kettlebell-workout-group-training.jpg';
+import { Picture } from 'astro:assets';
 ---
 
 <Layout
@@ -12,38 +14,43 @@ import Layout from '../layouts/Layout.astro';
   }}
 >
   <article id="main" class="relative z-10">
-    <section class="region">
-      <div
-        class="wrapper flow prose fade-in"
-        style="--wrapper-max-width: 65ch;"
-      >
-        <div class="box flow prose">
-          <h2>Drive more inbound leads, from your ideal audience</h2>
-          <h3>Are you posting often but struggling with focus?</h3>
-          <p>
-            Let us apply our research to your body of work and recommend
-            optimziations. You've already created a massive amount of content,
-            but it's not getting the traction you want. Let us supercharge your
-            existing content.
-          </p>
+    <section class="region wrapper">
+      <div class="switcher relative">
+        <svg
+          viewBox="0 0 256 256"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          class="absolute -inset-s z-0 h-4xl text-[#bfff00] hidden md:block"
+          aria-hidden="true"
+        >
+          <path
+            d="M121.182,0.951l134.441,134.438c-0.304,5.555 -0.968,11.082 -1.996,16.551l-149,-148.996c5.469,-1.024 11,-1.692 16.555,-1.993Zm41.734,4.645c11.844,3.352 23.137,8.398 33.536,14.984l39.539,39.539c6.586,10.395 11.632,21.692 14.988,33.532l-88.063,-88.055Zm-86.586,6.141l168.504,168.5c-1.867,4.207 -3.957,8.304 -6.265,12.285l-174.52,-174.52c3.977,-2.308 8.078,-4.398 12.281,-6.265Zm-33.738,21.902l180.34,180.336c-2.934,3.246 -6.027,6.344 -9.277,9.273l-180.336,-180.332c2.929,-3.25 6.027,-6.343 9.273,-9.277Zm-24.91,30.73l174.52,174.516c-3.977,2.309 -8.079,4.399 -12.282,6.266l-168.504,-168.5c1.868,-4.203 3.957,-8.305 6.266,-12.282Zm-15.059,40.579l149,149c-5.468,1.023 -11,1.687 -16.554,1.988l-134.442,-134.434c0.305,-5.558 0.969,-11.086 1.996,-16.554Zm2.649,58.289l88.058,88.058c-11.839,-3.351 -23.132,-8.402 -33.531,-14.988l-0.008,-0l-39.535,-39.531c-6.586,-10.399 -11.633,-21.696 -14.988,-33.539l0.004,-0Z"
+            fill="currentColor"></path>
+        </svg>
+        <div class="box">
+          <Picture
+            src={kettlebells}
+            widths={[240, 540, 720, kettlebells.width]}
+            sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${kettlebells.width}px`}
+            alt="Focused workout group training with kettlebells"
+            quality={80}
+            formats={['avif', 'webp']}
+            class="relative h-auto w-auto mx-auto object-contain rounded-2xl row-start-1 row-span-6 col-start-1 col-span-6 border-blue-200 border-8 z-10"
+            pictureAttributes={{
+              class:
+                'relative h-auto w-auto mx-auto object-contain rounded-2xl row-start-1 row-span-6 col-start-1 col-span-6 z-10',
+            }}
+          />
         </div>
-      </div>
-    </section>
-    <section class="region">
-      <div
-        class="wrapper flow prose fade-in"
-        style="--wrapper-max-width: 65ch;"
-      >
         <div class="box flow prose">
-          <h2>Looking for direction on content marketing?</h2>
-          <h3>Let us help you write content that connects</h3>
+          <h2>Drive more inbound leads from your ideal audience</h2>
           <p>
-            Whether you have a team to write copy, or need us to, we can help by
-            providing a data backed content strategy. We'll do the research, and
-            give you ideal long form content ideas to write about. We'll also
-            provide a list of keywords to target, example websites that rank
-            highly for those keyphrases, and analysis findings so you can track
-            how you stack up.
+            Regularly posting content, but just not attracting your tribe? Or
+            know that content marketing is crucial for your business, but don't
+            have the time or resources to do it well? At Straightforward Growth
+            we believe in the power of research-driven content, and have a
+            proven, repeatable model that will get your website (and your
+            contact details) seen and used.
           </p>
         </div>
       </div>
@@ -51,7 +58,40 @@ import Layout from '../layouts/Layout.astro';
     <section class="region" id="PricingTable">
       <div class="wrapper" style="--wrapper-max-width: 65ch;">
         <div class="box">
-          <h2>Feature list</h2>
+          <h2 class="relative">
+            <svg
+              viewBox="0 0 573 80"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              class="absolute -bottom-xs left-xs z-0 h-2xs text-[#bfff00]"
+            >
+              <path
+                d="M8.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
+                fill="currentColor"></path>
+              <path
+                d="M83.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
+                fill="currentColor"></path>
+              <path
+                d="M158.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
+                fill="currentColor"></path>
+              <path
+                d="M233.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
+                fill="currentColor"></path>
+              <path
+                d="M308.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
+                fill="currentColor"></path>
+              <path
+                d="M383.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
+                fill="currentColor"></path>
+              <path
+                d="M458.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
+                fill="currentColor"></path>
+              <path
+                d="M533.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
+                fill="currentColor"></path>
+            </svg>
+             Feature list
+          </h2>
         </div>
       </div>
       <div class="wrapper flow prose" style="--wrapper-max-width: 85ch;">
@@ -65,7 +105,7 @@ import Layout from '../layouts/Layout.astro';
               </thead>
               <tbody class="divide-y divide-blue-vivid-800">
                 <tr>
-                  <th class="py-s text-left">Content ideas</th>
+                  <th class="py-s text-left">Content assets</th>
                   <td class="py-s">2</td>
                   <td class="py-s">2</td>
                 </tr>
