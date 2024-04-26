@@ -81,7 +81,7 @@ const pageMeta = {
     >
       <div
         x-data="valueSlider"
-        x-init="$watch('averageValue, sliderValue', () => calculateRevenue())"
+        x-init="$watch('averageValue, impressionsSlider', () => calculateRevenue())"
         class="wrapper flow prose relative z-10"
       >
         <h2 class="mx-auto text-center">Impressions to cash</h2>
@@ -93,9 +93,12 @@ const pageMeta = {
           <div
             class="box text-center flow bg-indigo-vivid-300 text-indigo-vivid-900 flow-space-m"
           >
-            <h3 class="mx-auto mt-zero text-indigo-vivid-900">
-              $<span x-text="prettyAverageValue"></span> LTV
-            </h3>
+            <div class="flex flex-col-reverse">
+              <h4 class="mx-auto text-indigo-vivid-900 mt-2xs">ARPC</h4>
+              <h3 class="mx-auto mt-zero text-indigo-vivid-900">
+                $<span x-text="prettyAverageValue"></span>
+              </h3>
+            </div>
             <h4 class="mt-2xs-xs text-indigo-vivid-900"></h4>
             <label for="averageValue" class="sr-only">Average value</label>
             <input
@@ -103,21 +106,21 @@ const pageMeta = {
               class="w-full mt-m"
               type="range"
               x-model="averageValue"
-              min="500"
-              max="250000"
+              min="20"
+              max="520"
               step="100"
             />
             <h3 class="mx-auto text-indigo-vivid-900">
               <span x-text="prettyImpressions"></span> impressions
             </h3>
-            <label for="sliderValue" class="sr-only">Impressions</label>
+            <label for="impressionsSlider" class="sr-only">Impressions</label>
             <input
-              id="sliderValue"
+              id="impressionsSlider"
               class="w-full mt-m"
               type="range"
-              x-model="sliderValue"
+              x-model="impressionsSlider"
               min="500"
-              max="250000"
+              max="100000"
               step="100"
             />
           </div>
@@ -126,10 +129,10 @@ const pageMeta = {
           >
             <div class="flow prose">
               <h3 class="mx-auto mt-zero text-indigo-vivid-900">
-                Monthly revenue
+                Potential LTV
               </h3>
               <h4 class="text-step-4 text-indigo-vivid-900">
-                <span x-text="monthlyRevenue"></span>
+                <span x-text="potentialLTV"></span>
               </h4>
               <p class="mx-auto">
                 <span x-text="leads"></span> leads, <span x-text="leadsClosed"
@@ -150,7 +153,7 @@ const pageMeta = {
           <a
             href="https://www.outerboxdesign.com/web-design-articles/ctr-based-on-organic-position"
             target="_blank">²</a
-          > and a 10% close rate on leads.
+          >, that a customer stays for 3 years, and a 10% close rate on leads.
         </p>
       </div>
     </div>
@@ -212,22 +215,22 @@ const pageMeta = {
       init() {
         this.calculateRevenue();
       },
-      sliderValue: '15000',
+      impressionsSlider: '5000',
       prettyImpressions: '0',
       prettyAverageValue: '0',
       leads: 0,
       leadsClosed: 0,
-      averageValue: '20000',
-      monthlyRevenue: '$0',
+      averageValue: '120',
+      potentialLTV: '$0',
       calculateRevenue() {
         this.leads = Math.round(
-          (((Number(this.sliderValue) / 100) * 2) / 100) * 7
+          (((Number(this.impressionsSlider) / 100) * 2) / 100) * 7
         );
         this.leadsClosed = Math.round((this.leads / 100) * 10);
-        this.monthlyRevenue = formatter.format(
-          Math.round(this.leadsClosed * Number(this.averageValue))
+        this.potentialLTV = formatter.format(
+          Math.round(this.leadsClosed * Number(this.averageValue) * 36)
         );
-        this.prettyImpressions = Number(this.sliderValue).toLocaleString(
+        this.prettyImpressions = Number(this.impressionsSlider).toLocaleString(
           'en-US'
         );
         this.prettyAverageValue = Number(this.averageValue).toLocaleString(
