@@ -133,14 +133,16 @@ form > p label {
 
 input,
 textarea {
-  border: 1px solid var(--color-gray-800);
+  background-color: var(--color-blue-vivid-700);
+  color: var(--color-blue-vivid-300);
+  border: none;
   padding-block: var(--space-2xs);
   padding-inline: var(--space-xs);
-  border-radius: 0;
+  border-radius: var(--space-2xs);
 }
 
 input:focus,
 textarea:focus {
-  outline: 2px solid var(--color-gray-1200);
+  outline: 2px solid var(--color-blue-vivid-600);
   outline-offset: 2px;
 }
