@@ -1,0 +1,19 @@
+---
+import AccordionItem from './AccordionItem.astro';
+
+import { health } from '../store/faq.json';
+---
+
+<details-utils class="divide-y divide-gray-600">
+  {
+    health.map((faq, idx) => (
+      <AccordionItem
+        idx={idx}
+        title={faq.title}
+        description={faq.description}
+      />
+    ))
+  }
+</details-utils>
+
+<script src="@zachleat/details-utils/details-utils.js"></script>

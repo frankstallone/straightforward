@@ -1,0 +1,48 @@
+---
+type Props = {
+  idx: number;
+  title: string;
+  description: string;
+  color?: string;
+};
+
+const { idx, title, description, color } = Astro.props;
+const buttonClasses = color
+  ? `accordion-button text-left text-${color}-700`
+  : 'accordion-button text-left';
+const contentClasses = color ? `text-${color}-800` : '';
+---
+
+<div
+  x-data={'{ activeAccordion: false }'}
+  class="box flex flex-col text-left max-w-4xl mx-auto bg-transparent"
+>
+  <details class="flow">
+    <summary
+      @click="activeAccordion = !activeAccordion"
+      :aria-expanded="activeAccordion"
+      aria-controls={`accordion-panel-${idx}`}
+      class={buttonClasses}
+      >{title}
+      <svg
+        x-show="!activeAccordion"
+        focusable="false"
+        aria-hidden="true"
+        viewBox="0 0 24 24"
+        ><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" fill="currentColor"
+        ></path><path d="M0 0h24v24H0z" fill="none"></path></svg
+      ><svg
+        x-show="activeAccordion"
+        focusable="false"
+        aria-hidden="true"
+        viewBox="0 0 24 24"
+        ><path d="M19 13H5v-2h14v2z" fill="currentColor"></path><path
+          d="M0 0h24v24H0z"
+          fill="none"></path></svg
+      ></summary
+    >
+    <section class={contentClasses}>
+      <p class="mt-zero">{description}</p>
+    </section>
+  </details>
+</div>
