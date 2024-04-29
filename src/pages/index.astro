@@ -94,14 +94,14 @@ import { Picture } from 'astro:assets';
           </h2>
         </div>
         <ul class="grid" role="list" data-layout="50-50">
-          <li class="box flow prose bg-blue-vivid-800">
+          <li class="box flow prose bg-blue-vivid-800 rounded-3xl">
             <h3>We go deep on research</h3>
             <p>
               We'll uncover market-specific insights and high-value content
               assets that your target audience is actively searching for.
             </p>
           </li>
-          <li class="box flow prose bg-blue-vivid-800">
+          <li class="box flow prose bg-blue-vivid-800 rounded-3xl">
             <h3>We're highly organized</h3>
             <p>
               You'll get comprehensive plans that include optimized titles, high
@@ -109,7 +109,7 @@ import { Picture } from 'astro:assets';
               crafting high-performing content specific to every piece.
             </p>
           </li>
-          <li class="box flow prose bg-blue-vivid-800">
+          <li class="box flow prose bg-blue-vivid-800 rounded-3xl">
             <h3>We focus on conversions</h3>
             <p>
               We go beyond just attracting eyes; we design your content to
@@ -117,7 +117,7 @@ import { Picture } from 'astro:assets';
               wireframes and ongoing optimization based on user engagement.
             </p>
           </li>
-          <li class="box flow prose bg-blue-vivid-800">
+          <li class="box flow prose bg-blue-vivid-800 rounded-3xl">
             <h3>We tailor our support</h3>
             <p>
               With our continuous consulting, we track and refine your strategy
@@ -125,7 +125,7 @@ import { Picture } from 'astro:assets';
               consistent conversions.
             </p>
           </li>
-          <li class="box flow prose bg-blue-vivid-800">
+          <li class="box flow prose bg-blue-vivid-800 rounded-3xl">
             <h3>We obsess over high-caliber writing</h3>
             <p>
               If you need us to execute the writing part of the plan we provide,
@@ -134,7 +134,7 @@ import { Picture } from 'astro:assets';
               clearly from the noise.
             </p>
           </li>
-          <li class="box flow prose bg-blue-vivid-800">
+          <li class="box flow prose bg-blue-vivid-800 rounded-3xl">
             <h3>And we pour in our secret sauce (The Content Machine)</h3>
             <p>
               We've designed and built a custom Notion template that makes
@@ -189,7 +189,7 @@ import { Picture } from 'astro:assets';
       </div>
       <div class="wrapper">
         <ul class="grid" role="list" data-layout="50-50">
-          <li class="box flow prose bg-blue-vivid-800 rounded-xl">
+          <li class="box flow prose bg-blue-vivid-800 rounded-3xl">
             <h3>Insight</h3>
             <p>
               For teams who write their own content but lack the time or tools
@@ -230,7 +230,7 @@ import { Picture } from 'astro:assets';
               </li>
             </ul>
           </li>
-          <li class="box flow prose bg-blue-vivid-800 rounded-xl">
+          <li class="box flow prose bg-blue-vivid-800 rounded-3xl">
             <h3>Growth</h3>
             <p>
               For teams looking for a complete, hands-off content solution: we
@@ -271,7 +271,7 @@ import { Picture } from 'astro:assets';
       </div>
     </section>
     <section class="region" id="PricingTable">
-      <div class="wrapper" style="--wrapper-max-width: 65ch;">
+      <div class="wrapper">
         <div class="box">
           <h2 class="relative">
             <svg
@@ -309,14 +309,14 @@ import { Picture } from 'astro:assets';
           </h2>
         </div>
       </div>
-      <div class="wrapper flow prose" style="--wrapper-max-width: 85ch;">
+      <div class="wrapper flow prose">
         <div class="box">
           <table-saw breakpoint="(max-width: 760px)">
             <table class="w-full mx-auto text-left md:text-center">
               <thead>
                 <th></th>
-                <th class="w-1/4 px-xs py-s">Straight</th>
-                <th class="w-1/4 px-xs py-s">Straight+</th>
+                <th class="w-1/4 px-xs py-s">Insight</th>
+                <th class="w-1/4 px-xs py-s">Growth</th>
               </thead>
               <tbody class="divide-y divide-blue-vivid-800">
                 <tr>
@@ -378,7 +378,7 @@ import { Picture } from 'astro:assets';
       </div>
     </section>
     <section class="region" id="AddOns">
-      <div class="wrapper" style="--wrapper-max-width: 65ch;">
+      <div class="wrapper">
         <div class="box">
           <h2 class="relative">
             <svg
@@ -417,20 +417,26 @@ import { Picture } from 'astro:assets';
         </div>
       </div>
       <div class="wrapper box">
-        <div class="grid text-center" data-layout="thirds">
-          <div class="box bg-blue-vivid-800">Content implementation</div>
-          <div class="box bg-blue-vivid-800">
+        <ul class="grid text-center" data-layout="thirds" role="list">
+          <li class="box bg-blue-vivid-800 rounded-3xl">
+            Content implementation
+          </li>
+          <li class="box bg-blue-vivid-800 rounded-3xl">
             Concierge Google Search console service
-          </div>
-          <div class="box bg-blue-vivid-800">Concierge Google Ads service</div>
-          <div class="box bg-blue-vivid-800">
+          </li>
+          <li class="box bg-blue-vivid-800 rounded-3xl">
+            Concierge Google Ads service
+          </li>
+          <li class="box bg-blue-vivid-800 rounded-3xl">
             Concierge Google Analyics service
-          </div>
-          <div class="box bg-blue-vivid-800">SEO reporting</div>
-          <div class="box bg-blue-vivid-800">Page optimizations</div>
-          <div class="box bg-blue-vivid-800">Branded mini sites</div>
-          <div class="box bg-blue-vivid-800">Web performance audits</div>
-        </div>
+          </li>
+          <li class="box bg-blue-vivid-800 rounded-3xl">SEO reporting</li>
+          <li class="box bg-blue-vivid-800 rounded-3xl">Page optimizations</li>
+          <li class="box bg-blue-vivid-800 rounded-3xl">Branded mini sites</li>
+          <li class="box bg-blue-vivid-800 rounded-3xl">
+            Web performance audits
+          </li>
+        </ul>
       </div>
     </section>
   </article>
