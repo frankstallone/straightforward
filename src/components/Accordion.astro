@@ -1,6 +1,4 @@
 ---
-import AccordionItem from './AccordionItem.astro';
-
 type Props = {
   items: {
     title: string;
@@ -14,11 +12,39 @@ const { items } = Astro.props;
 <details-utils class="divide-y divide-blue-vivid-600">
   {
     items.map((item, idx) => (
-      <AccordionItem
-        idx={idx}
-        title={item.title}
-        description={item.description}
-      />
+    <div
+      x-data={'{ activeAccordion: false }'}
+      class="box flex flex-col text-left bg-transparent"
+    >
+      <details class="flow">
+        <summary
+          @click="activeAccordion = !activeAccordion"
+          :aria-expanded="activeAccordion"
+          aria-controls={`accordion-panel-${idx}`}
+          class={'accordion-button text-left'}
+          >{item.title}
+          <svg
+            x-show="!activeAccordion"
+            focusable="false"
+            aria-hidden="true"
+            viewBox="0 0 24 24"
+            ><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" fill="currentColor"
+            ></path><path d="M0 0h24v24H0z" fill="none"></path></svg
+          ><svg
+            x-show="activeAccordion"
+            focusable="false"
+            aria-hidden="true"
+            viewBox="0 0 24 24"
+            ><path d="M19 13H5v-2h14v2z" fill="currentColor"></path><path
+              d="M0 0h24v24H0z"
+              fill="none"></path></svg
+          ></summary
+        >
+        <section>
+          <p class="mt-zero">{item.description}</p>
+        </section>
+      </details>
+    </div>
     ))
   }
 </details-utils>

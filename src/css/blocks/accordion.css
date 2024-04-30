@@ -3,6 +3,7 @@
 .accordion-button {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: var(--justify-button, space-between);
+  gap: var(--space-2xs);
   color: var(--color-blue-100);
 }
