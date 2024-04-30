@@ -121,6 +121,11 @@ main:focus {
   color: var(--color-gray-100);
 }
 
+/* Remove default list styles for details */
+summary::-webkit-details-marker {
+  display: none;
+}
+
 form > p {
   display: flex;
   flex-flow: column nowrap;
