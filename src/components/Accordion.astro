@@ -1,12 +1,26 @@
 ---
-// TODO: Find a better solution for Accordions
-// Adapted from https://github.com/markteekman/accessible-astro-components/tree/main
+import AccordionItem from './AccordionItem.astro';
+
+type Props = {
+  items: {
+    title: string;
+    description: string;
+  }[];
+};
+
+const { items } = Astro.props;
 ---
 
-<div class="accordion">
-  <ul class="accordion__wrapper">
-    <slot />
-  </ul>
-</div>
+<details-utils class="divide-y divide-gray-600">
+  {
+    items.map((item, idx) => (
+      <AccordionItem
+        idx={idx}
+        title={item.title}
+        description={item.description}
+      />
+    ))
+  }
+</details-utils>
 
-<script src="../scripts/accordion.js"></script>
+<script src="@zachleat/details-utils/details-utils.js"></script>

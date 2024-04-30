@@ -1,41 +1,8 @@
-.accordion__wrapper {
-  list-style: none;
-  padding: 0;
-}
+/* Accordion Button */
 
-.accordion button {
+.accordion-button {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  background: none;
-  border: none;
-  padding: 0;
-}
-
-.accordion button:focus {
-  outline-offset: 12px;
-}
-
-.accordion button svg {
-  margin-inline-start: 2rem;
-}
-
-.accordion__panel {
-  visibility: hidden;
-  overflow: hidden;
-  height: 0;
-  transition:
-    height 0.3s ease-in-out,
-    visibility 0s 0.3s;
-}
-
-.is-active .accordion__panel {
-  visibility: visible;
-  height: auto;
-  transition:
-    height 0.3s ease-in-out,
-    visibility 0s 0s;
-}
-
-.panel__inner {
-  padding-block-start: 2rem;
+  color: var(--color-blue-100);
 }

@@ -18,6 +18,7 @@ Reference source: https://github.com/Set-Creative-Studio/cube-boilerplate/blob/m
 
 @import 'blocks/accordion.css' layer(components);
 @import 'blocks/buttons.css' layer(components);
+@import 'blocks/faq.css' layer(components);
 @import 'blocks/footer.css';
 @import 'blocks/headerlinks.css' layer(components);
 @import 'blocks/hero.css' layer(components);
