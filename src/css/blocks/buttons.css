@@ -1,12 +1,14 @@
-/* Buttons */
+/* Buttons 
+ * 
+ */
 
 .button {
   display: block;
   text-decoration: none;
   border: none;
   border-radius: var(--space-2xs);
-  background-color: var(--color-gold-vivid-200);
-  color: var(--color-gold-1000);
+  /* background-color: var(--color-gold-vivid-200);
+  color: var(--color-gold-1000); */
   padding-inline: var(--space-m);
   padding-block: var(--space-s);
   text-align: center;
@@ -21,12 +23,11 @@
 .button:focus,
 .button:active {
   text-decoration: none;
-  color: white;
-  color: var(--color-gold-vivid-900);
-  background-color: var(--color-gold-vivid-400);
+  /* color: var(--color-gold-vivid-900);
+  background-color: var(--color-gold-vivid-400); */
 }
 .button:focus {
-  outline: 2px solid var(--color-gold-500);
+  /* outline: 2px solid var(--color-gold-500); */
   outline-offset: 4px;
 }
 
@@ -43,10 +44,10 @@
 .button.invert:hover,
 .button.invert:focus,
 .button.invert:active {
-  color: var(--color-gold-vivid-100);
-  background-color: var(--color-gold-vivid-900);
+  color: var(--color-mint-vivid-200);
+  background-color: var(--color-mint-1000);
 }
 
 .button.invert:focus {
-  outline: 2px solid var(--color-gold-vivid-900);
+  outline: 2px solid var(--color-mint-1000);
 }

@@ -24,6 +24,7 @@ Reference source: https://github.com/Set-Creative-Studio/cube-boilerplate/blob/m
 @import 'blocks/headerlinks.css' layer(components);
 @import 'blocks/hero.css' layer(components);
 @import 'blocks/orbs.css' layer(components);
+@import 'blocks/packages.css' layer(components);
 @import 'blocks/pricecard.css' layer(components);
 @import 'blocks/prose.css';
 @import 'blocks/rangeslider.css' layer(components);
