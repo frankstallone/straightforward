@@ -11,7 +11,7 @@ html {
 
 body {
   color: var(--color-blue-vivid-300);
-  background: var(--color-blue-vivid-1000);
+  background: #0c1c27;
   font-size: var(--size-step-00);
   font-family: var(--font-base);
   position: relative;
