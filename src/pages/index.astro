@@ -97,86 +97,80 @@ import AccordionItem from '../components/AccordionItem.astro';
              How do we do it?
           </h2>
         </div>
-        <ul
-          class="grid"
-          role="list"
-          data-layout="50-50"
-          style="--gutter: var(--space-xs-s);"
-        >
-          <li
-            class="box flow prose bg-[#449deb] rounded-2xl text-blue-vivid-900"
-            style="--gutter: var(--space-s-m);"
-          >
-            <h3 class="text-blue-vivid-900">We go deep on research</h3>
-            <p>
-              We'll uncover market-specific insights and high-value content
-              assets that your target audience is actively searching for.
-            </p>
-          </li>
-          <li
-            class="box flow prose bg-[#4ce1bc] rounded-2xl text-mint-vivid-900"
-            style="--gutter: var(--space-s-m);"
-          >
-            <h3 class="text-mint-vivid-900">We're highly organized</h3>
-            <p>
-              You'll get comprehensive plans that include optimized titles, high
-              ranking examples, clear SEO strategies, and actionable guidance in
-              crafting high-performing content specific to every piece.
-            </p>
-          </li>
-          <li
-            class="box flow prose bg-[#ebc644] rounded-2xl text-orange-vivid-900"
-            style="--gutter: var(--space-s-m);"
-          >
-            <h3 class="text-orange-vivid-900">We focus on conversions</h3>
-            <p>
-              We go beyond just attracting eyes; we design your content to
-              convert visitors into leads and customers, backed by strategic
-              wireframes and ongoing optimization based on user engagement.
-            </p>
-          </li>
-          <li
-            class="box flow prose bg-[#869df9] rounded-2xl text-indigo-vivid-900"
-            style="--gutter: var(--space-s-m);"
-          >
-            <h3 class="text-indigo-vivid-900">We tailor our support</h3>
-            <p>
-              With our continuous consulting, we track and refine your strategy
-              to make sure you're receiving sustained traffic growth and
-              consistent conversions.
-            </p>
-          </li>
-          <li
-            class="box flow prose bg-[#e1744c] rounded-2xl text-magenta-vivid-900"
-            style="--gutter: var(--space-s-m);"
-          >
-            <h3 class="text-magenta-vivid-900">
-              We obsess over high-caliber writing
-            </h3>
-            <p>
-              If you need us to execute the writing part of the plan we provide,
-              we've got you covered. And in a world that's quickly filling with
-              generic AI content, you'll find anything we produce stands out
-              clearly from the noise.
-            </p>
-          </li>
-          <li
-            class="box flow prose bg-[#dee14c] rounded-2xl text-gold-vivid-900"
-            style="--gutter: var(--space-s-m);"
-          >
-            <h3 class="text-gold-vivid-900">
-              And we pour in our secret sauce (The Content Machine)
-            </h3>
-            <p>
-              We've designed and built a custom Notion template that makes
-              content research, creation, organization, scheduling, and
-              collaboration straightforward and effective. It's a powerful
-              content machine built for small businesses who want to create
-              better content, faster, and comes included in both of our plans
-              (more in this in the FAQs below).
-            </p>
-          </li>
-        </ul>
+        <div class="switcher">
+          <div class="bg-[#449deb] rounded-3xl text-blue-vivid-900 p-2xs">
+            <div class="box flow prose bg-blue-100 rounded-2xl h-full">
+              <h3 class="text-blue-vivid-900">We go deep on research</h3>
+              <p>
+                We'll uncover market-specific insights and high-value content
+                assets that your target audience is actively searching for.
+              </p>
+            </div>
+          </div>
+          <div class="bg-[#4ce1bc] rounded-3xl text-mint-vivid-900 p-2xs">
+            <div class="box flow prose bg-mint-100 rounded-2xl h-full">
+              <h3 class="text-mint-vivid-900">We're highly organized</h3>
+              <p>
+                You'll get comprehensive plans that include optimized titles,
+                high ranking examples, clear SEO strategies, and actionable
+                guidance in crafting high-performing content specific to every
+                piece.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="switcher">
+          <div class="bg-[#ebc644] rounded-3xl text-orange-vivid-900 p-2xs">
+            <div class="box flow prose bg-blue-100 rounded-2xl h-full">
+              <h3 class="text-orange-vivid-900">We focus on conversions</h3>
+              <p>
+                We go beyond just attracting eyes; we design your content to
+                convert visitors into leads and customers, backed by strategic
+                wireframes and ongoing optimization based on user engagement.
+              </p>
+            </div>
+          </div>
+          <div class="bg-[#869df9] rounded-3xl text-indigo-vivid-900 p-2xs">
+            <div class="box flow prose bg-mint-100 rounded-2xl h-full">
+              <h3 class="text-indigo-vivid-900">We tailor our support</h3>
+              <p>
+                With our continuous consulting, we track and refine your
+                strategy to make sure you're receiving sustained traffic growth
+                and consistent conversions.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="switcher">
+          <div class="bg-[#e1744c] rounded-3xl text-magenta-vivid-900 p-2xs">
+            <div class="box flow prose bg-blue-100 rounded-2xl h-full">
+              <h3 class="text-magenta-vivid-900">
+                We obsess over high-caliber writing
+              </h3>
+              <p>
+                If you need us to execute the writing part of the plan we
+                provide, we've got you covered. And in a world that's quickly
+                filling with generic AI content, you'll find anything we produce
+                stands out clearly from the noise.
+              </p>
+            </div>
+          </div>
+          <div class="bg-[#dee14c] rounded-3xl text-gold-vivid-900 p-2xs">
+            <div class="box flow prose bg-mint-100 rounded-2xl h-full">
+              <h3 class="text-gold-vivid-900">
+                And we pour in our secret sauce (The Content Machine)
+              </h3>
+              <p>
+                We've designed and built a custom Notion template that makes
+                content research, creation, organization, scheduling, and
+                collaboration straightforward and effective. It's a powerful
+                content machine built for small businesses who want to create
+                better content, faster, and comes included in both of our plans
+                (more in this in the FAQs below).
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <section class="region space-y-l-xl" id="OurPackages">
@@ -218,7 +212,7 @@ import AccordionItem from '../components/AccordionItem.astro';
           </h2>
         </div>
       </div>
-      <div class="wrapper">
+      <div class="wrapper flow">
         <div class="switcher">
           <div class="flow prose bg-[#449deb] p-2xs rounded-3xl">
             <div
@@ -392,6 +386,95 @@ import AccordionItem from '../components/AccordionItem.astro';
                 </p>
               </div>
             </seven-minute-tabs>
+          </div>
+        </div>
+        <div class="rounded-3xl bg-[#869df9] p-2xs">
+          <div
+            class="box bg-indigo-100 flow prose rounded-2xl text-indigo-1000"
+          >
+            <h3 class="text-indigo-1000 text-[5vw]">Compare packages</h3>
+            <div class="switcher">
+              <div class="box">
+                <h4 class="text-indigo-1000">Hydrate</h4>
+                <ul role="list" class="space-y-xs text-step-000">
+                  <li class="bullet">
+                    <Bullet />
+                     Get straight to what your audience is searching for with
+                    comprehensive, targeted SEO research that uncovers topics
+                    they care about.
+                  </li>
+                  <li class="bullet">
+                    <Bullet />
+                     Keep your content fresh and relevant with a manageable flow
+                    of handpicked content assets and titles that speak directly
+                    to your reader's interests and search intent.
+                  </li>
+                  <li class="bullet">
+                    <Bullet />
+                     Fine-tune your in-house writing with smart insights and
+                    practical advice that make your content sharper and more
+                    effective.
+                  </li>
+                  <li class="bullet">
+                    <Bullet />
+                     Gain an edge with insights into top-performing content in
+                    your niche—know what's ranking highest and use that
+                    knowledge to get your own content seen.
+                  </li>
+                  <li class="bullet">
+                    <Bullet />
+                     Streamline your workflow with our Content Machine, a
+                    bespoke tool that will simplify how you plan, create,
+                    schedule, and manage your content.
+                  </li>
+                  <li class="bullet">
+                    <Bullet />
+                     Stay on top of your content's performance with monthly
+                    reviews and advice on tweaking your articles for better
+                    visibility and reader engagement.
+                  </li>
+                </ul>
+              </div>
+              <div class="box">
+                <h4 class="text-indigo-1000">Ascend</h4>
+                <ul role="list" class="space-y-xs text-step-000">
+                  <li class="bullet">
+                    <Bullet />
+                     Bundle all the insights and support from Hydrate with the
+                    added muscle of our full-service content team.
+                  </li>
+                  <li class="bullet">
+                    <Bullet />
+                     Consider your content taken care of. From thorough research
+                    to writing articles and crafting social posts, we handle the
+                    heavy lifting so you don't have to.
+                  </li>
+                  <li class="bullet">
+                    <Bullet />
+                     Boost your conversion rates with content designed not just
+                    to attract eyes, but to turn visitors into leads and
+                    customers.
+                  </li>
+                  <li class="bullet">
+                    <Bullet />
+                     Trust in content that sounds like you, every time. No
+                    generic AI fluff here, just real, authentic writing that
+                    speaks to your customers.
+                  </li>
+                  <li class="bullet">
+                    <Bullet />
+                     Rest easy with unlimited revisions. We're committed to
+                    making sure your content hits the mark every time.
+                  </li>
+                  <li class="bullet">
+                    <Bullet />
+                     Benefit from a content strategy that grows stronger over
+                    time, with ongoing adjustments based on how your audience
+                    interacts and converts.
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
