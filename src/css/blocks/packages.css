@@ -9,10 +9,10 @@
 }
 
 .packages-tab[aria-selected='true'] {
-  background-color: #dee14c;
+  background-color: #bfff00;
   color: var(--color-gold-1000);
 }
 .packages-tab[aria-selected='true']:focus {
-  outline: 2px solid #dee14c;
+  outline: 2px solid #bfff00;
   outline-offset: 2px;
 }

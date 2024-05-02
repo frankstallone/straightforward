@@ -21,6 +21,7 @@ Reference source: https://github.com/Set-Creative-Studio/cube-boilerplate/blob/m
 @import 'blocks/buttons.css' layer(components);
 @import 'blocks/faq.css' layer(components);
 @import 'blocks/footer.css';
+@import 'blocks/form-gold.css';
 @import 'blocks/headerlinks.css' layer(components);
 @import 'blocks/hero.css' layer(components);
 @import 'blocks/orbs.css' layer(components);

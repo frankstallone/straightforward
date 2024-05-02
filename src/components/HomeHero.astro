@@ -1,7 +1,5 @@
 ---
 import Header from './Header.astro';
-import relax from '../assets/relaxed.jpg';
-import meditate from '../assets/meditation-class.jpg';
 import family from '../assets/family-rock-climbing.jpg';
 import { Picture } from 'astro:assets';
 ---
@@ -78,7 +76,10 @@ import { Picture } from 'astro:assets';
     <Header />
     <div class="switcher items-center" style="--gap: var(--space-m);">
       <div class="prose flow text-center md:text-left">
-        <h1 id="hero-title" class="text-blue-vivid-200 leading-flat">
+        <h1
+          id="hero-title"
+          class="text-blue-vivid-200 leading-flat text-step-4 lg:text-[5vw]"
+        >
           Effective content marketing for your health and wellness business
         </h1>
         <h2 id="hero-subtitle" class="text-step-00 text-[#dee14c]">
@@ -92,37 +93,7 @@ import { Picture } from 'astro:assets';
           your brand.
         </p>
       </div>
-      <div class="flex flex-col gap-m md:grid" data-layout="twelfths">
-        <Picture
-          src={relax}
-          widths={[240, 540, 720, relax.width]}
-          sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${relax.width}px`}
-          width={6865}
-          height={4904}
-          alt="Relaxed gentleman with a green juice"
-          quality={80}
-          formats={['avif', 'webp']}
-          class="h-auto w-auto mx-auto object-contain rounded-2xl row-start-1 row-span-6 col-start-1 col-span-6 border-blue-200 border-8 z-10"
-          pictureAttributes={{
-            class:
-              'h-auto w-auto mx-auto object-contain rounded-2xl row-start-1 row-span-6 col-start-1 col-span-6 z-10',
-          }}
-        />
-        <Picture
-          src={meditate}
-          widths={[240, 540, 720, meditate.width]}
-          sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${meditate.width}px`}
-          width={6865}
-          height={4904}
-          alt="Meditation class"
-          quality={80}
-          formats={['avif', 'webp']}
-          class="hidden md:block h-auto w-auto mx-auto object-contain rounded-2xl row-start-3 row-span-6 col-start-5 col-span-8 border-blue-200 border-8 z-10"
-          pictureAttributes={{
-            class:
-              'hidden md:block h-auto w-auto mx-auto object-contain rounded-2xl row-start-3 row-span-6 col-start-5 col-span-8 z-10',
-          }}
-        />
+      <div>
         <Picture
           src={family}
           widths={[240, 540, 720, family.width]}
@@ -132,10 +103,10 @@ import { Picture } from 'astro:assets';
           alt="Family rock climbing"
           quality={80}
           formats={['avif', 'webp']}
-          class="hidden md:block h-auto w-auto mx-auto object-contain rounded-2xl row-start-4 row-span-6 col-start-2 col-span-8 border-blue-200 border-8 z-0"
+          class="h-auto w-auto mx-auto object-contain rounded-2xl border-[#869df9] border-8 z-0 lg:max-w-xl"
           pictureAttributes={{
             class:
-              'hidden md:block h-auto w-auto mx-auto object-contain rounded-2xl row-start-4 row-span-6 col-start-2 col-span-8 z-0',
+              'h-auto w-auto mx-auto object-contain rounded-2xl z-0 lg:max-w-xl',
           }}
         />
       </div>

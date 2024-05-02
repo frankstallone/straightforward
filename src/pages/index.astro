@@ -18,7 +18,7 @@ import AccordionItem from '../components/AccordionItem.astro';
   }}
 >
   <article id="main" class="relative z-10">
-    <section class="region wrapper">
+    <section class="region wrapper" id="DriveLeads">
       <div class="switcher relative">
         <svg
           viewBox="0 0 256 256"
@@ -39,7 +39,7 @@ import AccordionItem from '../components/AccordionItem.astro';
             alt="Focused workout group training with kettlebells"
             quality={80}
             formats={['avif', 'webp']}
-            class="relative h-auto w-auto mx-auto object-contain rounded-2xl row-start-1 row-span-6 col-start-1 col-span-6 border-blue-200 border-8 z-10"
+            class="relative h-auto w-auto mx-auto object-contain rounded-2xl row-start-1 row-span-6 col-start-1 col-span-6 border-[#e1744c] border-8 z-10"
             pictureAttributes={{
               class:
                 'relative h-auto w-auto mx-auto object-contain rounded-2xl row-start-1 row-span-6 col-start-1 col-span-6 z-10',
@@ -47,7 +47,9 @@ import AccordionItem from '../components/AccordionItem.astro';
           />
         </div>
         <div class="box flow prose">
-          <h2>Drive more inbound leads from your ideal audience</h2>
+          <h2 class="lg:text-[4vw] leading-flat">
+            Drive more inbound leads from your ideal audience
+          </h2>
           <p>
             Regularly posting content, but just not attracting your tribe? Or
             know that content marketing is crucial for your business, but don't
@@ -59,48 +61,50 @@ import AccordionItem from '../components/AccordionItem.astro';
         </div>
       </div>
     </section>
-    <section class="region" id="HowWeDoIt">
-      <div class="wrapper space-y-l-xl">
-        <div class="box w-fit mx-auto text-center">
-          <h2 class="relative">
-            <svg
-              viewBox="0 0 573 80"
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-              class="absolute -bottom-xs left-xs z-0 h-2xs text-[#bfff00]"
-            >
-              <path
-                d="M8.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
-                fill="currentColor"></path>
-              <path
-                d="M83.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
-                fill="currentColor"></path>
-              <path
-                d="M158.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
-                fill="currentColor"></path>
-              <path
-                d="M233.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
-                fill="currentColor"></path>
-              <path
-                d="M308.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
-                fill="currentColor"></path>
-              <path
-                d="M383.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
-                fill="currentColor"></path>
-              <path
-                d="M458.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
-                fill="currentColor"></path>
-              <path
-                d="M533.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
-                fill="currentColor"></path>
-            </svg>
-             How do we do it?
-          </h2>
-        </div>
+    <section class="region space-y-l-xl" id="HowWeDoIt">
+      <div class="box w-fit mx-auto text-center">
+        <h2 class="relative lg:text-[4vw]">
+          <svg
+            viewBox="0 0 573 80"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            class="absolute -bottom-xs left-xs z-0 h-2xs text-[#bfff00]"
+          >
+            <path
+              d="M8.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
+              fill="currentColor"></path>
+            <path
+              d="M83.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
+              fill="currentColor"></path>
+            <path
+              d="M158.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
+              fill="currentColor"></path>
+            <path
+              d="M233.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
+              fill="currentColor"></path>
+            <path
+              d="M308.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
+              fill="currentColor"></path>
+            <path
+              d="M383.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
+              fill="currentColor"></path>
+            <path
+              d="M458.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
+              fill="currentColor"></path>
+            <path
+              d="M533.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
+              fill="currentColor"></path>
+          </svg>
+           How do we do it?
+        </h2>
+      </div>
+      <div class="wrapper space-y-s">
         <div class="switcher">
           <div class="bg-[#449deb] rounded-3xl text-blue-vivid-900 p-2xs">
             <div class="box flow prose bg-blue-100 rounded-2xl h-full">
-              <h3 class="text-blue-vivid-900">We go deep on research</h3>
+              <h3 class="text-blue-vivid-900 lg:text-[3vw] text-center">
+                We go deep on research
+              </h3>
               <p>
                 We'll uncover market-specific insights and high-value content
                 assets that your target audience is actively searching for.
@@ -109,7 +113,9 @@ import AccordionItem from '../components/AccordionItem.astro';
           </div>
           <div class="bg-[#4ce1bc] rounded-3xl text-mint-vivid-900 p-2xs">
             <div class="box flow prose bg-mint-100 rounded-2xl h-full">
-              <h3 class="text-mint-vivid-900">We're highly organized</h3>
+              <h3 class="text-mint-vivid-900 lg:text-[3vw] text-center">
+                We're highly organized
+              </h3>
               <p>
                 You'll get comprehensive plans that include optimized titles,
                 high ranking examples, clear SEO strategies, and actionable
@@ -122,7 +128,9 @@ import AccordionItem from '../components/AccordionItem.astro';
         <div class="switcher">
           <div class="bg-[#ebc644] rounded-3xl text-orange-vivid-900 p-2xs">
             <div class="box flow prose bg-blue-100 rounded-2xl h-full">
-              <h3 class="text-orange-vivid-900">We focus on conversions</h3>
+              <h3 class="text-orange-vivid-900 lg:text-[3vw] text-center">
+                We focus on conversions
+              </h3>
               <p>
                 We go beyond just attracting eyes; we design your content to
                 convert visitors into leads and customers, backed by strategic
@@ -132,7 +140,9 @@ import AccordionItem from '../components/AccordionItem.astro';
           </div>
           <div class="bg-[#869df9] rounded-3xl text-indigo-vivid-900 p-2xs">
             <div class="box flow prose bg-mint-100 rounded-2xl h-full">
-              <h3 class="text-indigo-vivid-900">We tailor our support</h3>
+              <h3 class="text-indigo-vivid-900 lg:text-[3vw] text-center">
+                We tailor our support
+              </h3>
               <p>
                 With our continuous consulting, we track and refine your
                 strategy to make sure you're receiving sustained traffic growth
@@ -142,9 +152,9 @@ import AccordionItem from '../components/AccordionItem.astro';
           </div>
         </div>
         <div class="switcher">
-          <div class="bg-[#e1744c] rounded-3xl text-magenta-vivid-900 p-2xs">
+          <div class="bg-[#e1744c] rounded-3xl text-orange-vivid-900 p-2xs">
             <div class="box flow prose bg-blue-100 rounded-2xl h-full">
-              <h3 class="text-magenta-vivid-900">
+              <h3 class="text-orange-vivid-900 lg:text-[3vw] text-center">
                 We obsess over high-caliber writing
               </h3>
               <p>
@@ -157,16 +167,19 @@ import AccordionItem from '../components/AccordionItem.astro';
           </div>
           <div class="bg-[#dee14c] rounded-3xl text-gold-vivid-900 p-2xs">
             <div class="box flow prose bg-mint-100 rounded-2xl h-full">
-              <h3 class="text-gold-vivid-900">
-                And we pour in our secret sauce (The Content Machine)
+              <h3 class="text-gold-vivid-900 lg:text-[3vw] text-center">
+                And we pour in our secret sauce
               </h3>
+              <h4 class="text-gold-vivid-900 text-center mt-[0.5rem]">
+                <em>The Content Machine</em>
+              </h4>
               <p>
                 We've designed and built a custom Notion template that makes
                 content research, creation, organization, scheduling, and
                 collaboration straightforward and effective. It's a powerful
                 content machine built for small businesses who want to create
                 better content, faster, and comes included in both of our plans
-                (more in this in the FAQs below).
+                (more in this <a href="#FAQs">in the FAQs below</a>).
               </p>
             </div>
           </div>
@@ -176,7 +189,7 @@ import AccordionItem from '../components/AccordionItem.astro';
     <section class="region space-y-l-xl" id="OurPackages">
       <div class="wrapper">
         <div class="box w-fit mx-auto text-center">
-          <h2 class="relative">
+          <h2 class="relative lg:text-[4vw]">
             <svg
               viewBox="0 0 573 80"
               version="1.1"
@@ -218,7 +231,7 @@ import AccordionItem from '../components/AccordionItem.astro';
             <div
               class="box flex flex-col justify-between flow prose bg-blue-100 rounded-2xl h-full text-blue-1000"
             >
-              <h3 class="text-blue-1000 text-[5vw]">
+              <h3 class="text-blue-1000 md:text-[5vw] leading-flat">
                 Join Straightforward Growth
               </h3>
               <a
@@ -392,7 +405,7 @@ import AccordionItem from '../components/AccordionItem.astro';
           <div
             class="box bg-indigo-100 flow prose rounded-2xl text-indigo-1000"
           >
-            <h3 class="text-indigo-1000 text-[5vw]">Compare packages</h3>
+            <h3 class="text-indigo-1000 md:text-[4vw]">Compare packages</h3>
             <div class="switcher">
               <div class="box">
                 <h4 class="text-indigo-1000">Hydrate</h4>
@@ -477,223 +490,229 @@ import AccordionItem from '../components/AccordionItem.astro';
             </div>
           </div>
         </div>
+        <div class="flow" id="FeaturesList">
+          <div class="rounded-3xl bg-[#ebc644] p-2xs text-gold-1000">
+            <div class="box bg-gold-100 flow prose rounded-2xl">
+              <h2 class="relative lg:text-[4vw] text-gold-1000">
+                Feature list
+              </h2>
+              <table-saw breakpoint="(max-width: 760px)">
+                <table class="w-full mx-auto text-left md:text-center">
+                  <thead>
+                    <th></th>
+                    <th class="w-1/4 px-xs py-s">Hydrate</th>
+                    <th class="w-1/4 px-xs py-s">Ascend</th>
+                  </thead>
+                  <tbody class="divide-y divide-blue-vivid-800">
+                    <tr>
+                      <th class="py-s text-left">Content assets</th>
+                      <td class="py-s">2</td>
+                      <td class="py-s">2</td>
+                    </tr>
+                    <tr>
+                      <th class="py-s text-left">Content machine</th>
+                      <td class="py-s"><Checkmark class="text-step-0000" /></td>
+                      <td class="py-s"><Checkmark class="text-step-0000" /></td>
+                    </tr>
+                    <tr>
+                      <th class="py-s text-left">Engagement best practices</th>
+                      <td class="py-s"><Checkmark class="text-step-0000" /></td>
+                      <td class="py-s"><Checkmark class="text-step-0000" /></td>
+                    </tr>
+                    <tr>
+                      <th class="py-s text-left">Converstion best practices</th>
+                      <td class="py-s"><Checkmark class="text-step-0000" /></td>
+                      <td class="py-s"><Checkmark class="text-step-0000" /></td>
+                    </tr>
+                    <tr>
+                      <th class="py-s text-left">Training</th>
+                      <td class="py-s"><Checkmark class="text-step-0000" /></td>
+                      <td class="py-s"><Checkmark class="text-step-0000" /></td>
+                    </tr>
+                    <tr>
+                      <th class="py-s text-left">Branded copy</th>
+                      <td class="py-s">&mdash;</td>
+                      <td class="py-s">Unlimited revisions</td>
+                    </tr>
+                    <tr>
+                      <th class="py-s text-left">Page level optimizations†</th>
+                      <td class="py-s">&mdash;</td>
+                      <td class="py-s"><Checkmark class="text-step-0000" /></td>
+                    </tr>
+                    <tr>
+                      <th class="py-s text-left">Minimum term</th>
+                      <td class="py-s">Month-to-month</td>
+                      <td class="py-s">Month-to-month</td>
+                    </tr>
+                    <tr>
+                      <th class="py-s text-left">Pay by credit card</th>
+                      <td class="py-s"><Checkmark class="text-step-0000" /></td>
+                      <td class="py-s"><Checkmark class="text-step-0000" /></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </table-saw>
+            </div>
+            <div class="box mx-auto text-center w-fit">
+              <p class="text-step-000">
+                † Page level optimizations include keyphrase density, URL, image
+                names, image <code>alt</code>
+                 tags, <code>meta</code> tags, and schema.org markup.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="region space-y-l-xl" id="AddOns">
+      <div class="wrapper">
+        <div class="box w-fit mx-auto text-center">
+          <h2 class="relative lg:text-[4vw]">
+            <svg
+              viewBox="0 0 573 80"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              class="absolute -bottom-xs left-xs z-0 h-2xs text-[#bfff00]"
+            >
+              <path
+                d="M8.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
+                fill="currentColor"></path>
+              <path
+                d="M83.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
+                fill="currentColor"></path>
+              <path
+                d="M158.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
+                fill="currentColor"></path>
+              <path
+                d="M233.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
+                fill="currentColor"></path>
+              <path
+                d="M308.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
+                fill="currentColor"></path>
+              <path
+                d="M383.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
+                fill="currentColor"></path>
+              <path
+                d="M458.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
+                fill="currentColor"></path>
+              <path
+                d="M533.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
+                fill="currentColor"></path>
+            </svg>
+             Add-ons
+          </h2>
+        </div>
+      </div>
+      <div class="wrapper">
+        <ul class="cluster text-center" role="list">
+          <li
+            class="box bg-[#449deb] text-blue-vivid-900 rounded-3xl"
+            style="--gutter: var(--space-2xs) var(--space-xs);"
+          >
+            Content implementation
+          </li>
+          <li
+            class="box bg-[#4ce1bc] text-mint-vivid-900 rounded-3xl"
+            style="--gutter: var(--space-2xs) var(--space-xs);"
+          >
+            Concierge Google Search console service
+          </li>
+          <li
+            class="box bg-[#ebc644] text-orange-vivid-900 rounded-3xl"
+            style="--gutter: var(--space-2xs) var(--space-xs);"
+          >
+            Concierge Google Ads service
+          </li>
+          <li
+            class="box bg-[#869df9] text-indigo-vivid-900 rounded-3xl"
+            style="--gutter: var(--space-2xs) var(--space-xs);"
+          >
+            Concierge Google Analyics service
+          </li>
+          <li
+            class="box bg-[#e1744c] text-orange-vivid-900 rounded-3xl"
+            style="--gutter: var(--space-2xs) var(--space-xs);"
+          >
+            SEO reporting
+          </li>
+          <li
+            class="box bg-[#dee14c] text-gold-vivid-900 rounded-3xl"
+            style="--gutter: var(--space-2xs) var(--space-xs);"
+          >
+            Page optimizations
+          </li>
+          <li
+            class="box bg-[#449deb] text-blue-vivid-900 rounded-3xl"
+            style="--gutter: var(--space-2xs) var(--space-xs);"
+          >
+            Branded mini sites
+          </li>
+          <li
+            class="box bg-[#4ce1bc] text-mint-vivid-900 rounded-3xl"
+            style="--gutter: var(--space-2xs) var(--space-xs);"
+          >
+            Web performance audits
+          </li>
+          <li
+            class="box bg-[#ebc644] text-orange-vivid-900 rounded-3xl"
+            style="--gutter: var(--space-2xs) var(--space-xs);"
+          >
+            More &hellip;
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="region space-y-l-xl" id="FAQs">
+      <div class="wrapper">
+        <div class="box w-fit mx-auto text-center">
+          <h2 class="relative lg:text-[4vw]">
+            <svg
+              viewBox="0 0 573 80"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              class="absolute -bottom-xs left-xs z-0 h-2xs text-[#bfff00]"
+            >
+              <path
+                d="M8.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
+                fill="currentColor"></path>
+              <path
+                d="M83.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
+                fill="currentColor"></path>
+              <path
+                d="M158.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
+                fill="currentColor"></path>
+              <path
+                d="M233.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
+                fill="currentColor"></path>
+              <path
+                d="M308.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
+                fill="currentColor"></path>
+              <path
+                d="M383.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
+                fill="currentColor"></path>
+              <path
+                d="M458.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
+                fill="currentColor"></path>
+              <path
+                d="M533.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
+                fill="currentColor"></path>
+            </svg>
+             Frequently asked questions
+          </h2>
+        </div>
+      </div>
+      <div class="wrapper" style="--wrapper-max-width: 65ch;">
+        <div class="rounded-3xl bg-[#869df9] p-2xs">
+          <div
+            class="box bg-indigo-100 flow prose rounded-2xl text-indigo-vivid-900"
+          >
+            <Accordion items={health} />
+          </div>
+        </div>
       </div>
     </section>
   </article>
 
-  <section class="region" id="PricingTable">
-    <div class="wrapper space-y-l-xl">
-      <div class="box w-fit mx-auto text-center">
-        <h2 class="relative">
-          <svg
-            viewBox="0 0 573 80"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            class="absolute -bottom-xs left-xs z-0 h-2xs text-[#bfff00]"
-          >
-            <path
-              d="M8.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
-              fill="currentColor"></path>
-            <path
-              d="M83.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
-              fill="currentColor"></path>
-            <path
-              d="M158.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
-              fill="currentColor"></path>
-            <path
-              d="M233.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
-              fill="currentColor"></path>
-            <path
-              d="M308.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
-              fill="currentColor"></path>
-            <path
-              d="M383.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
-              fill="currentColor"></path>
-            <path
-              d="M458.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
-              fill="currentColor"></path>
-            <path
-              d="M533.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
-              fill="currentColor"></path>
-          </svg>
-           Feature list
-        </h2>
-      </div>
-    </div>
-    <div class="wrapper flow prose">
-      <div class="box">
-        <table-saw breakpoint="(max-width: 760px)">
-          <table class="w-full mx-auto text-left md:text-center">
-            <thead>
-              <th></th>
-              <th class="w-1/4 px-xs py-s">Hydrate</th>
-              <th class="w-1/4 px-xs py-s">Ascend</th>
-            </thead>
-            <tbody class="divide-y divide-blue-vivid-800">
-              <tr>
-                <th class="py-s text-left">Content assets</th>
-                <td class="py-s">2</td>
-                <td class="py-s">2</td>
-              </tr>
-              <tr>
-                <th class="py-s text-left">Content machine</th>
-                <td class="py-s"><Checkmark class="text-step-0000" /></td>
-                <td class="py-s"><Checkmark class="text-step-0000" /></td>
-              </tr>
-              <tr>
-                <th class="py-s text-left">Engagement best practices</th>
-                <td class="py-s"><Checkmark class="text-step-0000" /></td>
-                <td class="py-s"><Checkmark class="text-step-0000" /></td>
-              </tr>
-              <tr>
-                <th class="py-s text-left">Converstion best practices</th>
-                <td class="py-s"><Checkmark class="text-step-0000" /></td>
-                <td class="py-s"><Checkmark class="text-step-0000" /></td>
-              </tr>
-              <tr>
-                <th class="py-s text-left">Training</th>
-                <td class="py-s"><Checkmark class="text-step-0000" /></td>
-                <td class="py-s"><Checkmark class="text-step-0000" /></td>
-              </tr>
-              <tr>
-                <th class="py-s text-left">Branded copy</th>
-                <td class="py-s">&mdash;</td>
-                <td class="py-s">Unlimited revisions</td>
-              </tr>
-              <tr>
-                <th class="py-s text-left">Page level optimizations†</th>
-                <td class="py-s">&mdash;</td>
-                <td class="py-s"><Checkmark class="text-step-0000" /></td>
-              </tr>
-              <tr>
-                <th class="py-s text-left">Minimum term</th>
-                <td class="py-s">Month-to-month</td>
-                <td class="py-s">Month-to-month</td>
-              </tr>
-              <tr>
-                <th class="py-s text-left">Pay by credit card</th>
-                <td class="py-s"><Checkmark class="text-step-0000" /></td>
-                <td class="py-s"><Checkmark class="text-step-0000" /></td>
-              </tr>
-            </tbody>
-          </table>
-        </table-saw>
-      </div>
-      <div class="box">
-        <p class="text-step-000">
-          † Page level optimizations include keyphrase density, URL, image
-          names, image <code>alt</code>
-           tags, <code>meta</code> tags, and schema.org markup.
-        </p>
-      </div>
-    </div>
-  </section>
-  <section class="region space-y-l-xl" id="AddOns">
-    <div class="wrapper">
-      <div class="box w-fit mx-auto text-center">
-        <h2 class="relative">
-          <svg
-            viewBox="0 0 573 80"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            class="absolute -bottom-xs left-xs z-0 h-2xs text-[#bfff00]"
-          >
-            <path
-              d="M8.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
-              fill="currentColor"></path>
-            <path
-              d="M83.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
-              fill="currentColor"></path>
-            <path
-              d="M158.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
-              fill="currentColor"></path>
-            <path
-              d="M233.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
-              fill="currentColor"></path>
-            <path
-              d="M308.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
-              fill="currentColor"></path>
-            <path
-              d="M383.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
-              fill="currentColor"></path>
-            <path
-              d="M458.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
-              fill="currentColor"></path>
-            <path
-              d="M533.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
-              fill="currentColor"></path>
-          </svg>
-           Add-ons
-        </h2>
-      </div>
-    </div>
-    <div class="wrapper">
-      <ul class="cluster text-center" role="list">
-        <li class="box bg-blue-vivid-800 rounded-3xl">
-          Content implementation
-        </li>
-        <li class="box bg-blue-vivid-800 rounded-3xl">
-          Concierge Google Search console service
-        </li>
-        <li class="box bg-blue-vivid-800 rounded-3xl">
-          Concierge Google Ads service
-        </li>
-        <li class="box bg-blue-vivid-800 rounded-3xl">
-          Concierge Google Analyics service
-        </li>
-        <li class="box bg-blue-vivid-800 rounded-3xl">SEO reporting</li>
-        <li class="box bg-blue-vivid-800 rounded-3xl">Page optimizations</li>
-        <li class="box bg-blue-vivid-800 rounded-3xl">Branded mini sites</li>
-        <li class="box bg-blue-vivid-800 rounded-3xl">
-          Web performance audits
-        </li>
-      </ul>
-    </div>
-  </section>
-  <section class="region" id="FAQs">
-    <div class="wrapper">
-      <div class="box w-fit mx-auto text-center">
-        <h2 class="relative">
-          <svg
-            viewBox="0 0 573 80"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            class="absolute -bottom-xs left-xs z-0 h-2xs text-[#bfff00]"
-          >
-            <path
-              d="M8.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
-              fill="currentColor"></path>
-            <path
-              d="M83.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
-              fill="currentColor"></path>
-            <path
-              d="M158.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
-              fill="currentColor"></path>
-            <path
-              d="M233.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
-              fill="currentColor"></path>
-            <path
-              d="M308.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
-              fill="currentColor"></path>
-            <path
-              d="M383.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
-              fill="currentColor"></path>
-            <path
-              d="M458.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
-              fill="currentColor"></path>
-            <path
-              d="M533.191,0.001c-1.914,0.032 -3.981,0.903 -5.637,2.555c-2.937,2.938 -3.41,7.195 -1.058,9.547l27.628,27.629l-27.628,27.633c-2.352,2.347 -1.879,6.605 1.058,9.543c2.942,2.941 7.195,3.414 9.547,1.062l33.941,-33.941c1.118,-1.117 1.59,-2.664 1.469,-4.297c0.121,-1.629 -0.351,-3.18 -1.469,-4.297l-33.941,-33.937c-1.027,-1.032 -2.422,-1.52 -3.91,-1.497Z"
-              fill="currentColor"></path>
-          </svg>
-           Frequently asked questions
-        </h2>
-      </div>
-    </div>
-    <div class="wrapper" style="--wrapper-max-width: 65ch;">
-      <Accordion items={health} />
-    </div>
-  </section>
+  <script src="@zachleat/table-saw/table-saw.js"></script>
+  <script src="@zachleat/seven-minute-tabs"></script>
 </Layout>
-
-<script src="@zachleat/table-saw/table-saw.js"></script>
-<script src="@zachleat/seven-minute-tabs"></script>
