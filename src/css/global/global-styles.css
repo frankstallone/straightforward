@@ -27,7 +27,7 @@ h5,
 h6 {
   color: var(--color-blue-100);
   font-family: var(--font-display);
-  font-weight: var(--font-semibold);
+  font-weight: var(--font-bold);
 }
 
 h1,
