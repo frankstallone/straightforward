@@ -1,7 +1,6 @@
 ---
 import Header from './Header.astro';
 import meditate from '../assets/meditation-class.jpg';
-import family from '../assets/family-rock-climbing.jpg';
 import { Picture } from 'astro:assets';
 ---
 
@@ -87,7 +86,7 @@ import { Picture } from 'astro:assets';
           Straightforward Growth specializes in generating more inbound leads
           for your health and wellness business.
         </h2>
-        <p class="text-blue-vivid-100">
+        <p class="text-blue-vivid-300">
           Whether you need deep SEO and topic research to arm your existing
           team, a volume of targeted content written for you, or both, our
           unique approach to content marketing is like personal training for
@@ -95,21 +94,6 @@ import { Picture } from 'astro:assets';
         </p>
       </div>
       <div>
-        <Picture
-          src={family}
-          widths={[240, 540, 720, family.width]}
-          sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${family.width}px`}
-          width={4657}
-          height={6978}
-          alt="Family rock climbing"
-          quality={80}
-          formats={['avif', 'webp']}
-          class="hidden md:block h-auto w-auto mx-auto object-contain rounded-2xl border-[#869df9] border-8 z-0 lg:max-w-xl"
-          pictureAttributes={{
-            class:
-              'hidden md:block h-auto w-auto mx-auto object-contain rounded-2xl z-0 lg:max-w-xl',
-          }}
-        />
         <Picture
           src={meditate}
           widths={[240, 540, 720, meditate.width]}
@@ -119,10 +103,10 @@ import { Picture } from 'astro:assets';
           alt="Meditation class"
           quality={80}
           formats={['avif', 'webp']}
-          class="md:hidden h-auto w-auto mx-auto object-contain rounded-2xl row-start-3 row-span-6 col-start-5 col-span-8 border-blue-200 border-8 z-10"
+          class="h-auto w-auto mx-auto object-contain rounded-2xl row-start-3 row-span-6 col-start-5 col-span-8 border-blue-200 border-8 z-10"
           pictureAttributes={{
             class:
-              'md:hidden h-auto w-auto mx-auto object-contain rounded-2xl row-start-3 row-span-6 col-start-5 col-span-8 z-10',
+              'h-auto w-auto mx-auto object-contain rounded-2xl row-start-3 row-span-6 col-start-5 col-span-8 z-10',
           }}
         />
       </div>

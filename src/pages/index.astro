@@ -102,9 +102,7 @@ import AccordionItem from '../components/AccordionItem.astro';
         <div class="switcher">
           <div class="bg-[#449deb] rounded-3xl text-blue-vivid-900 p-2xs">
             <div class="box flow prose bg-blue-100 rounded-2xl h-full">
-              <h3
-                class="text-blue-vivid-900 text-[7vw] md:text-[4vw] lg:text-step-3 text-center"
-              >
+              <h3 class="text-blue-vivid-900 text-step-3 text-center">
                 We go deep on research
               </h3>
               <p>
@@ -115,9 +113,7 @@ import AccordionItem from '../components/AccordionItem.astro';
           </div>
           <div class="bg-[#4ce1bc] rounded-3xl text-mint-vivid-900 p-2xs">
             <div class="box flow prose bg-mint-100 rounded-2xl h-full">
-              <h3
-                class="text-mint-vivid-900 text-[7vw] md:text-[4vw] lg:text-step-3 text-center"
-              >
+              <h3 class="text-mint-vivid-900 text-step-3 text-center">
                 We're highly organized
               </h3>
               <p>
@@ -132,9 +128,7 @@ import AccordionItem from '../components/AccordionItem.astro';
         <div class="switcher">
           <div class="bg-[#ebc644] rounded-3xl text-orange-vivid-900 p-2xs">
             <div class="box flow prose bg-orange-100 rounded-2xl h-full">
-              <h3
-                class="text-orange-vivid-900 text-[7vw] md:text-[4vw] lg:text-step-3 text-center"
-              >
+              <h3 class="text-orange-vivid-900 text-step-3 text-center">
                 We focus on conversions
               </h3>
               <p>
@@ -146,9 +140,7 @@ import AccordionItem from '../components/AccordionItem.astro';
           </div>
           <div class="bg-[#869df9] rounded-3xl text-indigo-vivid-900 p-2xs">
             <div class="box flow prose bg-indigo-100 rounded-2xl h-full">
-              <h3
-                class="text-indigo-vivid-900 text-[7vw] md:text-[4vw] lg:text-step-3 text-center"
-              >
+              <h3 class="text-indigo-vivid-900 text-step-3 text-center">
                 We tailor our support
               </h3>
               <p>
@@ -162,9 +154,7 @@ import AccordionItem from '../components/AccordionItem.astro';
         <div class="switcher">
           <div class="bg-[#e1744c] rounded-3xl text-orange-vivid-900 p-2xs">
             <div class="box flow prose bg-orange-100 rounded-2xl h-full">
-              <h3
-                class="text-orange-vivid-900 text-[7vw] md:text-[4vw] lg:text-step-3 text-center"
-              >
+              <h3 class="text-orange-vivid-900 text-step-3 text-center">
                 We obsess over high-caliber writing
               </h3>
               <p>
@@ -177,9 +167,7 @@ import AccordionItem from '../components/AccordionItem.astro';
           </div>
           <div class="bg-[#dee14c] rounded-3xl text-gold-vivid-900 p-2xs">
             <div class="box flow prose bg-gold-100 rounded-2xl h-full">
-              <h3
-                class="text-gold-vivid-900 text-[7vw] md:text-[4vw] lg:text-step-3 text-center"
-              >
+              <h3 class="text-gold-vivid-900 text-step-3 text-center">
                 And we pour in our secret sauce
               </h3>
               <h4 class="text-gold-vivid-900 text-center mt-[0.5rem]">
@@ -280,8 +268,20 @@ import AccordionItem from '../components/AccordionItem.astro';
                   >
                 </li>
                 <li class="list-none text-center flex">
-                  <a href="#ascend-tab" class="packages-tab" role="tab"
-                    >Ascend</a
+                  <a
+                    href="#ascend-tab"
+                    class="packages-tab flex justify-center items-center gap-3xs"
+                    role="tab"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 576 512"
+                      fill="currentColor"
+                      style="height: .8lh"
+                      ><path
+                        d="M460.7 39.3l-2.2-2.1c-4.7-4.6-11.5-6.4-17.9-4.7s-11.4 6.6-13.1 13l-.8 2.9c-3.3 11.8-5.1 23.7-5.5 35.6c24.3 20.6 42.9 47.8 53.3 78.8c-8.2-1.9-16.5-2.9-25-2.9c-.6 0-1.1 0-1.7 0c-18.4-44-56.5-77.4-103.6-89.3l-3.4-.9c-6.2-1.6-12.9-.6-18.5 2.6c-10.8 6.2-15.6 19.5-11.2 31.1c14.9 39.5 44.3 71.4 81.4 89.7c-3.7 6.6-6.4 14-7.6 21.8L279.7 154.9C248.8 137.3 213.8 128 178.2 128c-32.3 0-62.2 16.8-78.9 44.4C89 159.9 73.4 152 56 152c-30.9 0-56 25.1-56 56s25.1 56 56 56c11.3 0 21.8-3.3 30.6-9.1c4.9 17.2 14.5 33.1 28.4 45.9L257.2 431.2C269 442 284.4 448 300.4 448H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H352 335.2 320V340.5c0-42.9-28.4-80.5-69.6-92.3l-30.8-8.8c-8.5-2.4-13.4-11.3-11-19.8s11.3-13.4 19.8-11l30.8 8.8c55 15.7 92.8 65.9 92.8 123.1v15.7l56-32.4 6.4-3.7H515.7c33.3 0 60.3-27 60.3-60.3c0-18.1-8.2-35.3-22.2-46.7l-34.6-28.2c-4.6-3.7-9.4-7.1-14.5-10c8.4-49.3-7.8-100-43.9-135.5zm-318.5 382c-14.7 9.8-18.7 29.7-8.9 44.4s29.7 18.7 44.4 8.9l46-30.7-48.6-44.5-32.9 22zM480 240a16 16 0 1 1 32 0 16 16 0 1 1 -32 0z"
+                      ></path></svg
+                    > Ascend</a
                   >
                 </li>
               </ol>
@@ -290,7 +290,7 @@ import AccordionItem from '../components/AccordionItem.astro';
                 role="tabpanel"
                 class="box flow prose bg-mint-100 rounded-2xl text-mint-1000"
               >
-                <p class="text-step-000">
+                <p>
                   For teams who write their own content but lack the time or
                   tools to ensure it gets seen: we provide precise SEO research,
                   planning and topic ideas to ensure your content not only meets
@@ -301,49 +301,11 @@ import AccordionItem from '../components/AccordionItem.astro';
                 >
                   $2,000<small class="text-step-00 text-mint-800">/month</small>
                 </h3>
-                <AccordionItem
-                  title="Read more to see if Hydrate is right for you"
-                  idx={1}
-                >
-                  <ul role="list" class="space-y-xs text-step-000">
-                    <li class="bullet">
-                      <Bullet />
-                       Get straight to what your audience is searching for with
-                      comprehensive, targeted SEO research that uncovers topics
-                      they care about.
-                    </li>
-                    <li class="bullet">
-                      <Bullet />
-                       Keep your content fresh and relevant with a manageable
-                      flow of handpicked content assets and titles that speak
-                      directly to your reader's interests and search intent.
-                    </li>
-                    <li class="bullet">
-                      <Bullet />
-                       Fine-tune your in-house writing with smart insights and
-                      practical advice that make your content sharper and more
-                      effective.
-                    </li>
-                    <li class="bullet">
-                      <Bullet />
-                       Gain an edge with insights into top-performing content in
-                      your niche—know what's ranking highest and use that
-                      knowledge to get your own content seen.
-                    </li>
-                    <li class="bullet">
-                      <Bullet />
-                       Streamline your workflow with our Content Machine, a
-                      bespoke tool that will simplify how you plan, create,
-                      schedule, and manage your content.
-                    </li>
-                    <li class="bullet">
-                      <Bullet />
-                       Stay on top of your content's performance with monthly
-                      reviews and advice on tweaking your articles for better
-                      visibility and reader engagement.
-                    </li>
-                  </ul>
-                </AccordionItem>
+                <p>
+                  <a href="#ComparePackages"
+                    >Read more to see if Hydrate is right for you</a
+                  >
+                </p>
                 <p>
                   <a
                     href="#"
@@ -357,55 +319,21 @@ import AccordionItem from '../components/AccordionItem.astro';
                 role="tabpanel"
                 class="box flow prose bg-mint-100 rounded-3xl text-mint-1000"
               >
-                <p class="text-step-000">
+                <p>
                   For teams looking for a complete, hands-off content solution:
                   we combine our expert SEO research with high-quality writing
                   to deliver content that engages, converts, and ranks.
                 </p>
-                <h3 class="text-center text-mint-900 text-step-3">
+                <h3
+                  class="text-center text-mint-900 text-step-4 md:text-step-5"
+                >
                   $6,000<small class="text-step-00 text-mint-800">/month</small>
                 </h3>
-                <AccordionItem
-                  title="Read more to see if Ascend is right for you"
-                  idx={2}
-                >
-                  <ul role="list" class="space-y-xs text-step-000">
-                    <li class="bullet">
-                      <Bullet />
-                       Bundle all the insights and support from Hydrate with the
-                      added muscle of our full-service content team.
-                    </li>
-                    <li class="bullet">
-                      <Bullet />
-                       Consider your content taken care of. From thorough
-                      research to writing articles and crafting social posts, we
-                      handle the heavy lifting so you don't have to.
-                    </li>
-                    <li class="bullet">
-                      <Bullet />
-                       Boost your conversion rates with content designed not
-                      just to attract eyes, but to turn visitors into leads and
-                      customers.
-                    </li>
-                    <li class="bullet">
-                      <Bullet />
-                       Trust in content that sounds like you, every time. No
-                      generic AI fluff here, just real, authentic writing that
-                      speaks to your customers.
-                    </li>
-                    <li class="bullet">
-                      <Bullet />
-                       Rest easy with unlimited revisions. We're committed to
-                      making sure your content hits the mark every time.
-                    </li>
-                    <li class="bullet">
-                      <Bullet />
-                       Benefit from a content strategy that grows stronger over
-                      time, with ongoing adjustments based on how your audience
-                      interacts and converts.
-                    </li>
-                  </ul>
-                </AccordionItem>
+                <p>
+                  <a href="#ComparePackages"
+                    >Read more to see if Ascend is right for you</a
+                  >
+                </p>
                 <p>
                   <a
                     href="#"
@@ -417,16 +345,20 @@ import AccordionItem from '../components/AccordionItem.astro';
             </seven-minute-tabs>
           </div>
         </div>
-        <div class="rounded-3xl bg-[#869df9] p-2xs">
+        <div class="rounded-3xl bg-[#869df9] p-2xs" id="ComparePackages">
           <div
             class="box bg-indigo-100 flow prose rounded-2xl text-indigo-1000"
           >
-            <h3 class="text-indigo-1000 text-[7vw] md:text-[3vw]">
+            <h3 class="text-indigo-1000 text-step-3 lg:text-step-4">
               Compare packages
             </h3>
             <div class="switcher">
-              <div class="box">
-                <h4 class="text-indigo-1000">Hydrate</h4>
+              <div class="box flow prose">
+                <h4
+                  class="text-indigo-1000 text-step-2 ld:text-step-3 text-center"
+                >
+                  Hydrate
+                </h4>
                 <ul role="list" class="space-y-xs text-step-000">
                   <li class="bullet">
                     <Bullet />
@@ -466,8 +398,12 @@ import AccordionItem from '../components/AccordionItem.astro';
                   </li>
                 </ul>
               </div>
-              <div class="box">
-                <h4 class="text-indigo-1000">Ascend</h4>
+              <div class="box flow prose">
+                <h4
+                  class="text-indigo-1000 text-step-2 ld:text-step-3 text-center"
+                >
+                  Ascend
+                </h4>
                 <ul role="list" class="space-y-xs text-step-000">
                   <li class="bullet">
                     <Bullet />
@@ -511,7 +447,7 @@ import AccordionItem from '../components/AccordionItem.astro';
         <div class="flow" id="FeaturesList">
           <div class="rounded-3xl bg-[#ebc644] p-2xs text-gold-1000">
             <div class="box bg-gold-100 flow prose rounded-2xl">
-              <h2 class="relative text-[7vw] md:text-[3vw] text-gold-1000">
+              <h2 class="relative text-step-3 lg:text-step-4 text-gold-1000">
                 Feature list
               </h2>
               <table-saw breakpoint="(max-width: 760px)">
