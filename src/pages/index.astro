@@ -6,7 +6,28 @@ import { Picture } from 'astro:assets';
 import Accordion from '../components/Accordion.astro';
 import { health } from '../store/faq.json';
 import Bullet from '../components/Bullet.astro';
-import AccordionItem from '../components/AccordionItem.astro';
+
+const addOns = [
+  'Content implementation',
+  'Concierge Google Search Console service',
+  'Concierge Google Ads service',
+  'Concierge Google Analyics service',
+  'Concierge Google Business service',
+  'Comprehensive AEC reporting',
+  'Page level optimizations',
+  'Branded mini sites',
+  'Web performance audits',
+  'More ...',
+];
+
+const colorWheel = {
+  blue: 'bg-[#449deb] text-blue-vivid-900',
+  mint: 'bg-[#4ce1bc] text-mint-vivid-900',
+  gold: 'bg-[#ebc644] text-gold-vivid-900',
+  indigo: 'bg-[#869df9] text-indigo-vivid-900',
+  orange: 'bg-[#e1744c] text-orange-vivid-900',
+  yellow: 'bg-[#dee14c] text-gold-vivid-900',
+};
 ---
 
 <Layout
@@ -126,9 +147,9 @@ import AccordionItem from '../components/AccordionItem.astro';
           </div>
         </div>
         <div class="switcher">
-          <div class="bg-[#ebc644] rounded-3xl text-orange-vivid-900 p-2xs">
-            <div class="box flow prose bg-orange-100 rounded-2xl h-full">
-              <h3 class="text-orange-vivid-900 text-step-3 text-center">
+          <div class="bg-[#ebc644] rounded-3xl text-gold-vivid-900 p-2xs">
+            <div class="box flow prose bg-gold-100 rounded-2xl h-full">
+              <h3 class="text-gold-vivid-900 text-step-3 text-center">
                 We focus on conversions
               </h3>
               <p>
@@ -559,60 +580,22 @@ import AccordionItem from '../components/AccordionItem.astro';
       </div>
       <div class="wrapper">
         <ul class="cluster text-center" role="list">
-          <li
-            class="box bg-[#449deb] text-blue-vivid-900 rounded-3xl"
-            style="--gutter: var(--space-2xs) var(--space-xs);"
-          >
-            Content implementation
-          </li>
-          <li
-            class="box bg-[#4ce1bc] text-mint-vivid-900 rounded-3xl"
-            style="--gutter: var(--space-2xs) var(--space-xs);"
-          >
-            Concierge Google Search console service
-          </li>
-          <li
-            class="box bg-[#ebc644] text-orange-vivid-900 rounded-3xl"
-            style="--gutter: var(--space-2xs) var(--space-xs);"
-          >
-            Concierge Google Ads service
-          </li>
-          <li
-            class="box bg-[#869df9] text-indigo-vivid-900 rounded-3xl"
-            style="--gutter: var(--space-2xs) var(--space-xs);"
-          >
-            Concierge Google Analyics service
-          </li>
-          <li
-            class="box bg-[#e1744c] text-orange-vivid-900 rounded-3xl"
-            style="--gutter: var(--space-2xs) var(--space-xs);"
-          >
-            SEO reporting
-          </li>
-          <li
-            class="box bg-[#dee14c] text-gold-vivid-900 rounded-3xl"
-            style="--gutter: var(--space-2xs) var(--space-xs);"
-          >
-            Page optimizations
-          </li>
-          <li
-            class="box bg-[#449deb] text-blue-vivid-900 rounded-3xl"
-            style="--gutter: var(--space-2xs) var(--space-xs);"
-          >
-            Branded mini sites
-          </li>
-          <li
-            class="box bg-[#4ce1bc] text-mint-vivid-900 rounded-3xl"
-            style="--gutter: var(--space-2xs) var(--space-xs);"
-          >
-            Web performance audits
-          </li>
-          <li
-            class="box bg-[#ebc644] text-orange-vivid-900 rounded-3xl"
-            style="--gutter: var(--space-2xs) var(--space-xs);"
-          >
-            More &hellip;
-          </li>
+          {
+            addOns.map((addOn, index) => {
+              const color =
+                Object.values(colorWheel)[
+                  index % Object.keys(colorWheel).length
+                ];
+              return (
+                <li
+                  class={`box ${color} rounded-3xl`}
+                  style="--gutter: var(--space-2xs) var(--space-xs);"
+                >
+                  {addOn}
+                </li>
+              );
+            })
+          }
         </ul>
       </div>
     </section>
