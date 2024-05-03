@@ -38,6 +38,7 @@ Reference source: https://github.com/Set-Creative-Studio/cube-boilerplate/blob/m
 @import 'components/flow.css' layer(components);
 @import 'components/grid.css' layer(components);
 @import 'components/reel.css' layer(components);
+@import 'components/sidebar.css' layer(components);
 @import 'components/stack.css' layer(components);
 @import 'components/switcher.css' layer(components);
 @import 'components/wrapper.css' layer(components);
