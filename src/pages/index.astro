@@ -6,6 +6,7 @@ import { Picture } from 'astro:assets';
 import Accordion from '../components/Accordion.astro';
 import { health } from '../store/faq.json';
 import Bullet from '../components/Bullet.astro';
+import AccordionItem from '../components/AccordionItem.astro';
 
 const addOns = [
   'Content implementation',
@@ -195,12 +196,12 @@ const colorWheel = {
                 <em>The Content Machine</em>
               </h4>
               <p>
-                We've designed and built a custom Notion template that makes
-                content research, creation, organization, scheduling, and
-                collaboration straightforward and effective. It's a powerful
-                content machine built for small businesses who want to create
-                better content, faster, and comes included in both of our plans
-                (more in this <a href="#FAQs">in the FAQs below</a>).
+                We've designed and built a custom Notion template and framework
+                that makes content research, creation, organization, scheduling,
+                and collaboration straightforward and effective. It's a powerful
+                content machine built for businesses who want to create better
+                content, faster, and comes included in both of our plans (more
+                in this <a href="#FAQs">in the FAQs below</a>).
               </p>
             </div>
           </div>
@@ -257,6 +258,11 @@ const colorWheel = {
               >
                 Join Straightforward Growth
               </h3>
+              <p>
+                When you book a call with us, we'll give you a free content
+                asset. That way, as we're seeing if we are a good fit, we'll be
+                able to show you our core offer.
+              </p>
               <a
                 href="https://tidycal.com/19qz8xm/straightfoward-growth"
                 aria-label="Opens in a new tab"
@@ -343,7 +349,7 @@ const colorWheel = {
                 <p>
                   For teams looking for a complete, hands-off content solution:
                   we combine our expert SEO research with high-quality writing
-                  to deliver content that engages, converts, and ranks.
+                  to deliver content that ranks, engages, and converts.
                 </p>
                 <h3
                   class="text-center text-mint-900 text-step-4 md:text-step-5"
@@ -364,6 +370,87 @@ const colorWheel = {
                 </p>
               </div>
             </seven-minute-tabs>
+          </div>
+        </div>
+        <div class="flow" id="FeaturesList">
+          <div class="rounded-3xl bg-[#ebc644] p-2xs text-gold-1000">
+            <div class="box bg-gold-100 flow prose rounded-2xl">
+              <h2 class="relative text-step-3 lg:text-step-4 text-gold-1000">
+                Feature list
+              </h2>
+              <table-saw breakpoint="(max-width: 760px)">
+                <table class="w-full mx-auto text-left md:text-center">
+                  <thead>
+                    <th></th>
+                    <th class="w-1/4 px-xs py-s">Hydrate</th>
+                    <th class="w-1/4 px-xs py-s">Ascend</th>
+                  </thead>
+                  <tbody class="divide-y divide-blue-vivid-800">
+                    <tr>
+                      <th class="py-s text-left">Content assets</th>
+                      <td class="py-s">2</td>
+                      <td class="py-s">2</td>
+                    </tr>
+                    <tr>
+                      <th class="py-s text-left">Content machine</th>
+                      <td class="py-s"><Checkmark class="text-step-0000" /></td>
+                      <td class="py-s"><Checkmark class="text-step-0000" /></td>
+                    </tr>
+                    <tr>
+                      <th class="py-s text-left">Acquisition best practices</th>
+                      <td class="py-s"><Checkmark class="text-step-0000" /></td>
+                      <td class="py-s"><Checkmark class="text-step-0000" /></td>
+                    </tr>
+                    <tr>
+                      <th class="py-s text-left">Engagement best practices</th>
+                      <td class="py-s"><Checkmark class="text-step-0000" /></td>
+                      <td class="py-s"><Checkmark class="text-step-0000" /></td>
+                    </tr>
+                    <tr>
+                      <th class="py-s text-left">Converstion best practices</th>
+                      <td class="py-s"><Checkmark class="text-step-0000" /></td>
+                      <td class="py-s"><Checkmark class="text-step-0000" /></td>
+                    </tr>
+                    <tr>
+                      <th class="py-s text-left">Training</th>
+                      <td class="py-s"><Checkmark class="text-step-0000" /></td>
+                      <td class="py-s"><Checkmark class="text-step-0000" /></td>
+                    </tr>
+                    <tr>
+                      <th class="py-s text-left">Branded copy</th>
+                      <td class="py-s">&mdash;</td>
+                      <td class="py-s">Unlimited revisions</td>
+                    </tr>
+                    <tr>
+                      <th class="py-s text-left"
+                        >Page level optimizations <a
+                          href="#PageLevelOptimizations">†</a
+                        ></th
+                      >
+                      <td class="py-s">&mdash;</td>
+                      <td class="py-s"><Checkmark class="text-step-0000" /></td>
+                    </tr>
+                    <tr>
+                      <th class="py-s text-left">Minimum term</th>
+                      <td class="py-s">Month-to-month</td>
+                      <td class="py-s">Month-to-month</td>
+                    </tr>
+                    <tr>
+                      <th class="py-s text-left">Pay by credit card</th>
+                      <td class="py-s"><Checkmark class="text-step-0000" /></td>
+                      <td class="py-s"><Checkmark class="text-step-0000" /></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </table-saw>
+            </div>
+            <div class="box mx-auto text-center w-fit">
+              <p class="text-step-000" id="PageLevelOptimizations">
+                † Page level optimizations include keyphrase density, URL, image
+                names, image <code>alt</code>
+                 tags, <code>meta</code> tags, and schema.org markup.
+              </p>
+            </div>
           </div>
         </div>
         <div class="rounded-3xl bg-[#869df9] p-2xs" id="ComparePackages">
@@ -462,78 +549,6 @@ const colorWheel = {
                   </li>
                 </ul>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="flow" id="FeaturesList">
-          <div class="rounded-3xl bg-[#ebc644] p-2xs text-gold-1000">
-            <div class="box bg-gold-100 flow prose rounded-2xl">
-              <h2 class="relative text-step-3 lg:text-step-4 text-gold-1000">
-                Feature list
-              </h2>
-              <table-saw breakpoint="(max-width: 760px)">
-                <table class="w-full mx-auto text-left md:text-center">
-                  <thead>
-                    <th></th>
-                    <th class="w-1/4 px-xs py-s">Hydrate</th>
-                    <th class="w-1/4 px-xs py-s">Ascend</th>
-                  </thead>
-                  <tbody class="divide-y divide-blue-vivid-800">
-                    <tr>
-                      <th class="py-s text-left">Content assets</th>
-                      <td class="py-s">2</td>
-                      <td class="py-s">2</td>
-                    </tr>
-                    <tr>
-                      <th class="py-s text-left">Content machine</th>
-                      <td class="py-s"><Checkmark class="text-step-0000" /></td>
-                      <td class="py-s"><Checkmark class="text-step-0000" /></td>
-                    </tr>
-                    <tr>
-                      <th class="py-s text-left">Engagement best practices</th>
-                      <td class="py-s"><Checkmark class="text-step-0000" /></td>
-                      <td class="py-s"><Checkmark class="text-step-0000" /></td>
-                    </tr>
-                    <tr>
-                      <th class="py-s text-left">Converstion best practices</th>
-                      <td class="py-s"><Checkmark class="text-step-0000" /></td>
-                      <td class="py-s"><Checkmark class="text-step-0000" /></td>
-                    </tr>
-                    <tr>
-                      <th class="py-s text-left">Training</th>
-                      <td class="py-s"><Checkmark class="text-step-0000" /></td>
-                      <td class="py-s"><Checkmark class="text-step-0000" /></td>
-                    </tr>
-                    <tr>
-                      <th class="py-s text-left">Branded copy</th>
-                      <td class="py-s">&mdash;</td>
-                      <td class="py-s">Unlimited revisions</td>
-                    </tr>
-                    <tr>
-                      <th class="py-s text-left">Page level optimizations†</th>
-                      <td class="py-s">&mdash;</td>
-                      <td class="py-s"><Checkmark class="text-step-0000" /></td>
-                    </tr>
-                    <tr>
-                      <th class="py-s text-left">Minimum term</th>
-                      <td class="py-s">Month-to-month</td>
-                      <td class="py-s">Month-to-month</td>
-                    </tr>
-                    <tr>
-                      <th class="py-s text-left">Pay by credit card</th>
-                      <td class="py-s"><Checkmark class="text-step-0000" /></td>
-                      <td class="py-s"><Checkmark class="text-step-0000" /></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </table-saw>
-            </div>
-            <div class="box mx-auto text-center w-fit">
-              <p class="text-step-000">
-                † Page level optimizations include keyphrase density, URL, image
-                names, image <code>alt</code>
-                 tags, <code>meta</code> tags, and schema.org markup.
-              </p>
             </div>
           </div>
         </div>
@@ -641,9 +656,110 @@ const colorWheel = {
       <div class="wrapper" style="--wrapper-max-width: 65ch;">
         <div class="rounded-3xl bg-[#869df9] p-2xs">
           <div
-            class="box bg-indigo-100 flow prose rounded-2xl text-indigo-vivid-900"
+            class="box bg-indigo-100 rounded-2xl text-indigo-vivid-900 divide-y divide-blue-vivid-600"
           >
-            <Accordion items={health} />
+            <AccordionItem
+              title="Why do you work with health and wellness businesses, specifically?"
+              idx={0}
+            >
+              <p>
+                15 years deep into our professional journey, we're acutely aware
+                of how easy it is to slip into an unhealthy lifestyle when
+                you're busy. And, frankly, that story is all too common for
+                people the world over. There are some incredible health and
+                wellness companies out there making real change to people's
+                lives, and we love the idea of dialing our focus into supporting
+                those who are driving that change. We're also firm believers
+                that happy, healthy people create better businesses.
+              </p>
+            </AccordionItem>
+            <AccordionItem
+              title="What does a completed set of research include?"
+              idx={1}
+            >
+              <p>
+                EVERYTHING you need to write (or have us write) compelling
+                content that your target audience is currently searching for
+                every day. That includes everything from an optmized title, to
+                the key phrases you'll need to incorporate, to example sites
+                that are ranking well in the same space, to specific guidance on
+                how best to tailor the piece. We'll even include suggestions on
+                how to position any relevant CTAs.
+              </p>
+            </AccordionItem>
+            <AccordionItem title="What is this 'Content Machine'?" idx={2}>
+              <p>
+                The Content Machine is a Notion template and a framework
+                designed to make content research, creation, organization, and
+                scheduling straightforward and effective. It's built for small
+                business teams, freelancers and solopreneurs who want to create
+                better content, faster. It will help you:
+              </p>
+              <h3 class="text-step-00">Research and plan with ease</h3>
+              <p>
+                Content Machine gives you a dedicated space to consolidate
+                market research, competitive insights, key phrases for SEO, and
+                creative inspiration, right where you plan and produce your
+                content. This clever integration means you can easily reference
+                your foundational research as you develop every piece of
+                content.
+              </p>
+              <h3 class="text-step-00">Create content that resonates</h3>
+              <p>
+                Draft, edit, and finalize both long and short-form content
+                within a single, unified space. From long-form articles to quick
+                social media posts, Content Machine streamlines the whole
+                process, helping you produce content that is clear, engaging,
+                and always resonant.
+              </p>
+              <h3 class="text-step-00">Organize effortlessly</h3>
+              <p>
+                Say goodbye to scattered documents and disjointed workflows.
+                Content Machine brings harmony to your content strategy,
+                enabling you to link short and long-form pieces, categorize your
+                work, and keep everything in the same place. This smart
+                organization reduces the time from concept to publication,
+                allowing you to focus less on managing and more on creating.
+              </p>
+              <h3 class="text-step-00">Schedule with precision</h3>
+              <p>
+                View your entire content calendar at a glance. Schedule,
+                rearrange, plan ahead, and easily go back in time to find past
+                work that's ripe for repurposing. The flexibility to adapt to
+                new trends or audience needs will keep your content strategy
+                dynamic and relevant. What you
+              </p>publish will always be on time, on brand.
+              <h3 class="text-step-00">Collaborate seamlessly</h3>
+              <p>
+                Whether you're on your own or part of a team, Content Machine
+                facilitates easy collaboration whenever you need it. Share
+                feedback, suggestions, and edits in real time, right from the
+                same space where you're creating and organizing your content.
+                Collaboration, without the chaos.
+              </p>
+            </AccordionItem>
+            <AccordionItem
+              title="Will this help reduce my paid ad spend?"
+              idx={3}
+            >
+              <p>
+                Almost certainly, yes. The more of a domain authority you become
+                (by search engines recognizing that you create high quality
+                content that your audience wants to read), the more free,
+                organic traffic your site will receive. This takes time, energy,
+                and effort, but with the right content your organic traffic <em
+                  >will</em
+                > grow.
+              </p>
+            </AccordionItem>
+            <AccordionItem title="Can I pause or cancel any time?" idx={4}>
+              <p>
+                Because our service is month to month, and because we deliver
+                high quality work extremely quickly, we don't provide refunds.
+                But you will only ever be charged for one month in advance, and
+                you can cancel any time.
+              </p>
+            </AccordionItem>
           </div>
         </div>
       </div>

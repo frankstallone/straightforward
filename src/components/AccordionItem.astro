@@ -10,16 +10,17 @@ const { idx, title } = Astro.props;
 <details-utils>
   <div
     x-data={'{ activeAccordion: false }'}
-    class="flex flex-col text-left bg-transparent mt-m"
+    class="box flex flex-col text-left bg-transparent"
+    style="--gutter: var(--space-xs-s);"
   >
     <details class="flow">
       <summary
         @click="activeAccordion = !activeAccordion"
         :aria-expanded="activeAccordion"
         aria-controls={`accordion-item-${idx}`}
-        class={'accordion-button text-step-000'}
-        style="--justify-button: flex-start"
+        class={'accordion-button'}
       >
+        {title}
         <svg
           x-show="!activeAccordion"
           focusable="false"
@@ -35,9 +36,9 @@ const { idx, title } = Astro.props;
           ><path d="M19 13H5v-2h14v2z" fill="currentColor"></path><path
             d="M0 0h24v24H0z"
             fill="none"></path></svg
-        >{title}
+        >
       </summary>
-      <section>
+      <section class="flow prose">
         <slot />
       </section>
     </details>
