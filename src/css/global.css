@@ -17,11 +17,15 @@ Reference source: https://github.com/Set-Creative-Studio/cube-boilerplate/blob/m
 */
 
 @import 'blocks/accordion.css' layer(components);
+@import 'blocks/bullet.css' layer(components);
 @import 'blocks/buttons.css' layer(components);
+@import 'blocks/faq.css' layer(components);
 @import 'blocks/footer.css';
+@import 'blocks/form-gold.css';
 @import 'blocks/headerlinks.css' layer(components);
 @import 'blocks/hero.css' layer(components);
 @import 'blocks/orbs.css' layer(components);
+@import 'blocks/packages.css' layer(components);
 @import 'blocks/pricecard.css' layer(components);
 @import 'blocks/prose.css';
 @import 'blocks/rangeslider.css' layer(components);
@@ -34,6 +38,7 @@ Reference source: https://github.com/Set-Creative-Studio/cube-boilerplate/blob/m
 @import 'components/flow.css' layer(components);
 @import 'components/grid.css' layer(components);
 @import 'components/reel.css' layer(components);
+@import 'components/sidebar.css' layer(components);
 @import 'components/stack.css' layer(components);
 @import 'components/switcher.css' layer(components);
 @import 'components/wrapper.css' layer(components);

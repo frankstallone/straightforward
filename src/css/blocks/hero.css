@@ -4,12 +4,12 @@
 }
 
 #hero-title {
-  font-size: var(--size-step-4);
   letter-spacing: -0.025em;
 }
 
 #hero-subtitle {
   max-inline-size: 60ch;
+  text-transform: uppercase;
 }
 
 #hero-svg {

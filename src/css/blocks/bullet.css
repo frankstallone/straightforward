@@ -1,0 +1,12 @@
+.bullet {
+  position: relative;
+  padding-inline-start: var(--space-m);
+  font-size: var(--step--1);
+}
+.bullet svg {
+  height: 0.75lh;
+  position: absolute;
+  margin-inline-start: calc(var(--space-m) * -0.95);
+  top: 50%;
+  transform: translateY(-50%);
+}

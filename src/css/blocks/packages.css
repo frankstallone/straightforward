@@ -1,0 +1,18 @@
+.packages-tab {
+  text-decoration: none;
+  padding-left: var(--space-xs);
+  padding-right: var(--space-xs);
+  padding-top: 0.45rem;
+  padding-bottom: 0.45rem;
+  border-radius: 100vw;
+  font-size: var(--size-step-000);
+}
+
+.packages-tab[aria-selected='true'] {
+  background-color: #bfff00;
+  color: var(--color-gold-1000);
+}
+.packages-tab[aria-selected='true']:focus {
+  outline: 2px solid #bfff00;
+  outline-offset: 2px;
+}

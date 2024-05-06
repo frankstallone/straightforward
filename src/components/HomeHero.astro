@@ -1,8 +1,6 @@
 ---
 import Header from './Header.astro';
-import relax from '../assets/relaxed.jpg';
 import meditate from '../assets/meditation-class.jpg';
-import family from '../assets/family-rock-climbing.jpg';
 import { Picture } from 'astro:assets';
 ---
 
@@ -70,40 +68,32 @@ import { Picture } from 'astro:assets';
       </linearGradient>
     </defs>
   </svg>
-  <div class="cover relative z-10" id="hero">
+  <div
+    class="cover relative z-10"
+    id="hero"
+    style="--cover-padding: var(--space-s-m);"
+  >
     <Header />
     <div class="switcher items-center" style="--gap: var(--space-m);">
       <div class="prose flow text-center md:text-left">
-        <h1 id="hero-title" class="text-blue-vivid-200 leading-flat">
+        <h1
+          id="hero-title"
+          class="text-blue-vivid-200 leading-flat text-step-4 lg:text-step-5"
+        >
           Effective content marketing for your health and wellness business
         </h1>
-        <h2 id="hero-subtitle" class="text-step-00 text-gold-vivid-200">
+        <h2 id="hero-subtitle" class="text-step-00 text-[#dee14c]">
           Straightforward Growth specializes in generating more inbound leads
           for your health and wellness business.
         </h2>
-        <p class="text-blue-vivid-100">
+        <p class="text-blue-vivid-300">
           Whether you need deep SEO and topic research to arm your existing
           team, a volume of targeted content written for you, or both, our
           unique approach to content marketing is like personal training for
           your brand.
         </p>
       </div>
-      <div class="flex flex-col gap-m md:grid" data-layout="twelfths">
-        <Picture
-          src={relax}
-          widths={[240, 540, 720, relax.width]}
-          sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${relax.width}px`}
-          width={6865}
-          height={4904}
-          alt="Relaxed gentleman with a green juice"
-          quality={80}
-          formats={['avif', 'webp']}
-          class="h-auto w-auto mx-auto object-contain rounded-2xl row-start-1 row-span-6 col-start-1 col-span-6 border-blue-200 border-8 z-10"
-          pictureAttributes={{
-            class:
-              'h-auto w-auto mx-auto object-contain rounded-2xl row-start-1 row-span-6 col-start-1 col-span-6 z-10',
-          }}
-        />
+      <div>
         <Picture
           src={meditate}
           widths={[240, 540, 720, meditate.width]}
@@ -113,28 +103,20 @@ import { Picture } from 'astro:assets';
           alt="Meditation class"
           quality={80}
           formats={['avif', 'webp']}
-          class="hidden md:block h-auto w-auto mx-auto object-contain rounded-2xl row-start-3 row-span-6 col-start-5 col-span-8 border-blue-200 border-8 z-10"
+          class="h-auto w-auto mx-auto object-contain rounded-2xl row-start-3 row-span-6 col-start-5 col-span-8 border-blue-200 border-8 z-10"
           pictureAttributes={{
             class:
-              'hidden md:block h-auto w-auto mx-auto object-contain rounded-2xl row-start-3 row-span-6 col-start-5 col-span-8 z-10',
-          }}
-        />
-        <Picture
-          src={family}
-          widths={[240, 540, 720, family.width]}
-          sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${family.width}px`}
-          width={4657}
-          height={6978}
-          alt="Family rock climbing"
-          quality={80}
-          formats={['avif', 'webp']}
-          class="hidden md:block h-auto w-auto mx-auto object-contain rounded-2xl row-start-4 row-span-6 col-start-2 col-span-8 border-blue-200 border-8 z-0"
-          pictureAttributes={{
-            class:
-              'hidden md:block h-auto w-auto mx-auto object-contain rounded-2xl row-start-4 row-span-6 col-start-2 col-span-8 z-0',
+              'h-auto w-auto mx-auto object-contain rounded-2xl row-start-3 row-span-6 col-start-5 col-span-8 z-10',
           }}
         />
       </div>
     </div>
+    <span class="text-center mx-auto"
+      ><a
+        href="#OurPackages"
+        class="button w-fit rounded-full bg-[#869df9] text-indigo-vivid-900 hover:bg-[#b1c0fe] focus:outline-2 focus:outline-[#b1c0fe] focus:outline-offset-4"
+        >See packages</a
+      ></span
+    >
   </div>
 </div>

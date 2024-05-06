@@ -1,7 +1,7 @@
 /* Main navigation buttons */
 .header-links a {
   color: var(--color-blue-100);
-  font-size: var(--size-step-0);
+  font-size: var(--size-step-00);
   display: inline-block;
   padding: var(--space-3xs) var(--space-2xs);
   text-decoration: none;
