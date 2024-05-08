@@ -3,12 +3,13 @@
   color: var(--color-blue-100);
   font-size: var(--size-step-00);
   display: inline-block;
-  padding: var(--space-3xs) var(--space-2xs);
+  padding: var(--space-3xs) var(--space-xs);
   text-decoration: none;
   transition:
     color var(--transition-base),
     box-shadow var(--transition-base);
   box-shadow: inset 0 0 0 0 var(--color-gold-vivid-200);
+  border-radius: 1rem;
 }
 
 .header-links a:hover,
@@ -16,5 +17,5 @@
 .header-links a:active {
   color: var(--color-gold-vivid-900);
   text-decoration: none;
-  box-shadow: inset 200px 0 0 0 var(--color-gold-vivid-200);
+  box-shadow: inset 230px 0 0 0 var(--color-gold-vivid-200);
 }

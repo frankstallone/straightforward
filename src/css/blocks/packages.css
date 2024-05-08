@@ -16,3 +16,21 @@
   outline: 2px solid #bfff00;
   outline-offset: 2px;
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  #hydrate-tab:not(hidden) p,
+  #hydrate-tab:not(hidden) h3,
+  #ascend-tab:not(hidden) p,
+  #ascend-tab:not(hidden) h3 {
+    -webkit-animation: fade-in-bottom var(--transition-fade) both;
+    animation: fade-in-bottom var(--transition-fade) both;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in-bottom {
+    -webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1)
+      both;
+    animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  }
+}

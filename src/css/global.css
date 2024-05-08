@@ -7,6 +7,7 @@
 
 @import 'global/variables.css';
 @import 'global/global-styles.css';
+@import 'global/animations.css';
 /* 
 See issue: https://github.com/frankstallone/astro-cube-boilerplate/issues/1
 Reference source: https://github.com/Set-Creative-Studio/cube-boilerplate/blob/main/src/css/global.css#L11
