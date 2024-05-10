@@ -79,7 +79,7 @@ const customSignHeading = {
     'notion-share-update-msg'
   ) as HTMLParagraphElement;
 
-  // If the form was just subtmitted, hide it
+  // If the form was just submitted, hide it, if not, add the session id
   if (notionShareEmail) {
     // Add the hidden class
     notionShareEmailForm.classList.add('hidden');
