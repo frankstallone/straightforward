@@ -171,7 +171,7 @@ import lucas from '../assets/Lucas-Bako-avatar.jpg';
         </h2>
       </div>
       <div class="rounded-3xl bg-[#dee14c] p-2xs">
-        <div class="box bg-gold-100 flow prose rounded-2xl text-gold-1000">
+        <div class="box bg-gold-100 flow rounded-2xl text-gold-1000">
           <p>
             If you're a company in the health and wellness space, we should
             meet. With a deep, data-backed focus specializing in your industry,
@@ -184,7 +184,7 @@ import lucas from '../assets/Lucas-Bako-avatar.jpg';
           </p>
           <form
             name="main"
-            class="flow form-gold"
+            class="flow flow-space-s form-gold"
             netlify-honeypot="bot-field"
             method="POST"
             data-netlify="true"
@@ -199,8 +199,7 @@ import lucas from '../assets/Lucas-Bako-avatar.jpg';
               <label for="bot-field">Do you like HIIT workouts?</label>
               <input name="bot-field" id="bot-field" />
             </p>
-            <span class="flex flex-col space-y-3xs-2xs">
-              <label for="name">Name</label>
+            <span class="flex flex-col form-group">
               <input
                 id="name"
                 name="name"
@@ -208,9 +207,9 @@ import lucas from '../assets/Lucas-Bako-avatar.jpg';
                 required
                 aria-required="true"
               />
+              <label for="name">Name</label>
             </span>
-            <span class="flex flex-col space-y-3xs-2xs">
-              <label for="email">Email</label>
+            <span class="flex flex-col form-group">
               <input
                 id="email"
                 name="email"
@@ -218,17 +217,18 @@ import lucas from '../assets/Lucas-Bako-avatar.jpg';
                 required
                 aria-required="true"
               />
+              <label for="email">Email</label>
             </span>
-            <span class="flex flex-col space-y-3xs-2xs">
-              <label for="message">Message</label>
+            <span class="flex flex-col form-group">
               <textarea
                 name="message"
                 id="message"
                 rows="6"
                 required
                 aria-required="true"></textarea>
+              <label for="message">Message</label>
             </span>
-            <div class="flex flex-col space-y-3xs-2xs">
+            <div class="flex flex-col form-group">
               <button type="submit" class="button">Submit</button>
             </div>
           </form>
