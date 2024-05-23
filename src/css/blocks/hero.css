@@ -5,11 +5,15 @@
 
 #hero-title {
   letter-spacing: -0.025em;
+  color: var(--color-blue-vivid-200);
+  line-height: var(--leading-flat);
 }
 
 #hero-subtitle {
   max-inline-size: 60ch;
   text-transform: uppercase;
+  font-size: var(--size-step-00);
+  color: var(--color-electric);
 }
 
 #hero-svg {

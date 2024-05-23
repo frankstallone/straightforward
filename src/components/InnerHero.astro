@@ -10,7 +10,7 @@ interface Props {
 const { header } = Astro.props;
 ---
 
-<div class="relative z-0 overflow-hidden">
+<div class="relative z-0">
   <svg
     viewBox="0 0 753 1049"
     id="hero-svg"
@@ -74,13 +74,19 @@ const { header } = Astro.props;
       </linearGradient>
     </defs>
   </svg>
-  <div class="cover relative z-10" id="hero" style="--cover-padding: 0;">
+  <div
+    class="cover relative z-10"
+    id="hero"
+    style="--cover-padding: 0; --min-block-size: 75svh;"
+  >
     <InnerHeader />
-    <div class="region box flex flex-col justify-center flow prose">
-      <h1 id="hero-title" class="text-gold-vivid-200">
+    <div
+      class="region box flex flex-col justify-center flow prose region-space-xl-2xl"
+    >
+      <h1 id="hero-title" class="text-step-4 lg:text-step-5">
         {header.title}
       </h1>
-      <h2 class="font-regular text-gold-vivid-200">
+      <h2 id="hero-subtitle">
         {header.subtitle}
       </h2>
     </div>

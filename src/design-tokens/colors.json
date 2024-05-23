@@ -141,6 +141,7 @@
     { "name": "Magenta Vivid 600", "value": "#d72d79" },
     { "name": "Magenta Vivid 700", "value": "#ab2165" },
     { "name": "Magenta Vivid 800", "value": "#731f44" },
-    { "name": "Magenta Vivid 900", "value": "#4f172e" }
+    { "name": "Magenta Vivid 900", "value": "#4f172e" },
+    { "name": "Electric", "value": "#dee14c" }
   ]
 }
