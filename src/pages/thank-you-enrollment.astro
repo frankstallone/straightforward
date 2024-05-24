@@ -18,14 +18,14 @@ const customSignHeading = {
 >
   <section class="region wrapper">
     <div class="content flow prose">
-      <h2>What's next?</h2>
+      <h2 class="lg:text-step-4 leading-flat">What's next?</h2>
       <p>
         Within the next 24 hours you'll get an email from Notion saying that
-        you've been added as a guest to your own unique page. This page will
-        have your first 3 long form content suggestions, and so much more!
+        you've been added as to your personalized Content Machine dashboard.
+        This page will have your first long form content assets, and much more!
       </p>
       <p id="notion-share-update-msg">
-        Typically we use the same email address associated with your Stripe
+        Typically, we use the same email address associated with your Stripe
         account to share the Notion page. If you would like to use another email
         address, feel free to add that here.
       </p>
@@ -60,7 +60,7 @@ const customSignHeading = {
             aria-required="true"
           />
         </span>
-        <button type="submit" class="button">Submit</button>
+        <button type="submit" class="button w-full">Submit</button>
       </form>
     </div>
   </section>
@@ -85,7 +85,7 @@ const customSignHeading = {
     notionShareEmailForm.classList.add('hidden');
     // Update the Notion shared message
     notionShareMsg.innerHTML =
-      '<strong>Email address to be used with your membership has been updated!</strong>';
+      '<strong>Email address has been updated!</strong>';
     // Else, if Stripe session id is present, add it to the form
   } else {
     // Isolate session_id
