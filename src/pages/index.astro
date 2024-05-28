@@ -339,7 +339,9 @@ const testimonials = [
         <div class="flow" id="FeaturesList">
           <div class="rounded-3xl bg-[#ebc644] p-2xs text-gold-1000">
             <div class="box bg-gold-100 flow prose rounded-2xl">
-              <h2 class="relative text-step-3 lg:text-step-4 text-gold-1000">
+              <h2
+                class="relative text-step-3 lg:text-step-4 text-gold-1000 text-center mx-auto"
+              >
                 Feature list
               </h2>
               <table-saw breakpoint="(max-width: 760px)">
@@ -421,7 +423,9 @@ const testimonials = [
           <div
             class="box bg-indigo-100 flow prose rounded-2xl text-indigo-1000"
           >
-            <h3 class="text-indigo-1000 text-step-3 lg:text-step-4">
+            <h3
+              class="text-indigo-1000 text-step-3 lg:text-step-4 text-center mx-auto"
+            >
               Compare packages
             </h3>
             <div class="switcher">
@@ -534,16 +538,16 @@ const testimonials = [
             x-init="$watch('averageValue, impressionsSlider', () => calculateRevenue())"
             class="box flow prose bg-orange-100 rounded-2xl"
           >
-            <h2 class="text-step-3 lg:text-step-4">Impressions to revenue</h2>
-            <p>
+            <h2 class="text-step-3 lg:text-step-4 text-center mx-auto">
+              Impressions to revenue
+            </h2>
+            <p class="text-center mx-auto">
               Want to see what an increase in impressions could do for your
               revenue? Set your current average monthly revenue per customer,
               your current impression benchmark, and then slide up to see the
               real impact: <a href="#CalculatorAssumptions">†</a>
             </p>
-            <div
-              class="box text-center flow flow-space-m rounded-3xl max-w-3xl mx-auto"
-            >
+            <div class="box text-center flow flow-space-m mx-auto">
               <h3
                 class="mx-auto mt-zero text-orange-vivid-900 text-step-2 ld:text-step-3"
               >
