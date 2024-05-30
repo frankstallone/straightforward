@@ -4,7 +4,7 @@ import ThankYouLayout from '../layouts/ThankYouLayout.astro';
 const customSignHeading = {
   title: 'Thank you for joining',
   subtitle:
-    'A payment to STRAIGHTFORWARD GROWTH will appear on your statement.',
+    "Welcome to the team! We can't wait to use our deep health and wellness content research to make an impact for you. Here's to more focus, more traffic, more leads. 💪🏻",
 };
 ---
 
@@ -27,14 +27,16 @@ const customSignHeading = {
          video.
       </video>
       <p>
-        Within the next 24 hours you'll get an email from Notion saying that
-        you've been added as to your personalized Content Machine dashboard.
-        This page will have your first long form content assets, and much more!
+        Within the next 24 hours, you'll receive an email from Notion adding you
+        to your personalized Content Machine dashboard. This will have your
+        first research-backed long form content assets ready to go, along with a
+        whole lot more (including what we think will be the most usableuseable
+        content calendar you've ever laid eyes on).
       </p>
       <p id="notion-share-update-msg">
-        Typically, we use the same email address associated with your Stripe
-        account to share the Notion page. If you would like to use another email
-        address, feel free to add that here.
+        We'll send the Notion invite to the email address you just used in
+        Stripe. If you'd prefer we sent it somewhere else, pop that below right
+        now:
       </p>
       <form
         name="notion-share-email"
@@ -69,6 +71,12 @@ const customSignHeading = {
         </span>
         <button type="submit" class="button w-full">Submit</button>
       </form>
+      <p>
+        <small
+          >* Note: your payment will appear in your account as being made to
+          STRAIGHTFORWARD GROWTH
+        </small>
+      </p>
     </div>
   </section>
 </ThankYouLayout>
