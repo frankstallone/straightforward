@@ -13,10 +13,10 @@ const { meta } = Astro.props;
 
 const title = meta.title
   ? meta.title
-  : 'Straighforward Growth | Consulting expertise with a twist';
+  : 'Health & Wellness Digital Marketing Agency | Content Marketing Agency';
 const description = meta.description
   ? meta.description
-  : 'Straighforward Growth | Consulting expertise with a twist';
+  : 'Health & Wellness Digital Marketing Agency | Content Marketing Agency | Straightforward Growth is a Health & Wellness Digital Marketing Agency specializing in High Value, Search Optimized Content Marketing. Contact now to gain your competitive edge.';
 const canonicalURL = meta.canonicalURL
   ? meta.canonicalURL
   : 'https://straightforwardgrowth.com';
@@ -72,6 +72,98 @@ const ogImage = meta.image ? meta.image : '/media/og-image@2x.png';
     crossorigin="anonymous"
   />
   <!-- Schema.org -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Service",
+      "serviceType": "Health & Wellness Digital Marketing Agency | Content Marketing Agency ",
+      "description": "Health & Wellness Digital Marketing Agency | Content Marketing Agency | Straightforward Growth is a Health & Wellness Digital Marketing Agency specializing in High Value, Search Optimized Content Marketing. Contact now to gain your competitive edge.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Straightforward Growth LLC",
+        "telephone": "908-304-2855",
+        "logo": "https://straightforwardgrowth.com/android-chrome-512x512.png",
+        "priceRange": "$$-$$$",
+        "image": "https://straightforwardgrowth.com/media/og-image@2x.png",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "503 E.73rd Street, Suite 5B",
+          "addressLocality": "New York",
+          "addressRegion": "NY",
+          "postalCode": "10021"
+        }
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "New York City",
+          "sameAs": "https://en.wikipedia.org/wiki/New_York_City"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Digital Marketing",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Digital Marketing"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Content Marketing"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Best Health and Wellness Content Marketing"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Health and Wellness Digital Marketing"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Health and Wellness Content Marketing"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Search Optimized Content Marketing"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Content Marketing for Health and Wellness Business"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Best Health and Wellness Digital Marketing Agency"
+            }
+          }
+        ]
+      }
+    }
+  </script>
   <!-- Google tag (gtag.js) -->
   <script
     type="text/partytown"
