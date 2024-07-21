@@ -20,10 +20,16 @@ const { header } = Astro.props;
     <div
       class="region flex flex-col justify-center flow prose region-space-xl-2xl text-center mx-auto"
     >
-      <h1 id="hero-title" class="text-step-4 lg:text-step-5">
+      <h1 id="hero-title" class="text-step-4 lg:text-step-5 mx-auto">
         {header.title}
       </h1>
-      {header.subtitle ? <h2 id="hero-subtitle">{header.subtitle}</h2> : null}
+      {
+        header.subtitle ? (
+          <h2 id="hero-subtitle" class="mx-auto">
+            {header.subtitle}
+          </h2>
+        ) : null
+      }
     </div>
   </div>
 </div>
