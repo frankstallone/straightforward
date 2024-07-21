@@ -187,3 +187,16 @@ export const headerLinks = [
     url: '/#content-marketing-packages',
   },
 ];
+
+/**
+ * Color wheel used for dynamic colors in bento boxes
+ */
+
+export const colorWheel = {
+  blue: 'bg-[#449deb] text-blue-vivid-900',
+  mint: 'bg-[#4ce1bc] text-mint-vivid-900',
+  gold: 'bg-[#ebc644] text-gold-vivid-900',
+  indigo: 'bg-[#869df9] text-indigo-vivid-900',
+  orange: 'bg-[#e1744c] text-orange-vivid-900',
+  yellow: 'bg-[#dee14c] text-gold-vivid-900',
+};
