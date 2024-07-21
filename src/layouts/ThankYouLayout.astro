@@ -1,7 +1,7 @@
 ---
-import Footer from '../components/Footer.astro';
-import Head from '../components/Head.astro';
-import InnerHero from '../components/InnerHero.astro';
+import Footer from '@components/Footer.astro';
+import Head from '@components/Head.astro';
+import InnerHero from '@components/InnerHero.astro';
 
 const { meta, header } = Astro.props;
 ---
@@ -11,7 +11,7 @@ const { meta, header } = Astro.props;
   <Head meta={meta} />
   <body>
     <a href="#main" class="sr-only sr-only-focusable">Skip to content</a>
-    <main>
+    <main id="main">
       <!-- Heading & Hero -->
       <InnerHero header={header} />
       <slot />
