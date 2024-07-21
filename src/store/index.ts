@@ -1,7 +1,12 @@
 /**
  * HTML wrapper for Prettier formatting
  */
+
 const html = String.raw;
+
+/**
+ * FAQs
+ */
 
 export const faqs = [
   {
@@ -157,5 +162,28 @@ export const faqs = [
           Notion account
         </li>
       </ul>`,
+  },
+];
+
+/**
+ * Links used throughout the various headers
+ */
+
+export const headerLinks = [
+  {
+    title: 'How',
+    url: '/#how-does-content-marketing-work',
+  },
+  {
+    title: 'FAQ',
+    url: '/#content-marketing-faqs',
+  },
+  {
+    title: 'Contact',
+    url: '#content-marketing-agency-contact',
+  },
+  {
+    title: 'Packages',
+    url: '/#content-marketing-packages',
   },
 ];

@@ -1,0 +1,42 @@
+---
+import { getCollection } from 'astro:content';
+import BlogLayout from '@layouts/BlogLayout.astro';
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection('blog');
+  return blogEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+
+const { Content } = await entry.render();
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<BlogLayout
+  meta={{
+    title: entry.data.title,
+    description: entry.data.description,
+    image: entry.data.image,
+    canonicalURL: canonicalURL.href,
+  }}
+  header={{
+    title: entry.data.title,
+    subtitle: entry.data.subtitle,
+  }}
+>
+  <article
+    class="region overflow-clip bg-gray-100 relative z-10"
+    data-article="true"
+    style="--measure: 85ch"
+    id="main"
+  >
+    <div class="wrapper flow prose text-gray-1400">
+      <Content />
+    </div>
+  </article>
+</BlogLayout>

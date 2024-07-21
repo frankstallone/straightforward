@@ -1,0 +1,29 @@
+---
+import BlogHeader from './BlogHeader.astro';
+interface Props {
+  header: {
+    title: string;
+    subtitle?: string;
+  };
+}
+
+const { header } = Astro.props;
+---
+
+<div class="relative z-0">
+  <div
+    class="cover relative z-10"
+    id="hero"
+    style="--cover-padding: var(--space-s-m); --min-block-size: 25svh;"
+  >
+    <BlogHeader />
+    <div
+      class="region flex flex-col justify-center flow prose region-space-xl-2xl text-center mx-auto"
+    >
+      <h1 id="hero-title" class="text-step-4 lg:text-step-5">
+        {header.title}
+      </h1>
+      {header.subtitle ? <h2 id="hero-subtitle">{header.subtitle}</h2> : null}
+    </div>
+  </div>
+</div>

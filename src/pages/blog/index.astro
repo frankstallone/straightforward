@@ -1,0 +1,55 @@
+---
+import { getCollection } from 'astro:content';
+import BlogLayout from '@layouts/BlogLayout.astro';
+
+const allPosts = (await getCollection('blog')).sort(
+  (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+);
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<BlogLayout
+  meta={{
+    title: 'Blog posts by Frank Stallone',
+    description:
+      'The writing of Frank Stallone, a UX Enginineer living in the Northeast',
+    canonicalURL: canonicalURL.href,
+  }}
+  ,
+  header={{
+    title: 'Straightforward Thoughts',
+    subtitle: 'What we know works, why, and how to do it',
+  }}
+>
+  <section class="box flow bg-white z-10 relative" id="main">
+    <div class="grid gap-3xs" style="--grid-min-item-size: min(400px, 60%);">
+      {
+        allPosts.map((post) => (
+          <div class="flow prose p-m text-gray-1200 bg-gray-400">
+            <h3 class="mt-zero">
+              <a href={`/${post.collection}/${post.slug}/`}>
+                {post.data.title}
+              </a>
+            </h3>
+            <p class="mt-2xs ">
+              <small class="uppercase text-step-000 font-medium font-mono tracking-wide text-gray-700">
+                {new Date(post.data.publishDate).toLocaleDateString(undefined, {
+                  weekday: 'long',
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric',
+                })}
+              </small>
+            </p>
+            <p>{post.data.description}</p>
+            <p class="pb-l">
+              <a href={`/${post.collection}/${post.slug}/`}>
+                Read more &hellip;
+              </a>
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</BlogLayout>
