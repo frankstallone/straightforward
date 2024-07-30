@@ -1,11 +1,6 @@
 ---
-import BlogHeader from './BlogHeader.astro';
-interface Props {
-  header: {
-    title: string;
-    subtitle?: string;
-  };
-}
+import BlogHeader from '@components/BlogHeader.astro';
+import BlogHeroImage from '@components/BlogHeroImage.astro';
 
 const { header } = Astro.props;
 ---
@@ -28,6 +23,11 @@ const { header } = Astro.props;
           <h2 id="hero-subtitle" class="mx-auto">
             {header.subtitle}
           </h2>
+        ) : null
+      }
+      {
+        header.heroImage ? (
+          <BlogHeroImage image={header.heroImage} alt={header.alt} />
         ) : null
       }
     </div>

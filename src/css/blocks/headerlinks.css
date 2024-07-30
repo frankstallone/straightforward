@@ -8,7 +8,7 @@
   transition:
     color var(--transition-base),
     box-shadow var(--transition-base);
-  box-shadow: inset 0 0 0 0 var(--color-gold-vivid-200);
+  box-shadow: inset 0 0 0 0 #bfff00;
   border-radius: 1rem;
 }
 
@@ -17,5 +17,5 @@
 .header-links a:active {
   color: var(--color-gold-vivid-900);
   text-decoration: none;
-  box-shadow: inset 230px 0 0 0 var(--color-gold-vivid-200);
+  box-shadow: inset 230px 0 0 0 #bfff00;
 }

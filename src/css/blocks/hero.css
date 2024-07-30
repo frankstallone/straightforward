@@ -13,7 +13,7 @@
   max-inline-size: 60ch;
   text-transform: uppercase;
   font-size: var(--size-step-00);
-  color: var(--color-electric);
+  /* color: var(--color-electric); */
 }
 
 #hero-svg {

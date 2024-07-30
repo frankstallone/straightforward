@@ -10,13 +10,13 @@
 }
 
 .form-gold button {
-  background-color: var(--color-gold-vivid-900);
+  background-color: var(--color-gold-1000);
   color: var(--color-gold-100);
 }
 
 .form-gold button:hover,
 .form-gold button:focus {
-  background-color: var(--color-gold-vivid-800);
+  background-color: var(--color-gold-900);
   color: var(--color-gold-100);
 }
 

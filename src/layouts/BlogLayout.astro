@@ -4,6 +4,21 @@ import Footer from '@components/Footer.astro';
 import Head from '@components/Head.astro';
 import BlogHero from '@components/BlogHero.astro';
 
+interface Props {
+  meta: {
+    title: string;
+    description: string;
+    canonicalURL: string;
+    image?: string;
+  };
+  header: {
+    title: string;
+    subtitle?: string;
+    heroImage?: any;
+    alt?: string;
+  };
+}
+
 const { meta, header } = Astro.props;
 ---
 
