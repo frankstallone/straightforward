@@ -11,7 +11,7 @@ const { image, alt } = Astro.props;
 <Picture
   src={image}
   widths={[300, 500, image.width]}
-  sizes={`(max-width: 360px) 300px, (max-width: 720px) 500px, ${image.width}px`}
+  sizes={`(max-width: 360px) 300px, (max-width: 620px) 500px, ${image.width}px`}
   alt={alt}
   class="object-cover h-auto max-w-[800px] mx-auto"
   quality={80}

@@ -5,31 +5,31 @@ import BlogHeroImage from '@components/BlogHeroImage.astro';
 const { header } = Astro.props;
 ---
 
-<div class="relative z-0">
-  <div
-    class="cover relative z-10"
-    id="hero"
-    style="--cover-padding: var(--space-s-m); --min-block-size: 25svh;"
-  >
+<div class="relative z-0 bg-white">
+  <div class="box bg-blue-vivid-1000">
     <BlogHeader />
-    <div
-      class="region flex flex-col justify-center flow prose region-space-xl-2xl text-center mx-auto"
+  </div>
+  <div
+    class="region flex flex-col justify-center flow prose region-space-xl-2xl text-center mx-auto"
+  >
+    <h1
+      id="hero-title"
+      class="text-step-4 lg:text-step-5 mx-auto"
+      style="--hero-title-color: var(--color-blue-vivid-900)"
     >
-      <h1 id="hero-title" class="text-step-4 lg:text-step-5 mx-auto">
-        {header.title}
-      </h1>
-      {
-        header.subtitle ? (
-          <h2 id="hero-subtitle" class="mx-auto">
-            {header.subtitle}
-          </h2>
-        ) : null
-      }
-      {
-        header.heroImage ? (
-          <BlogHeroImage image={header.heroImage} alt={header.alt} />
-        ) : null
-      }
-    </div>
+      {header.title}
+    </h1>
+    {
+      header.subtitle ? (
+        <h2 id="hero-subtitle" class="mx-auto">
+          {header.subtitle}
+        </h2>
+      ) : null
+    }
+    {
+      header.heroImage ? (
+        <BlogHeroImage image={header.heroImage} alt={header.alt} />
+      ) : null
+    }
   </div>
 </div>
