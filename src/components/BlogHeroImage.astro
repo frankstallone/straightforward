@@ -13,7 +13,7 @@ const { image, alt } = Astro.props;
   widths={[300, 500, image.width]}
   sizes={`(max-width: 360px) 300px, (max-width: 620px) 500px, ${image.width}px`}
   alt={alt}
-  class="object-cover h-auto max-w-[800px] mx-auto"
+  class="object-cover h-auto w-auto mx-auto"
   quality={80}
   formats={['avif', 'webp']}
 />

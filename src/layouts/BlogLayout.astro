@@ -16,6 +16,8 @@ interface Props {
     subtitle?: string;
     heroImage?: any;
     alt?: string;
+    bgClass?: string;
+    headingStyles?: string;
   };
 }
 
@@ -25,7 +27,7 @@ const { meta, header } = Astro.props;
 <!doctype html>
 <html lang="en">
   <Head meta={meta} />
-  <body>
+  <body id="blog">
     <a href="#main" class="sr-only sr-only-focusable">Skip to content</a>
     <main id="main">
       <!-- Heading & Hero -->

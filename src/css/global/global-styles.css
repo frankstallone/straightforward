@@ -154,3 +154,7 @@ textarea:focus {
 th {
   font-weight: var(--font-medium);
 }
+
+#blog li + li {
+  margin-block-start: var(--space-2xs);
+}

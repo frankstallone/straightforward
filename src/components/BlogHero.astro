@@ -3,10 +3,15 @@ import BlogHeader from '@components/BlogHeader.astro';
 import BlogHeroImage from '@components/BlogHeroImage.astro';
 
 const { header } = Astro.props;
+
+const blogHeroClasses = `relative z-0 ${header.bgClass ? header.bgClass : ''}`;
+const headingStyles = header.headingStyles
+  ? '--hero-title-color: var(' + header.headingStyles + ')'
+  : '';
 ---
 
-<div class="relative z-0 bg-white">
-  <div class="box bg-blue-vivid-1000">
+<div class={blogHeroClasses}>
+  <div class="box bg-blue-1200">
     <BlogHeader />
   </div>
   <div
@@ -15,7 +20,7 @@ const { header } = Astro.props;
     <h1
       id="hero-title"
       class="text-step-4 lg:text-step-5 mx-auto"
-      style="--hero-title-color: var(--color-blue-vivid-900)"
+      style={headingStyles}
     >
       {header.title}
     </h1>
@@ -26,10 +31,12 @@ const { header } = Astro.props;
         </h2>
       ) : null
     }
-    {
-      header.heroImage ? (
-        <BlogHeroImage image={header.heroImage} alt={header.alt} />
-      ) : null
-    }
+    <div class="max-w-[800px] mx-auto">
+      {
+        header.heroImage ? (
+          <BlogHeroImage image={header.heroImage} alt={header.alt} />
+        ) : null
+      }
+    </div>
   </div>
 </div>
