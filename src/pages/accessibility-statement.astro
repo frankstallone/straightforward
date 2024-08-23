@@ -1,5 +1,6 @@
 ---
 import BlogLayout from '@layouts/BlogLayout.astro';
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <BlogLayout
@@ -7,6 +8,7 @@ import BlogLayout from '@layouts/BlogLayout.astro';
     title: 'Straighforward Growth | Consulting expertise with a twist',
     description:
       'With a combined 30 years of experience in the tech industry, we help you grow your business with a twist.',
+    canonicalURL: canonicalURL.href,
   }}
   header={{
     title: 'Accessibility Statement for Straightforward Growth website',
