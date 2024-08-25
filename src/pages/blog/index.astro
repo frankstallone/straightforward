@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BlogLayout from '@layouts/BlogLayout.astro';
 import { colorClassCalc } from 'src/scripts';
+import { Picture } from 'astro:assets';
 
 const allPosts = (await getCollection('blog')).sort(
   (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
@@ -27,11 +28,32 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         allPosts.map((post, index) => {
           const colors = colorClassCalc(index);
           return (
-            <div class={`rounded-3xl p-2xs ${colors.class}`}>
+            <div
+              class={`flex flex-col rounded-3xl p-2xs ${colors.class} overflow-clip`}
+            >
+              {post.data.heroImage ? (
+                <Picture
+                  src={post.data.heroImage}
+                  widths={[300, 500]}
+                  sizes={`(max-width: 360px) 300px, (max-width: 620px) 500px`}
+                  alt={post.data.title}
+                  class="object-cover rounded-t-2xl h-auto aspect-video"
+                  quality={80}
+                  formats={['avif', 'webp']}
+                />
+              ) : null}
               <div
-                class={`flow prose p-m text-${colors.color}-1000 bg-${colors.color}-100 rounded-2xl h-full`}
+                class={`flow prose p-m text-${colors.color}-1000 bg-${
+                  colors.color
+                }-100 ${
+                  post.data.heroImage ? 'rounded-b-2xl' : 'rounded-2xl'
+                } h-full`}
               >
-                <h3 class={`mt-zero text-${colors.color}-vivid-900`}>
+                <h3
+                  class={`${post.data.heroImage ? '' : 'mt-zero'} text-${
+                    colors.color
+                  }-vivid-900`}
+                >
                   <a href={`/${post.collection}/${post.slug}/`}>
                     {post.data.title}
                   </a>
