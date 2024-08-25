@@ -1,5 +1,7 @@
 ---
 import '../css/global.css';
+import type { CollectionEntry } from 'astro:content';
+import BlogSchema from './BlogSchema.astro';
 export interface Props {
   meta: {
     title?: string;
@@ -7,9 +9,10 @@ export interface Props {
     canonicalURL?: URL | string;
     image?: string;
   };
+  post?: CollectionEntry<'blog'>;
 }
 
-const { meta } = Astro.props;
+const { meta, post } = Astro.props;
 
 const title = meta.title
   ? meta.title
@@ -68,7 +71,9 @@ const ogImage = meta.image ? meta.image : '/media/og-image@2x.png';
     crossorigin="anonymous"
   />
   <!-- Schema.org -->
-  <script type="application/ld+json">
+   {
+    post ? <BlogSchema post={post} meta={meta} /> : 
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org/",
       "@type": "Service",
@@ -160,6 +165,8 @@ const ogImage = meta.image ? meta.image : '/media/og-image@2x.png';
       }
     }
   </script>
+   }
+
   <!-- Google tag (gtag.js) -->
   <script
     type="text/partytown"

@@ -3,6 +3,7 @@ import Contact from '@components/Contact.astro';
 import Footer from '@components/Footer.astro';
 import Head from '@components/Head.astro';
 import BlogHero from '@components/BlogHero.astro';
+import type { CollectionEntry } from 'astro:content';
 
 interface Props {
   meta: {
@@ -19,14 +20,15 @@ interface Props {
     bgClass?: string;
     headingStyles?: string;
   };
+  post?: CollectionEntry<'blog'>;
 }
 
-const { meta, header } = Astro.props;
+const { meta, header, post } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
-  <Head meta={meta} />
+  <Head meta={meta} post={post} />
   <body id="blog">
     <a href="#main" class="sr-only sr-only-focusable">Skip to content</a>
     <main id="main">

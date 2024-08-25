@@ -21,6 +21,8 @@ const blogCollection = defineCollection({
         .optional(),
       alt: z.string().optional(),
       socialImage: z.string().optional(),
+      // TODO: This will NOT be optional once this branch is merged: https://github.com/frankstallone/straightforward/pull/9
+      keywords: z.array(z.string()).optional(),
     }),
 });
 // 3. Export a single `collections` object to register your collection(s)
