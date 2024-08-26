@@ -5,7 +5,7 @@
 
 #hero-title {
   letter-spacing: -0.025em;
-  color: var(--color-blue-vivid-200);
+  color: var(--hero-title-color, var(--color-blue-vivid-200));
   line-height: var(--leading-flat);
 }
 
@@ -13,7 +13,7 @@
   max-inline-size: 60ch;
   text-transform: uppercase;
   font-size: var(--size-step-00);
-  color: var(--color-electric);
+  /* color: var(--color-electric); */
 }
 
 #hero-svg {

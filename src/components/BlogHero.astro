@@ -1,0 +1,42 @@
+---
+import BlogHeader from '@components/BlogHeader.astro';
+import BlogHeroImage from '@components/BlogHeroImage.astro';
+
+const { header } = Astro.props;
+
+const blogHeroClasses = `relative z-0 ${header.bgClass ? header.bgClass : ''}`;
+const headingStyles = header.headingStyles
+  ? '--hero-title-color: var(' + header.headingStyles + ')'
+  : '';
+---
+
+<div class={blogHeroClasses}>
+  <div class="box bg-[#0c1c27]">
+    <BlogHeader />
+  </div>
+  <div
+    class="region flex flex-col justify-center flow prose region-space-xl-2xl text-center mx-auto"
+  >
+    <h1
+      id="hero-title"
+      class="text-step-4 lg:text-step-5 mx-auto"
+      style={headingStyles}
+    >
+      {header.title}
+    </h1>
+    {
+      header.subtitle ? (
+        <h2 id="hero-subtitle" class="mx-auto">
+          {header.subtitle}
+        </h2>
+      ) : null
+    }
+    <div class="max-w-[800px] mx-auto">
+      {
+        header.heroImage ? (
+          <BlogHeroImage image={header.heroImage} alt={header.alt} />
+        ) : null
+      }
+    </div>
+  </div>
+</div>

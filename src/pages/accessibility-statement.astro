@@ -1,88 +1,90 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import BlogLayout from '@layouts/BlogLayout.astro';
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
-<Layout
+<BlogLayout
   meta={{
     title: 'Straighforward Growth | Consulting expertise with a twist',
-    description:
+    metaTitle: 'Straighforward Growth | Consulting expertise with a twist',
+    schemaDescription:
       'With a combined 30 years of experience in the tech industry, we help you grow your business with a twist.',
+    metaDescription:
+      'With a combined 30 years of experience in the tech industry, we help you grow your business with a twist.',
+    canonicalURL: canonicalURL.href,
+  }}
+  header={{
+    title: 'Accessibility Statement for Straightforward Growth website',
+    subtitle: 'This is an accessibility statement from Straightforward Growth.',
   }}
 >
-  <section class="region wrapper flow prose" style="--wrapper-max-width: 75ch;">
-    <h2>Accessibility Statement for Straightforward Growth website</h2>
-    <p>This is an accessibility statement from Straightforward Growth.</p>
-
-    <h2>Measures to support accessibility</h2>
-    <p>
-      Straightforward Growth takes the following measures to ensure
-      accessibility of Straightforward Growth's website:
-    </p>
-
-    <ul>
-      <li>Include accessibility as part of our mission statement.</li>
-      <li>Include accessibility throughout our internal policies.</li>
-      <li>Integrate accessibility into our procurement practices.</li>
-    </ul>
-    <h2>Conformance status</h2>
-    <p>
-      The <a
-        href="https://www.w3.org/WAI/standards-guidelines/wcag/"
-        target="_blank">Web Content Accessibility Guidelines (WCAG)</a
-      > defines requirements for designers and developers to improve
-      accessibility for people with disabilities. It defines three levels of
-      conformance: Level A, Level AA, and Level AAA. Straightforward Growth's
-      website is fully conformant with WCAG 2.1 level AA. Fully conformant means
-      that the content fully conforms to the accessibility standard without any
-      exceptions.
-    </p>
-
-    <h2>Additional accessibility considerations</h2>
-    <p>
-      I have also applied some Level AAA Success criteria. Colors have higher
-      contrast ratios.
-    </p>
-
-    <h2>Feedback</h2>
-    <p>
-      I welcome your feedback on the accessibility of Straightforward Growth's
-      personal website. Please let us know if you encounter accessibility
-      barriers on Straightforward Growth's website <a
-        href="#content-marketing-agency-contact">fill out my contact form</a
-      >. I try to respond to feedback within 5 business days.
-    </p>
-
-    <h2>Technical specifications</h2>
-    <p>
-      Accessibility of Straightforward Growth's website relies on the following
-      technologies to work with the particular combination of web browser and
-      any assistive technologies or plugins installed on your computer:
-    </p>
-
-    <ul>
-      <li>HTML</li>
-      <li>WAI-ARIA</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-    </ul>
-    <p>
-      These technologies are relied upon for conformance with the accessibility
-      standards used.
-    </p>
-
-    <h2>Assessment approach</h2>
-    <p>
-      Straightforward Growth assessed the accessibility of Straightforward
-      Growth's personal website by the following approaches:
-    </p>
-
-    <ul>
-      <li>Self-evaluation</li>
-    </ul>
-    <h2>Date</h2>
-    <p>
-      This statement was created on 12 March 2024 using the W3C Accessibility
-      Statement Generator Tool.
-    </p>
-  </section>
-</Layout>
+  <article class="region bg-gray-100">
+    <div class="wrapper flow prose text-gray-1400">
+      <h2>Measures to support accessibility</h2>
+      <p>
+        Straightforward Growth takes the following measures to ensure
+        accessibility of Straightforward Growth's website:
+      </p>
+      <ul>
+        <li>Include accessibility as part of our mission statement.</li>
+        <li>Include accessibility throughout our internal policies.</li>
+        <li>Integrate accessibility into our procurement practices.</li>
+      </ul>
+      <h2>Conformance status</h2>
+      <p>
+        The <a
+          href="https://www.w3.org/WAI/standards-guidelines/wcag/"
+          target="_blank">Web Content Accessibility Guidelines (WCAG)</a
+        > defines requirements for designers and developers to improve
+        accessibility for people with disabilities. It defines three levels of
+        conformance: Level A, Level AA, and Level AAA. Straightforward Growth's
+        website is fully conformant with WCAG 2.1 level AA. Fully conformant
+        means that the content fully conforms to the accessibility standard
+        without any exceptions.
+      </p>
+      <h2>Additional accessibility considerations</h2>
+      <p>
+        We have also applied some Level AAA Success criteria. Colors have higher
+        contrast ratios.
+      </p>
+      <h2>Feedback</h2>
+      <p>
+        We welcome your feedback on the accessibility of Straightforward
+        Growth's personal website. Please let us know if you encounter
+        accessibility barriers on Straightforward Growth's website <a
+          href="#content-marketing-agency-contact">fill out the contact form</a
+        >. We try to respond to feedback within 5 business days.
+      </p>
+      <h2>Technical specifications</h2>
+      <p>
+        Accessibility of Straightforward Growth's website relies on the
+        following technologies to work with the particular combination of web
+        browser and any assistive technologies or plugins installed on your
+        computer:
+      </p>
+      <ul>
+        <li>HTML</li>
+        <li>WAI-ARIA</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+      <p>
+        These technologies are relied upon for conformance with the
+        accessibility standards used.
+      </p>
+      <h2>Assessment approach</h2>
+      <p>
+        Straightforward Growth assessed the accessibility of Straightforward
+        Growth's personal website by the following approaches:
+      </p>
+      <ul>
+        <li>Self-evaluation</li>
+      </ul>
+      <h2>Date</h2>
+      <p>
+        This statement was created on 12 March 2024 using the W3C Accessibility
+        Statement Generator Tool.
+      </p>
+    </div>
+  </article>
+</BlogLayout>

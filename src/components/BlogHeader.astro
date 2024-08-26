@@ -1,5 +1,5 @@
 ---
-import { headerLinks } from 'src/store';
+import { headerLinks } from '../store';
 ---
 
 <header
@@ -91,7 +91,7 @@ import { headerLinks } from 'src/store';
     </svg>
   </a>
   <nav>
-    <ul role="list" class="cluster justify-center font-medium gap-2xs md:gap-s">
+    <ul role="list" class="cluster justify-center font-medium gap-s md:gap-m">
       {
         headerLinks.map((link) => (
           <li>

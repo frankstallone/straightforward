@@ -1,0 +1,104 @@
+---
+import { getCollection } from 'astro:content';
+import BlogLayout from '@layouts/BlogLayout.astro';
+import { colorClassCalc } from 'src/scripts';
+import { Picture } from 'astro:assets';
+
+const allPosts = (await getCollection('blog')).sort(
+  (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+);
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+/**
+ * Truncates the description to 24 words
+ * @param description - The description to truncate
+ * @returns The truncated description
+ */
+
+function truncateDescription(description: string) {
+  const words = description.split(' ');
+  if (words.length <= 24) {
+    return description;
+  } else {
+    const truncatedWords = words.slice(0, 24);
+    return truncatedWords.join(' ') + '...';
+  }
+}
+---
+
+<BlogLayout
+  meta={{
+    title: 'Blog posts by the team at Straighforward Growth',
+    metaTitle: 'Blog posts by the team at Straighforward Growth',
+    metaDescription: 'Content marketing tips, tricks, why and how',
+    schemaDescription: 'Content marketing tips, tricks, why and how',
+    canonicalURL: canonicalURL.href,
+  }}
+  header={{
+    title: 'Straightforward Thoughts',
+    subtitle: 'What we know works, why, and how to do it',
+  }}
+>
+  <section class="box flow z-10 relative" id="main">
+    <div class="grid gap-xs" style="--grid-min-item-size: min(400px, 60%);">
+      {
+        allPosts.map((post, index) => {
+          const colors = colorClassCalc(index);
+          return (
+            <div
+              class={`flex flex-col rounded-3xl p-2xs ${colors.class} overflow-clip`}
+            >
+              {post.data.heroImage ? (
+                <Picture
+                  src={post.data.heroImage}
+                  widths={[300, 500]}
+                  sizes={`(max-width: 360px) 300px, (max-width: 620px) 500px`}
+                  alt={post.data.title}
+                  class="object-cover rounded-t-2xl h-auto aspect-video"
+                  quality={80}
+                  formats={['avif', 'webp']}
+                />
+              ) : null}
+              <div
+                class={`flow prose p-m text-${colors.color}-1000 bg-${
+                  colors.color
+                }-100 ${
+                  post.data.heroImage ? 'rounded-b-2xl' : 'rounded-2xl'
+                } h-full`}
+              >
+                <h3
+                  class={`${post.data.heroImage ? '' : 'mt-zero'} text-${
+                    colors.color
+                  }-vivid-900`}
+                >
+                  <a href={`/${post.collection}/${post.slug}/`}>
+                    {post.data.title}
+                  </a>
+                </h3>
+                <p class="mt-2xs ">
+                  <small class="uppercase text-step-000 font-medium font-mono tracking-wide text-gray-900">
+                    {new Date(post.data.publishDate).toLocaleDateString(
+                      undefined,
+                      {
+                        weekday: 'long',
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric',
+                      }
+                    )}
+                  </small>
+                </p>
+                <p>{truncateDescription(post.body)}</p>
+                <p class="pb-l">
+                  <a href={`/${post.collection}/${post.slug}/`}>
+                    Read more &hellip;
+                  </a>
+                </p>
+              </div>
+            </div>
+          );
+        })
+      }
+    </div>
+  </section>
+</BlogLayout>

@@ -1,21 +1,27 @@
 ---
 import '../css/global.css';
+import type { CollectionEntry } from 'astro:content';
+import BlogSchema from './BlogSchema.astro';
+import DefaultSchema from './DefaultSchema.astro';
 export interface Props {
   meta: {
     title?: string;
-    description?: string;
+    metaTitle?: string;
+    metaDescription?: string;
+    schemaDescription?: string;
     canonicalURL?: URL | string;
     image?: string;
   };
+  post?: CollectionEntry<'blog'>;
 }
 
-const { meta } = Astro.props;
+const { meta, post } = Astro.props;
 
-const title = meta.title
-  ? meta.title
+const title = meta.metaTitle
+  ? meta.metaTitle ? meta.title 
   : 'Health & Wellness Digital Marketing Agency | Content Marketing Agency';
-const description = meta.description
-  ? meta.description
+const description = meta.metaDescription
+  ? meta.metaDescription
   : 'Health & Wellness Digital Marketing Agency | Content Marketing Agency | Straightforward Growth is a Health & Wellness Digital Marketing Agency specializing in High Value, Search Optimized Content Marketing. Contact now to gain your competitive edge.';
 const canonicalURL = meta.canonicalURL
   ? meta.canonicalURL
@@ -44,7 +50,7 @@ const ogImage = meta.image ? meta.image : '/media/og-image@2x.png';
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content={canonicalURL} />
-  <meta property="og:title" content={title} />
+  <meta property="og:title" content={meta.title} />
   <meta property="og:description" content={description} />
   <meta property="og:image" content={ogImage} />
   <meta
@@ -68,98 +74,8 @@ const ogImage = meta.image ? meta.image : '/media/og-image@2x.png';
     crossorigin="anonymous"
   />
   <!-- Schema.org -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org/",
-      "@type": "Service",
-      "serviceType": "Health & Wellness Digital Marketing Agency | Content Marketing Agency ",
-      "description": "Health & Wellness Digital Marketing Agency | Content Marketing Agency | Straightforward Growth is a Health & Wellness Digital Marketing Agency specializing in High Value, Search Optimized Content Marketing. Contact now to gain your competitive edge.",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Straightforward Growth LLC",
-        "telephone": "908-304-2855",
-        "logo": "https://straightforwardgrowth.com/straightforward-growth-llc.png",
-        "priceRange": "$$-$$$",
-        "image": "https://straightforwardgrowth.com/media/health-and-wellness-digital-marketing-agency.jpg",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "503 E.73rd Street, Suite 5B",
-          "addressLocality": "New York",
-          "addressRegion": "NY",
-          "postalCode": "10021"
-        }
-      },
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "New York City",
-          "sameAs": "https://en.wikipedia.org/wiki/New_York_City"
-        }
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Digital Marketing",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Digital Marketing"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Content Marketing"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Best Health and Wellness Content Marketing"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Health and Wellness Digital Marketing"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Health and Wellness Content Marketing"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Search Optimized Content Marketing"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Content Marketing for Health and Wellness Business"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Best Health and Wellness Digital Marketing Agency"
-            }
-          }
-        ]
-      }
-    }
-  </script>
+  {post ? <BlogSchema post={post} meta={meta} /> : <DefaultSchema />}
+
   <!-- Google tag (gtag.js) -->
   <script
     type="text/partytown"

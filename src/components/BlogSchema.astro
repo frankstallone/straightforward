@@ -1,0 +1,41 @@
+---
+import type { Props } from './Head.astro';
+const { meta, post } = Astro.props;
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': meta.canonicalURL,
+  },
+  headline: meta.metaTitle,
+  description: meta.schemaDescription,
+  image: meta.image,
+  keywords: post?.data.keywords,
+  author: {
+    '@type': 'Organization',
+    name: 'Straightforward Growth LLC',
+    url: Astro.site,
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '908-304-2855',
+      contactType: 'Customer Service',
+    },
+  },
+  datePublished: post?.data.publishDate,
+  dateModified: post?.data.publishDate,
+  publisher: {
+    '@type': 'Organization',
+    name: 'Straightforward Growth LLC',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://straightforwardgrowth.com/straightforward-growth-llc.png',
+      width: '512',
+      height: '512',
+    },
+  },
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />

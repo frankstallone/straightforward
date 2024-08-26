@@ -22,8 +22,8 @@
   #hydrate-tab:not(hidden) h3,
   #ascend-tab:not(hidden) p,
   #ascend-tab:not(hidden) h3 {
-    -webkit-animation: fade-in-bottom var(--transition-fade) both;
-    animation: fade-in-bottom var(--transition-fade) both;
+    -webkit-animation: fade-in-bottom var(--transition-movement) both;
+    animation: fade-in-bottom var(--transition-movement) both;
   }
 }
 
