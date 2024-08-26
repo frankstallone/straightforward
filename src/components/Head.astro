@@ -18,7 +18,7 @@ export interface Props {
 const { meta, post } = Astro.props;
 
 const title = meta.metaTitle
-  ? meta.metaTitle
+  ? meta.metaTitle ? meta.title 
   : 'Health & Wellness Digital Marketing Agency | Content Marketing Agency';
 const description = meta.metaDescription
   ? meta.metaDescription
