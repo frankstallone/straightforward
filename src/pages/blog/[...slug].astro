@@ -20,7 +20,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <BlogLayout
   meta={{
     title: post.data.title,
-    description: post.data.description,
+    metaTitle: post.data.metaTitle,
+    metaDescription: post.data.metaDescription,
+    schemaDescription: post.data.schemaDescription,
     canonicalURL: canonicalURL.href,
     image: post.data.socialImage,
   }}

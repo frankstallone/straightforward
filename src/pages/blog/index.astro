@@ -8,12 +8,30 @@ const allPosts = (await getCollection('blog')).sort(
   (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
 );
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+/**
+ * Truncates the description to 24 words
+ * @param description - The description to truncate
+ * @returns The truncated description
+ */
+
+function truncateDescription(description: string) {
+  const words = description.split(' ');
+  if (words.length <= 24) {
+    return description;
+  } else {
+    const truncatedWords = words.slice(0, 24);
+    return truncatedWords.join(' ') + '...';
+  }
+}
 ---
 
 <BlogLayout
   meta={{
     title: 'Blog posts by the team at Straighforward Growth',
-    description: 'Content marketing tips, tricks, why and how',
+    metaTitle: 'Blog posts by the team at Straighforward Growth',
+    metaDescription: 'Content marketing tips, tricks, why and how',
+    schemaDescription: 'Content marketing tips, tricks, why and how',
     canonicalURL: canonicalURL.href,
   }}
   header={{
@@ -70,7 +88,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
                     )}
                   </small>
                 </p>
-                <p>{post.data.description}</p>
+                <p>{truncateDescription(post.body)}</p>
                 <p class="pb-l">
                   <a href={`/${post.collection}/${post.slug}/`}>
                     Read more &hellip;
