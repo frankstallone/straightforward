@@ -52,7 +52,7 @@ By integrating psychographic insights with content performance data, you can cre
 
 ## Engage Directly Through Surveys and Feedback
 
-<img src="/src/assets/blog/shutterstock_2459457415.jpg" class="object-cover max-w-full md:max-w-3xl" alt="Engage directly through surveys and feedback">
+<img src="/src/assets/blog/target-audience-analysis-2.jpg" class="object-cover max-w-full md:max-w-3xl" alt="Engage directly through surveys and feedback">
 
 While data provides valuable quantitative insights, you really can’t get better than direct engagement with honest, trustworthy members of your target audience.
 
