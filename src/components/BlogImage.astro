@@ -1,0 +1,21 @@
+---
+import { Picture } from 'astro:assets';
+
+interface Props {
+  src: any;
+  alt: string;
+}
+
+const { src, alt } = Astro.props;
+---
+
+<Picture
+  src={src}
+  widths={[300, 500, src.width]}
+  sizes={`(max-width: 360px) 300px, (max-width: 620px) 500px, ${src.width}px`}
+  alt={alt}
+  class="object-cover h-auto w-auto mx-auto"
+  formats={['avif', 'webp']}
+  quality={80}
+  class="object-cover max-w-full md:max-w-3xl h-auto"
+/>

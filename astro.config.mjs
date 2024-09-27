@@ -4,20 +4,17 @@ import partytown from '@astrojs/partytown';
 import tailwind from '@astrojs/tailwind';
 import alpinejs from '@astrojs/alpinejs';
 
+import mdx from "@astrojs/mdx";
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://straightforwardgrowth.com',
-  integrations: [
-    sitemap(),
-    partytown({
-      // Example: Add dataLayer.push as a forwarding-event.
-      config: {
-        forward: ['dataLayer.push'],
-      },
-    }),
-    tailwind({
-      applyBaseStyles: false,
-    }),
-    alpinejs(),
-  ],
+  integrations: [sitemap(), partytown({
+    // Example: Add dataLayer.push as a forwarding-event.
+    config: {
+      forward: ['dataLayer.push']
+    }
+  }), tailwind({
+    applyBaseStyles: false
+  }), alpinejs(), mdx()]
 });
