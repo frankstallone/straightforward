@@ -11,6 +11,7 @@ const blogCollection = defineCollection({
       metaDescription: z.string(),
       schemaDescription: z.string(),
       subtitle: z.string().optional(),
+      summary: z.string().max(400),
       // In frontmatter, dates written without quotes around them are interpreted as Date objects
       publishDate: z
         .string()
