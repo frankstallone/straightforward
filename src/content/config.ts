@@ -10,8 +10,11 @@ const blogCollection = defineCollection({
       metaTitle: z.string(),
       metaDescription: z.string(),
       schemaDescription: z.string(),
-      subtitle: z.string().optional(),
-      summary: z.string().max(400),
+      subtitle: z.string().optional().describe('Sits below the title on posts'),
+      summary: z
+        .string()
+        .max(400)
+        .describe('A short summary of the post used in the blog index'),
       // In frontmatter, dates written without quotes around them are interpreted as Date objects
       publishDate: z
         .string()
@@ -22,10 +25,15 @@ const blogCollection = defineCollection({
           message: 'Cover image must be at least 1080 pixels wide!',
         })
         .optional(),
-      alt: z.string().optional(),
-      socialImage: z.string().optional(),
-      // TODO: This will NOT be optional once this branch is merged: https://github.com/frankstallone/straightforward/pull/9
-      keywords: z.array(z.string()).optional(),
+      alt: z.string().optional().describe('Alt text for the hero image'),
+      socialImage: z
+        .string()
+        .optional()
+        .describe('Image used when sharing on social media'),
+      keywords: z
+        .array(z.string())
+        .optional()
+        .describe('Keywords for schema.org tags'),
     }),
 });
 // 3. Export a single `collections` object to register your collection(s)
