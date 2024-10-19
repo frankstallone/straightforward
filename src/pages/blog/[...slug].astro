@@ -1,6 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
 import BlogLayout from '@layouts/BlogLayout.astro';
+import type { Props as HeadProps } from '@components/Head.astro';
+import { buildHierarchy } from '@utils/index';
+import TableOfContents from '@components/TableOfContents.astro';
+import Sidebar from '@components/Sidebar.astro';
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection('blog');
@@ -10,9 +14,30 @@ export async function getStaticPaths() {
   }));
 }
 
-const { post } = Astro.props;
+export interface Props extends HeadProps {
+  content: {
+    title: string;
+  };
+  headings: {
+    slug: string;
+    text: string;
+    depth: number;
+  }[];
+}
 
-const { Content } = await post.render();
+const {
+  post,
+  // content: { title },
+  // headings,
+} = Astro.props;
+
+if (!post) {
+  throw new Error('Post not found');
+}
+
+const { Content, headings } = await post.render();
+const headingsArray = buildHierarchy(headings);
+// console.log(headingsArray);
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
@@ -42,8 +67,24 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     style="--measure: 85ch"
     id="main"
   >
-    <div class="wrapper flow prose text-gray-1400">
-      <Content />
+    <div class="wrapper text-gray-1400">
+      <Sidebar class="sidebar flow prose" data-direction="rtl">
+        {
+          headingsArray && headingsArray.length > 0 && (
+            <nav class="box mt-zero max-w-fit text-step-000">
+              <h2 class="text-step-0">Table of contents</h2>
+              <ul class="border-l-2 border-l-blue-300">
+                {headingsArray.map((heading) => (
+                  <TableOfContents heading={heading} />
+                ))}
+              </ul>
+            </nav>
+          )
+        }
+        <div class="flow prose">
+          <Content />
+        </div>
+      </Sidebar>
     </div>
   </article>
 </BlogLayout>
